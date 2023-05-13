@@ -1,0 +1,628 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>NXT Modular Test Vehicle (MTV)</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt" onload="FP_preloadImgs(/*url*/'../images/buttons/instructions/buttonC.jpg',/*url*/'../images/buttons/instructions/buttonB.jpg')">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../index.html">
+<img border="0" src="../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">Modular Test Vehicle 
+		(MTV)</font></td>
+		<td width="150" align="right">
+		<table border="0">
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html">Building</a>:</font></td>
+				<td height="23" align="right">
+				<img border="0" src="../images/BuildAdvanced.gif" width="53" height="16" alt="Advanced"></td>
+			</tr>
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="#Program">Program</a>: </font>
+				</td>
+				<td height="23" align="right">
+				<img border="0" src="../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p><a href="../index.html">
+<img border="0" src="../images/ForNXT1X.png" width="737" height="21"></a></p>
+<h3><span style="font-weight: 400">Building Instructions</span></h3>
+<hr>
+<table border="0" width="740" cellpadding="4">
+	<tr>
+		<td><font size="2">The Modular Test Vehicle consists of five different 
+		modules that can be built separately.&nbsp; </font>
+		<p><font size="2"><b>Note:</b> The Frame module has two 
+		versions of the instructions, depending on whether you are using AA 
+		batteries or the Li-Ion rechargeable battery pack.<br>
+&nbsp;</font></p>
+		<table border="0" width="100%" cellspacing="6">
+			<tr>
+				<td><font face="Arial"><b>1A. Frame for <br>
+				AA Batteries</b></td>
+				<td width="54"><font face="Arial">
+				<img border="0" src="../images/BuildIntermediate.gif" width="53" height="16" alt="Intermediate"></font></td>
+				<td><font face="Arial"><b>1B. Frame for <br>
+				Rechargeable Battery </b></font></td>
+				<td width="54"><font face="Arial">
+				<img border="0" src="../images/BuildIntermediate.gif" width="53" height="16" alt="Intermediate"></font></td>
+				<td><font face="Arial"><b>2. Drive Wheels</b></font></font></td>
+				<td width="54"><font face="Arial">
+				<img border="0" src="../images/BuildAdvanced.gif" width="53" height="16" alt="Advanced"></font></td>
+			</tr>
+			<tr>
+				<td width="33%" align="center" colspan="2">
+				<a href="frame/stepsAA.html">
+				<img border="1" src="DCP_6142.JPG" width="236" height="134"></a></td>
+				<td width="33%" align="center" colspan="2">
+				<a href="frame/stepsLi.html">
+				<img border="1" src="DCP_6153.JPG" width="230" height="134"></a></td>
+				<td width="30%" align="center" colspan="2">
+				<a href="drive_wheels/steps.html">
+				<img border="1" src="DCP_6182.JPG" width="216" height="160"></a></td>
+			</tr>
+			<tr>
+				<td width="33%" align="center" colspan="2">
+				<a href="frame/stepsAA.html">
+		<img border="0" id="img1" src="../images/buttons/instructions/buttonA.jpg" height="36" width="180" alt="Building Instructions" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonB.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonA.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonC.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonB.jpg')" fp-style="fp-btn: Glow Capsule 3; fp-font: Arial; fp-orig: 0" fp-title="Building Instructions"></a></td>
+				<td width="33%" align="center" colspan="2">
+				<a href="frame/stepsLi.html">
+		<img border="0" id="img2" src="../images/buttons/instructions/buttonA.jpg" height="36" width="180" alt="Building Instructions" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'../images/buttons/instructions/buttonB.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'../images/buttons/instructions/buttonA.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'../images/buttons/instructions/buttonC.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'../images/buttons/instructions/buttonB.jpg')" fp-style="fp-btn: Glow Capsule 3; fp-font: Arial; fp-orig: 0" fp-title="Building Instructions"></a></td>
+				<td width="30%" align="center" colspan="2">
+				<a href="drive_wheels/steps.html">
+		<img border="0" id="img3" src="../images/buttons/instructions/buttonA.jpg" height="36" width="180" alt="Building Instructions" onmouseover="FP_swapImg(1,0,/*id*/'img3',/*url*/'../images/buttons/instructions/buttonB.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img3',/*url*/'../images/buttons/instructions/buttonA.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img3',/*url*/'../images/buttons/instructions/buttonC.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img3',/*url*/'../images/buttons/instructions/buttonB.jpg')" fp-style="fp-btn: Glow Capsule 3; fp-font: Arial; fp-orig: 0" fp-title="Building Instructions"></a></td>
+			</tr>
+		</table>
+		<p>&nbsp;</p>
+		<table border="0" width="100%" cellspacing="6">
+			<tr>
+				<td><font face="Arial"><b>3. Straight Wheels</b></td>
+				<td width="54">
+				<font face="Arial">
+				<img border="0" src="../images/BuildEasy.gif" width="53" height="16" alt="Easy"></td>
+				<td><font face="Arial"><b>4. Castor Wheel </b></font></td>
+				<td width="54">
+				<img border="0" src="../images/BuildIntermediate.gif" width="53" height="16" alt="Intermediate"></td>
+				<td><font face="Arial"><b>5. Payload Basket</b></font></font></td>
+				<td width="54">
+				<img border="0" src="../images/BuildEasy.gif" width="53" height="16" alt="Easy"></font></td>
+			</tr>
+			<tr>
+				<td width="33%" align="center" colspan="2">
+				<a href="straight_wheels/steps.html">
+				<img border="1" src="DCP_6183.JPG" width="227" height="148"></a></td>
+				<td width="33%" align="center" colspan="2">
+				<a href="castor_wheel/steps.html">
+				<img border="1" src="DCP_6071.JPG" width="225" height="148"></a></td>
+				<td width="33%" align="center" colspan="2">
+				<a href="basket/steps.html">
+				<img border="1" src="DCP_6048.JPG" width="219" height="148"></a></td>
+			</tr>
+			<tr>
+				<td width="33%" align="center" colspan="2">
+				<a href="straight_wheels/steps.html">
+		<img border="0" id="img4" src="../images/buttons/instructions/buttonA.jpg" height="36" width="180" alt="Building Instructions" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/instructions/buttonB.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/instructions/buttonA.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/instructions/buttonC.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/instructions/buttonB.jpg')" fp-style="fp-btn: Glow Capsule 3; fp-font: Arial; fp-orig: 0" fp-title="Building Instructions"></a></td>
+				<td width="33%" align="center" colspan="2">
+				<a href="castor_wheel/steps.html">
+		<img border="0" id="img5" src="../images/buttons/instructions/buttonA.jpg" height="36" width="180" alt="Building Instructions" onmouseover="FP_swapImg(1,0,/*id*/'img5',/*url*/'../images/buttons/instructions/buttonB.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img5',/*url*/'../images/buttons/instructions/buttonA.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img5',/*url*/'../images/buttons/instructions/buttonC.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img5',/*url*/'../images/buttons/instructions/buttonB.jpg')" fp-style="fp-btn: Glow Capsule 3; fp-font: Arial; fp-orig: 0" fp-title="Building Instructions"></a></td>
+				<td width="33%" align="center" colspan="2">
+				<a href="basket/steps.html">
+		<img border="0" id="img6" src="../images/buttons/instructions/buttonA.jpg" height="36" width="180" alt="Building Instructions" onmouseover="FP_swapImg(1,0,/*id*/'img6',/*url*/'../images/buttons/instructions/buttonB.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img6',/*url*/'../images/buttons/instructions/buttonA.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img6',/*url*/'../images/buttons/instructions/buttonC.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img6',/*url*/'../images/buttons/instructions/buttonB.jpg')" fp-style="fp-btn: Glow Capsule 3; fp-font: Arial; fp-orig: 0" fp-title="Building Instructions"></a></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<hr>
+<h3><span style="font-weight: 400"><font face="Arial Rounded MT Bold" size="5">
+Assembling the Robot and Wiring 
+the Drive Motors</font></span></h3>
+<table border="0" width="740" cellpadding="4">
+	<tr>
+		<td>
+		<p style="margin-bottom: 0"><font size="2">Once you have built the five 
+		MTV modules, you can snap them together any way you want to make a 
+		complete vehicle.&nbsp; Note that no extra pegs are required to assemble 
+		the modules.&nbsp; The modules have the pegs built-in, and the frame has 
+		a number of attachment points ready to go.&nbsp; It is then also easy to 
+		pull the modules apart and reassemble them in a different way, so you 
+		can quickly experiment with several combinations to compare how well the 
+		resulting robots work.</font></p>
+		<p style="margin-bottom: 0"><font size="2">Once you have snapped the 
+		modules together, you should use two wires to connect the two drive 
+		motors to ports <b>B</b> and <b>C</b> on the NXT.&nbsp; If you want, you 
+		can try routing the wires around parts of the robot to keep them out of 
+		the way, as shown below.</font></p>
+		<p style="margin-bottom: 0" align="center">
+		<img border="1" src="DCP_6253.JPG" width="462" height="320"><br>
+&nbsp;</td>
+	</tr>
+</table>
+<h3><span style="font-weight: 400"><font face="Arial Rounded MT Bold" size="5">
+Experimenting with Different Configurations</font></span></h3>
+<table border="0" width="740" cellpadding="4">
+	<tr>
+		<td>
+		<p style="margin-bottom: 0"><font size="2">There are hundreds of 
+		different ways you can assemble the MTV modules into a complete robot, 
+		and each different configuration will perform differently.&nbsp; Some 
+		will go straighter, others will turn better, some will carry heavier 
+		loads better, and some will be more consistent and accurate.&nbsp; A few 
+		ideas to get you started are shown below.<br>
+&nbsp;</font></td>
+	</tr>
+</table>
+		<table border="0" width="800" cellspacing="6">
+			<tr>
+				<td align="left">
+				<img border="1" src="DCP_6043.JPG" width="240" height="160"></td>
+				<td align="left">
+				<img border="1" src="DCP_6044.JPG" width="219" height="160"></td>
+				<td align="left">
+				<img border="1" src="DCP_6045.JPG" width="243" height="160"></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top">
+				<p align="left"><font size="2">Rear wheel drive, rear engine,<br>
+				straight front wheels with tires, <br>
+				medium wheelbase, rear payload.<br>
+&nbsp;</font></td>
+				<td align="left" valign="top">
+				<font size="2">Front wheel drive, mid engine,<br>
+				rear castor wheel,<br>
+				medium wheelbase, rear payload.</font></td>
+				<td align="left" valign="top">
+				<font size="2">Front wheel drive, mid engine,<br>
+				straight rear wheels without tires,<br>
+				short wheelbase, front payload.</font></td>
+			</tr>
+			<tr>
+				<td align="left">
+				<img border="1" src="DCP_6046.JPG" width="239" height="166"></td>
+				<td align="left">
+				<img border="1" src="DCP_6181.JPG" width="221" height="166"></td>
+				<td align="left">
+				<img border="1" src="DCP_6042.JPG" width="233" height="166"></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top">
+				<font size="2">Rear wheel drive, mid engine,<br>
+				straight front wheels without tires,<br>
+				long wheelbase, front payload.</font></td>
+				<td align="left" valign="top">
+				<font size="2">Rear wheel drive, mid engine,<br>
+				straight front wheels without tires,<br>
+				medium wheelbase, front payload.</font></td>
+				<td align="left" valign="top">
+				<font size="2">Rear wheel drive, mid engine,<br>
+				front castor wheel,<br>
+				short wheelbase, rear payload.<br>
+&nbsp;</font></td>
+			</tr>
+		</table>
+<h3><span style="font-weight: 400"><font face="Arial Rounded MT Bold" size="5">
+<a name="Gears"></a>Experimenting with Different Gears </font></span></h3>
+<table border="0" width="840" cellpadding="4">
+	<tr>
+		<td>
+		<p style="margin-bottom: 0"><font size="2">The Drive Wheels module is 
+		designed to make it easy to change the gears used so that you can 
+		experiment with different gear combinations.&nbsp; Different 
+		combinations will result in different gear ratios, which will have a big 
+		effect on the speed and power of your robot.&nbsp;&nbsp; The faster gear 
+		combinations will make the robot go faster but have less power, which 
+		will make it harder to turn and carry loads, and note that faster robots 
+		are also typically less accurate.&nbsp; </font></p>
+		<p style="margin-bottom: 0"><font size="2">Five different gear ratios 
+		are possible in the Drive Wheels module as shown below:</font><br>
+&nbsp;</p>
+		<table border="1" width="100%" style="border-collapse: collapse" bordercolor="#000000" cellpadding="4">
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+				<img border="0" src="drive_wheels/DCP_6108.JPG" width="126" height="150"></td>
+				<td>
+				<img border="0" src="drive_wheels/DCP_6106.JPG" width="128" height="150"></td>
+				<td>
+				<img border="0" src="drive_wheels/DCP_6107.JPG" width="132" height="150"></td>
+				<td>
+				<img border="0" src="drive_wheels/DCP_6105.JPG" width="153" height="150"></td>
+				<td>
+				<img border="0" src="drive_wheels/DCP_6109.JPG" width="124" height="150"></td>
+			</tr>
+			<tr>
+				<td><b><font size="2">Motor Gear</font></b></td>
+				<td><font size="2">8 tooth</font></td>
+				<td><font size="2">12 tooth</font></td>
+				<td><font size="2">16 tooth*</font></td>
+				<td><font size="2">20 tooth</font></td>
+				<td><font size="2">24 tooth</font></td>
+			</tr>
+			<tr>
+				<td><b><font size="2">Wheel Gear</font></b></td>
+				<td><font size="2">24 tooth</font></td>
+				<td><font size="2">20 tooth</font></td>
+				<td><font size="2">16 tooth*</font></td>
+				<td><font size="2">12 tooth</font></td>
+				<td><font size="2">8 tooth</font></td>
+			</tr>
+			<tr>
+				<td><b><font size="2">Gear Ratio</font></b></td>
+				<td><font size="2">24:8 = 3:1&nbsp; (3.0)</font></td>
+				<td><font size="2">20:12 = 5:3&nbsp; (1.7)</font></td>
+				<td><font size="2">16:16 = 1:1&nbsp; (1.0)</font></td>
+				<td><font size="2">12:20 = 3:5&nbsp; (0.6)</font></td>
+				<td><font size="2">8:24 = 1:3&nbsp; (0.3)</font></td>
+			</tr>
+			<tr>
+				<td><b><font size="2">Speed</font></b></td>
+				<td><font size="2">Very Slow</font></td>
+				<td><font size="2">Slow</font></td>
+				<td><font size="2">Medium</font></td>
+				<td><font size="2">Fast</font></td>
+				<td><font size="2">Very Fast</font></td>
+			</tr>
+		</table>
+		<p style="margin-bottom: 0"><font size="2"><b>*</b> Note that the Medium 
+		speed gear combination requires a total of four 16 tooth gears, but the 
+		Retail version of the NXT kit by itself has only two of these gears.</font></p>
+		<h3 style="margin-bottom: 0"><font size="3">Changing Gears</font></h3>
+		<h4 style="margin-bottom: 0"><font size="2">
+		<span style="font-weight: 400">You can change the gears used in the 
+		Drive Wheels drive module without taking the whole thing apart if you do 
+		it as follows.&nbsp; This requires careful hands, but if you can do this 
+		then maybe you could be a mechanic for a race car team, as they are 
+		often required to crawl under the car to change out the gears to adjust 
+		the speed of the car!</span></font></h4>
+		<ol>
+			<li>
+			<h4 style="margin-bottom: 6px"><font size="2">
+			<span style="font-weight: 400">Remove the two gears on the inside of 
+			the wheel axles.</span></font></h4>
+			</li>
+			<li>
+			<h4 style="margin-bottom: 6px"><font size="2">
+			<span style="font-weight: 400">Pull the wheels and the axles off on 
+			both sides.&nbsp; </span></font></h4>
+			</li>
+			<li>
+			<h4 style="margin-bottom: 6px"><font size="2">
+			<span style="font-weight: 400">Remove the two gears on the inside of 
+			the motor axles, and replace them with the new motor gears, rotating 
+			the new gears slightly as necessary to get the cross hole to line up 
+			with the motor axle.</span></font></h4>
+			</li>
+			<li>
+			<h4 style="margin-bottom: 6px"><font size="2">
+			<span style="font-weight: 400">Replace the wheels and axles and put 
+			on the two new wheel gears on the inside.</span></font></h4>
+			</li>
+			<li>
+			<h4 style="margin-bottom: 6px"><font size="2">
+			<span style="font-weight: 400">Check the axles and bushings on the 
+			wheels to make sure that everything is still secure and lined up, 
+			but not pushed together too tightly.&nbsp;&nbsp; </span></font></h4>
+			</li>
+		</ol>
+		<h4 style="margin-bottom: 6px"><font size="2">Note:
+		<span style="font-weight: 400">With the faster gear combinations, you 
+		will be able to turn a wheel by hand and see the gears turn, but on the 
+		slower gear combinations there will be too much resistance and the axle 
+		will just twist.</span></font></h4>
+		<h4 style="margin-bottom: 6px"><font size="2">Important:<span style="font-weight: 400"> 
+		When you change the gear ratio of your robot, you will also likely need 
+		to change the program to adjust the number of degrees or rotations 
+		specified for your Move blocks, because the robot will be moving more or 
+		less for a given amount of rotation of the motors.&nbsp; See the
+		<a href="#Program">programming</a> section below.</span><br>
+&nbsp;</font></h4>
+		</td>
+	</tr>
+</table>
+<hr>
+<p><a name="Program"></a></p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td bgcolor="#C0C0C0"><font face="Arial Rounded MT Bold" size="5">MTV Programming</font><p style="margin-bottom: 6px">
+		<font size="2">Two very simple programs are provided to get you started 
+		with testing your MTV robots.&nbsp; You can also write your own test 
+		programs to do whatever you want.&nbsp; When testing for mechanical 
+		performance, it is good to keep the program as simple as possible to 
+		avoid introducing more questions.</font></p>
+		<ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">The
+			<a href="../programs/Out_and_Back.rbt">Out_and_Back</a> program 
+			makes the robot go forward then backward by the same amount.&nbsp; 
+			If your robot tracks well in a straight line, then it should end up 
+			almost exactly where it started.&nbsp; How far it goes out will 
+			depend a lot on which gears you use (see <a href="#Gears">
+			Experimenting with Different Gears</a>), so be prepared to adjust 
+			the program for different gears, or to change the distance to your 
+			liking.&nbsp; The longer the distance, the harder the test is.&nbsp; 
+			You may also need to adjust the direction of the movement if your 
+			robot faces &quot;backwards&quot;.&nbsp; See the program comments for details.</font></p>
+			</li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">The
+			<a href="../programs/L_Turn.rbt">L_Turn</a> program make the robot 
+			move in a simple L-shaped pattern, consisting of a straight section, 
+			a pivot turn to the right, then another straight section.&nbsp; For 
+			the robot that I tested this program on, I adjusted the Duration of 
+			the pivot turn to make the robot do an approximate right angle turn, 
+			but your results will depend a lot on how your robot is designed, 
+			and especially which gears you use.&nbsp;&nbsp; Be prepared to 
+			change the Duration of the Move blocks, especially the pivot turn.&nbsp;
+			<br>
+			<br>
+			Once you come up with a good starting point for the Durations, a 
+			good test for a robot is to see how consistently and accurately it 
+			can travel the same path.&nbsp; Without making any changes to either 
+			the robot or the program, try carefully starting the robot in 
+			exactly the same spot and trying the L Turn three or more times in a 
+			row, marking the final position of the robot after each run.&nbsp; 
+			Did the robot end up in the same place each time?&nbsp; How close 
+			was it? </font></p></li>
+		</ul>
+		<p style="margin-bottom: 6px"><font size="2">When you are making changes 
+		to the robot or the program, be sure to make only one change at a time 
+		before testing it again.&nbsp; That way, you won't get confused about 
+		what caused a difference that you see.</font></p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 6px">&nbsp;</p><hr>
+<h3><span style="font-weight: 400"><font face="Arial Rounded MT Bold" size="5">
+<a name="Balance"></a>Experimenting with Weight Balance</font></span></h3>
+<table border="0" width="740" cellpadding="4">
+	<tr>
+		<td>
+		<p style="margin-bottom: 0"><font size="2">One design issue that you 
+		will definitely want to experiment with is that of weight balance, and 
+		the MTV is designed to make it easy to experiment with this.&nbsp; The 
+		weight balance of a robot refers to what percentage of the robot's total 
+		weight is over the drive wheels, as opposed to the remaining percentage 
+		that is over any non-motorized rolling wheels or sliding parts.&nbsp; 
+		Weight balance can have a huge impact on the performance of a robot, 
+		especially its ability to turn well and turn accurately and 
+		consistently.</font></p>
+		<p style="margin-bottom: 0"><font size="2">Many teams that build robots 
+		for FIRST LEGO League, for example, have turning problems (such as 
+		stalling in a turn or inconsistent turn angles) that are ultimately 
+		caused by poor weight balance.&nbsp; The resulting turning problems may 
+		only happen sometimes (due to variations in friction on the surface, 
+		different weights being carried, battery charge level, etc.), leading 
+		the teams to suspect problems with their programs or unknown gremlins in 
+		the NXT, when in fact the real problem often lies with the robot chassis 
+		design. </font></p>
+		<p style="margin-bottom: 0"><font size="2">You can measure the actual 
+		weight balance of a robot by doing two measurements with a small scale 
+		as shown in the examples below, but you don't need a scale to do 
+		experiments with weight balance.&nbsp; Without a scale, you can get a 
+		rough idea of the weight balance of your robot by putting the robot on a 
+		flat surface and then alternately lifting just the front or back of the 
+		robot with your hand to see which side feels heavier.&nbsp; And even if 
+		you can't easily guess the approximate balance of the robot, the MTV 
+		frame is designed to make it easy to shift the modules back and forth to 
+		get more or less weight over the drive wheels, so just try making 
+		changes in one direction then the other and see which turns out better.<br>
+&nbsp;</font></p>
+		<div align="center">
+			<div align="center">
+				<table border="0" cellspacing="6" width="680">
+					<tr>
+						<td>
+						<img border="1" src="DCP_6263.JPG" align="left" width="295" height="250"></td>
+						<td>
+						<img border="1" src="DCP_6262.JPG" align="right" width="330" height="250"></td>
+					</tr>
+					<tr>
+						<td colspan="2"><font size="2">This example robot has a 
+						total weight of 818 grams when carrying the two balls, 
+						with 306 grams over the drive wheels.&nbsp; To determine 
+						the drive wheel weight, put the drive wheels on the 
+						scale and then support the non-drive wheels on something 
+						off the scale that is tall enough to make the robot 
+						level.&nbsp; Then to determine the percentage of weight 
+						over the drive wheels, divide the drive wheel weight by 
+						the total weight, so this robot has a weight balance of 
+						306/818 = 37% over the drive wheels.<br>
+&nbsp;</font></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div align="center">
+			<table border="0" cellspacing="6" width="680">
+				<tr>
+					<td>
+					<img border="1" src="DCP_6256.JPG" width="297" height="250" align="left"></td>
+					<td>
+					<img border="1" src="DCP_6254.JPG" width="297" height="250" align="right"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><font size="2">This second example robot has 
+					a total weight of 820 grams, with 662 grams or 662/820 = 81% 
+					over the drive wheels, which is much more than the first 
+					example above.&nbsp; </font>
+					<p><font size="2">The weight of a robot includes everything 
+					that it is carrying, so one thing that increases the drive 
+					wheel weight of the second robot is that the payload 
+					(basket and balls) is on the drive wheel side of the robot 
+					instead of the other side.&nbsp; However, the biggest effect 
+					is due to the position of the NXT brick, which is the 
+					heaviest part of the robot.&nbsp; Look at the position of 
+					the NXT brick in these two example robots and you will see 
+					how the second robot has the NXT positioned much farther on 
+					the drive wheel side of the robot. <br>
+&nbsp;</font></td>
+				</tr>
+			</table>
+		</div>
+		<h3 style="margin-bottom: 0"><font size="3">Getting a Good Weight 
+		Balance</font></h3>
+		<p style="margin-bottom: 0"><font size="2">So, what is a good weight 
+		balance to shoot for?&nbsp; Well, it depends on how your robot is built 
+		and what you need your robot to do, and there are some trade-offs, so 
+		you will need to experiment.&nbsp; </font></p>
+		<p style="margin-bottom: 0"><font size="2">Race cars (which turn by 
+		pivoting the front wheels) typically shoot for a weight balance of 50%, 
+		but for an NXT robot that turns by changing the speed and direction of 
+		two drive motors, you will typically want a weight balance of more than 
+		50% over the drive wheels.&nbsp; You may be able to go as high as say 
+		80-90%, but this may make the robot unstable (it might pop a wheelie or 
+		tip over when changing speed or direction suddenly).&nbsp; It also might 
+		affect the robot's ability to go straight accurately.</font></td>
+	</tr>
+</table>
+<p style="margin-bottom: 6px">&nbsp;</p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="5">Challenges</font><ol>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Try several different 
+			MTV robot designs and test them.&nbsp; See how many different 
+			designs you can come up with.&nbsp; Even if you think you know a 
+			design will be &quot;bad&quot; for some reason, try it anyway and see if you 
+			can predict what will happen when you test it.&nbsp; For some of the 
+			designs that you think are good, experiment with some changes to see 
+			if you can make it even better.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">As discussed in the
+			<a href="#Balance">Experimenting with Weight Balance</a> section 
+			above, the weight balance of your robot is also affected by any 
+			attachments and other weight that it is carrying.&nbsp; Try putting 
+			the 3rd NXT motor in the payload basket to experiment with carrying 
+			a heavier weight.&nbsp; Or how about something even heavier?&nbsp; 
+			Can you make a design that can drive and turn well while carrying a 
+			full soda can?</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Adding even one turn to 
+			a programmed path can add a lot of inconsistency and error, 
+			especially to a robot design that is in need of improvements.&nbsp; 
+			For an advanced challenge, try adding more turns.&nbsp; For example, 
+			you could add steps to the end of the
+			<a href="../programs/L_Turn.rbt">L_Turn</a> program to make the 
+			robot retrace its steps in reverse and try to return to the starting 
+			point.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">The
+			<a href="../programs/L_Turn.rbt">L_Turn</a> program uses Move blocks 
+			for both its straight and turning parts.&nbsp; But there is more 
+			than one way to power two motors.&nbsp; You can also use two 
+			individual Motor blocks (one for each motor) on different sequences, 
+			or on the same sequence with the first one set to not &quot;wait for 
+			completion&quot; (so that they happen at the same time).&nbsp; Try using 
+			these in place of either the straight or turn Move blocks.&nbsp; For 
+			turning, try both stopping one motor and reversing one motor.&nbsp; 
+			How do any of these change the performance and consistency of your 
+			robot?&nbsp; Although the Move block has some built-in features to 
+			try to synchronize two motors, don't assume that it will work well 
+			for your robot.&nbsp; For some robot designs it can make it worse.&nbsp; 
+			Also, both the Move and Motor blocks have options such as Power 
+			level, Brake vs. Coast, Ramp Up, etc., that you can experiment with.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Another difficult test 
+			for a robot is to see if it can perform consistently even with 
+			different levels of battery charge.&nbsp; Try alternating between a 
+			set of worn and fresh AA batteries.&nbsp; Or if you have the 
+			rechargeable battery pack, try alternating between that and AA 
+			batteries (fresh AA batteries will be more powerful than the 
+			rechargeable battery).</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Using the results of 
+			what you learn from your experiments, can you design your own robot 
+			chassis from scratch that performs as good or better than your best 
+			MTV design, but is simpler, uses fewer parts, is stronger, etc.?</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">The MTV modules are 
+			specially designed to snap together without the need for additional 
+			pegs, and to pull apart without other parts of the robot coming 
+			apart.&nbsp; Study how the attachments are done, and see if you can 
+			design other attachments that go on and off quickly and easily.</font></li>
+		</ol>
+		</td>
+	</tr>
+</table>
+<p align="center">&nbsp;</p>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana" size="1">Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2009 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

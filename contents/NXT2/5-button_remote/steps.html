@@ -1,0 +1,282 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>NXT 5 Button Remote Control</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../../index.html">
+<img border="0" src="../../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">5 Button Remote Control</font></td>
+		<td width="150" align="right">
+		<table border="0">
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html">Building</a>:</font></td>
+				<td height="23" align="right">
+				<img border="0" src="../../images/BuildEasy.gif" width="53" height="16" alt="Easy"></td>
+			</tr>
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="#Program">Program</a>: </font>
+				</td>
+				<td height="23" align="right">
+				<img border="0" src="../../images/ProgramIntermediate.gif" width="53" height="16" alt="Intermediate"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p>
+<a href="../../index.html"><img border="0" src="../../images/ForNXT2.png" width="737" height="21"></a></p>
+<h3><span style="font-weight: 400">Building Instructions</span></h3>
+<hr>
+<p><b><font face="Arial" size="7">1</font></b></p>
+<p><img border="1" src="DCP_3238.JPG" width="736" height="324"></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">(You can use the NXT with either AA batteries or the NXT Rechargeable 
+		Battery Pack.)</font></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_3237.JPG" width="736" height="505"></p>
+<p><img border="1" src="DCP_3236.JPG" width="736" height="475"></p>
+<p><img border="1" src="DCP_3235-1.JPG" width="736" height="480"></p>
+<hr>
+<p><a name="Program"></a></p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td bgcolor="#C0C0C0"><font face="Arial Rounded MT Bold" size="5">5 
+		Button 
+		Remote Control Programming</font><p>
+		<font size="2">The <a href="../../programs2/5ButtonRemote.rbt">5ButtonRemote</a> program for the remote control 
+		provides one general purpose way to send Bluetooth messages from the 
+		remote control to another NXT (other strategies are possible).&nbsp; A 
+		receiving program on the other NXT must be used to interpret the 
+		Bluetooth messages and take action.&nbsp; For example, see the 
+		<a href="../../programs2/5ButtonSteer.rbt">5ButtonSteer</a> program from the <a href="../race_car/index.html">Race 
+		Car</a> project.&nbsp; Instructions to use the remote with the Race Car 
+		are below.</font></p>
+		<p style="margin-bottom: 6px">
+		<font size="2">The <a href="../../programs2/5ButtonRemote.rbt">5ButtonRemote</a> program sends two different 
+		kinds of Bluetooth messages to two different mailboxes on the receiving 
+		NXT:&nbsp; </font></p>
+		<ol>
+			<li>
+			<p style="margin-bottom: 6px">
+		<font size="2">The first message, sent to mailbox 1, is a Number that 
+		indicates the state of the two touch sensors as follows: 0 = Neither 
+		pressed, 1 = Left only pressed, 2 = Right only pressed, 3 = Both 
+		pressed.&nbsp; These messages are sent continuously at about 20 messages 
+		per second (even when the sensor state has not changed since the last 
+		message).</font></p></li>
+			<li>
+			<p style="margin-bottom: 6px">
+		<font size="2">The second message, sent to mailbox 2, is a Number that 
+		indicates when an NXT button is bumped (pressed and then released) as 
+		follows: 1 = Left Arrow button, 2 = Enter button, 3 = Right Arrow 
+		button.&nbsp; These messages are only sent when an NXT button is bumped 
+		and are only sent once for each bump.</font></p>
+			</li>
+		</ol>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 6px">&nbsp;</p>
+<table border="0" width="740" cellpadding="4">
+	<tr>
+		<td>
+		<p style="margin-bottom: 12px"><font face="Arial Rounded MT Bold" size="5">Using 
+		Bluetooth Wireless Remote Control with Two NXTs</font></p>
+		<table border="0" width="100%">
+			<tr>
+				<td valign="top" width="47%">
+				<p style="margin-bottom: 6px"><font size="2">You will need 
+				another NXT to receive the messages from the remote control and 
+				an appropriate receiving program for that NXT project.&nbsp; The 
+				following example instructions show how to set up an connection 
+				between the 5 Button Remote Control and the
+				<a href="../race_car/index.html">Race Car</a> project.</font></p>
+				<ol>
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">Download the
+					<b>5ButtonSteer</b> 
+					program to the Race Car NXT, but don't run it yet.</font></li>
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">Download the
+					<b>5ButtonRemote</b> 
+					program to the 5 Button Remote Control, but don't run it yet.</font></li>
+				</ol>
+				</td>
+				<td width="52%" valign="top">
+				<img border="1" src="DCP_3242.JPG" width="386" height="208"></td>
+			</tr>
+			<tr>
+				<td valign="top" colspan="2">
+				<ol start="3">
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">Establish a 
+					Bluetooth connection from the remote control to the Race Car.&nbsp; See your NXT User Guide for 
+					instructions, summarized here:</font><ol type="a">
+						<li>
+						<p style="margin-bottom: 6px"><font size="2">Make sure 
+						Bluetooth is turned on for both NXTs from the Bluetooth 
+						menu (from NXT main menu) </font></li>
+						<li>
+						<p style="margin-bottom: 6px"><font size="2">From the 
+						NXT for the remote control, go to the Bluetooth 
+						menu, and if this is the first time these two NXTs have 
+						been connected, pick Search.&nbsp; Pick Contacts if they 
+						have connected before.</font></li>
+						<li>
+						<p style="margin-bottom: 6px"><font size="2">Choose the 
+						name of the NXT for the Race Car from the list 
+						and connect.</font></li>
+						<li>
+						<p style="margin-bottom: 6px"><font size="2">Connect 
+						using connection number 1</font></li>
+						<li>
+						<p style="margin-bottom: 6px"><font size="2">If prompted 
+						for a Passkey, you can accept the default 1234 key on 
+						both NXTs</font></li>
+						<li>
+						<p style="margin-bottom: 6px"><font size="2">The NXTs 
+						are connected when they both display a diamond after the 
+						Bluetooth icon in the upper left corner of the screen.</font></li>
+					</ol>
+					</li>
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">Run the
+					<b>5ButtonRemote</b> 
+					program on the remote control NXT.</font></li>
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">Run the
+					<b>5ButtonSteer</b> 
+					program on the Race Car NXT.</font></li>
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">The Race Car will operate 
+					from the remote control as follows:</font><ul>
+						<li>
+						<p style="margin-bottom: 6px"><font size="2">With 
+						neither touch sensor pressed, the car stops.</font></li>
+						<li>
+						<p style="margin-bottom: 6px"><font size="2">Press and 
+						hold both touch sensors to drive forward.</font></li>
+						<li>
+						<p style="margin-bottom: 6px"><font size="2">Press and 
+						hold the left touch sensor to  
+						turn left, or the right touch sensor to turn right.</font></li>
+						<li>
+						<p style="margin-bottom: 6px"><font size="2">Press and 
+						release the Left Arrow button to decrease the drive 
+						power (speed) by 20%, and the Right Arrow button to 
+						increase speed by 20%.&nbsp; The current power level is 
+						displayed on the Race Car NXT (not the remote NXT).</font></li>
+						<li>
+						<p style="margin-bottom: 6px"><font size="2">Press and 
+						release the Enter button to toggle Reverse mode (once to 
+						shift into Reverse and again to go back to forward).&nbsp; 
+						When in Reverse mode, the car will drive and turn in 
+						reverse.</font></li>
+					</ul>
+					</li>
+				</ol>
+				<p style="margin-bottom: 6px"><font size="2">Note that you could 
+				use the 5 Button Remote Control to control another NXT project that can 
+				respond in any way it wants to the Bluetooth messages described 
+				in the <a href="#Program">Programming</a> section above, so you 
+				could assign other actions to the five available buttons if you 
+				want.</font></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 6px">&nbsp;</p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="5">Challenges</font><ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Design your own robot 
+			to use with the 5 Button Remote Control and write a Bluetooth 
+			receiving control program for it to use.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Try modifying the 
+			<b>5ButtonRemote</b> program to make the remote control work better 
+			or differently for your own robot designs.&nbsp; For example, you 
+			might want to change the NXT button behavior from &quot;bumped&quot; to &quot;press 
+			and hold&quot;, or perhaps add some feedback on the display.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Note that a limitation 
+			of the NXT is that it cannot sense two NXT buttons (Left Arrow, 
+			Enter, Right Arrow) being pressed at the same time.&nbsp; However, 
+			it can sense two touch sensors pressed at the same time, and touch 
+			sensor(s) pressed at the same time as one NXT button.&nbsp; So, math 
+			question: How many different combinations of the 5 buttons can the 
+			remote control sense?</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Can you use or modify the 
+			remote control to control something that is not a vehicle?</font></li>
+		</ul>
+		</td>
+	</tr>
+</table>
+<table border="0" width="740" cellpadding="24">
+	<tr>
+		<td align="center">
+		&nbsp;</td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana" size="1">Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2010 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>NXT Race Car</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt" onload="FP_preloadImgs(/*url*/'../../images/buttons/instructions/buttonC.jpg', /*url*/'../../images/buttons/instructions/buttonB.jpg')">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../../index.html">
+<img border="0" src="../../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">Race Car</font></td>
+		<td width="150" align="right">
+		<table border="0">
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html">Building</a>:</font></td>
+				<td height="23" align="right">
+				<img border="0" src="../../images/BuildExpert.gif" width="53" height="16" alt="Expert"></td>
+			</tr>
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html#Program">Program</a>: </font>
+				</td>
+				<td height="23" align="right">
+				<img border="0" src="../../images/ProgramAdvanced.gif" width="53" height="16" alt="Advanced"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p>
+<a href="../../index.html"><img border="0" src="../../images/ForNXT2.png" width="737" height="21"></a></p>
+<p><a href="steps.html">
+<img border="1" src="DCP_0080.JPG" width="736" height="462"></a></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">This Race Car is designed to look and steer like a 
+		real car, with pivoting front wheel steering.&nbsp; It is also designed 
+		for speed, with gears to increase the speed of the rear drive wheels.&nbsp; </font><p>
+		<font size="2">The Color Sensor is positioned under the car so that the 
+		car do some basic autonomous operations by sensing the color of the 
+		surface.&nbsp; The sensor can distinguish six different colors, so you 
+		can make the car react to different colored tape lines, colored paper 
+		strips, etc.</font><p><font size="2">You can also operate the car by 
+		remote control with either a simple two button wired remote control 
+		(requires only one NXT kit), or by wireless Bluetooth remote control 
+		from another NXT such as the <a href="../5-button_remote/index.html">5 
+		Button Remote Control</a> or the <a href="../steering_remote/index.html">
+		Steering Remote Control</a>.&nbsp; Programs are provided for all three 
+		of these remote controls. <br>
+&nbsp;</font></td>
+	</tr>
+</table>
+<table border="0" width="740" cellpadding="2">
+	<tr>
+		<td align="center">
+		<p align="center">
+		<img border="1" src="DCP_3243.JPG" width="337" height="196"></td>
+		<td align="center">
+		<p align="center">
+		<img border="1" src="DCP_0075.JPG" width="371" height="196"></td>
+	</tr>
+	<tr>
+		<td align="center" valign="top"><font size="2">Autonomous Operation
+		with Color Sensor<br>
+&nbsp;</font></td>
+		<td align="center" valign="top"><font size="2">Wired 2-Button Remote 
+		Control</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign="top">
+		<img border="1" src="DCP_3242.JPG" width="351" height="196"></td>
+		<td align="center" valign="top">
+		<img border="1" src="DCP_3245.JPG" width="361" height="196"></td>
+	</tr>
+	<tr>
+		<td align="center" valign="top"><font size="2">Wireless Bluetooth Remote 
+		Control<br>
+		with the <a href="../5-button_remote/index.html">5 Button Remote Control</a><br>
+&nbsp;</font></td>
+		<td align="center" valign="top"><font size="2">Wireless Bluetooth Remote 
+		Control<br>
+		with the <a href="../steering_remote/index.html">Steering Remote Control</a><br>
+&nbsp;</font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td width="187" valign="bottom">
+		&nbsp;</td>
+		<td>
+		<p align="center"><font face="Verdana" size="2"><br>
+		</font><a href="steps.html">
+		<img border="0" id="img2" src="../../images/buttons/instructions/buttonA.jpg" height="36" width="180" alt="Building Instructions" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'../../images/buttons/instructions/buttonB.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'../../images/buttons/instructions/buttonA.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'../../images/buttons/instructions/buttonC.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'../../images/buttons/instructions/buttonB.jpg')" fp-style="fp-btn: Glow Capsule 3; fp-font: Arial; fp-orig: 0" fp-title="Building Instructions"></a></td>
+		<td width="170">
+		&nbsp;</td>
+	</tr>
+</table>
+<p style="margin-bottom: 6px">&nbsp;</p>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana" size="1">Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2010 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

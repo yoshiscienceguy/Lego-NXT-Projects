@@ -1,0 +1,420 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Multi-Bot Programs</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../../index.html">
+<img border="0" src="../../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">Multi-Bot Programs</font></td>
+		<td width="174" align="right">
+		<table border="0">
+			<tr>
+				<td height="23" align="right">
+				<font size="2"><a href="programs.html">Programs Index</a></font></td>
+			</tr>
+			<tr>
+				<td height="23" align="right">
+				<font size="2"><a href="Multi-Bot-Programs">Programs Folder</a></font></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p><a href="../../index.html"><img border="0" src="../../images/ForNXT2.png" width="737" height="21"></a></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<h2><font size="4">(H) Using the Light Sensor</font></h2>
+		<p><font size="2">The programs in this section give examples of using 
+		the Multi-Bot's <a href="line/steps.html">Line Sensor</a> with the <i>
+		Color Sensor</i> replaced by the standard <i>Light Sensor</i>, which is 
+		included in the LEGO Education NXT set (9797) and the original version 
+		of the Retail NXT set (8527).&nbsp; </font></p>
+		<div align="center">
+			<table border="1" width="650" cellpadding="4">
+				<tr>
+					<td width="328"><font size="2"><b>Note:</b> The Light Sensor 
+					programs require that you replace the <i>Color Sensor</i> in 
+					the
+				<a href="line/steps.html">Line Sensor</a> building 
+					instructions with the <i>Light Sensor</i>. </font>
+					<p><font size="2">For programs using the Color Sensor, <br>
+					see <a href="color.html">Using the Color Sensor</a>.</font></td>
+					<td align="center">
+					<img border="0" src="../../images/ColorSensor.png" width="112" height="97"><br>
+					<font size="1"><br>
+					NXT 2.0 Color Sensor</font></td>
+					<td align="center" width="142">
+					<img border="0" src="../../images/LightSensor.jpg" width="126" height="99"><br>
+					<font size="1"><br>
+					Light Sensor</font></td>
+				</tr>
+			</table>
+			<p>&nbsp;</div>
+		<h3><font size="3"><a name="Line"></a>Line Sensing</font></h3>
+		<table border="1" width="100%" bordercolorlight="#808080" bordercolordark="#808080" style="border-collapse: collapse" cellpadding="3">
+			<tr>
+				<td align="left" valign="top" width="188"><b><font size="2">
+				Program</font></b></td>
+				<td align="left" valign="top" width="413"><b><font size="2">
+				Description and Observations</font></b></td>
+				<td align="right" valign="top"><b><font size="2">Attachments</font></b></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="188">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">H1-FindLine</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="413"><font size="2">This 
+				program shows the simplest way to use the Light Sensor, which is 
+				to the <b>Wait for Light Sensor</b> block.&nbsp; A <b>Move</b>
+				<i>Unlimited</i> block starts the robot driving forward, then 
+				the program continues to the <b>Wait for Light Sensor</b> block, 
+				which will wait until the sensor sees a &quot;dark&quot; color, then a <b>Move</b>
+				<i>Stop</i> block stops the robot.</font><p><font size="2">Try 
+				making a black line on a light-colored floor with black 
+				electrical tape, then start the robot facing perpendicular to 
+				the line at any distance away.&nbsp; It should stop right at the 
+				line.</font><p><font size="2">The Light Sensor outputs a number 
+				from 0 to 100 that indicates the brightness of the light seen by 
+				the sensor (0 is darkest, 100 is brightest).&nbsp; In order to 
+				test for a &quot;dark&quot; color, the <b>Wait for Light Sensor</b> block 
+				specifies a brightness value to compare against and a comparison 
+				direction (&lt; or &gt;) in the <i>Light</i> field.&nbsp; In this 
+				example, the test <i>&quot;&lt; 50&quot;</i> is used, but you may need to 
+				modify the 50 value for your conditions, or <i>calibrate</i> the 
+				light sensor to adjust its readings (see below).</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="variations/steps.html#treads">Treads</a></font><p>
+				<font size="2">
+				<a href="line/steps.html">Line Sensor</a></font><br>
+				<font size="2">(Substitute <br>
+				Light Sensor)</font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="188">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">H2-DispLight</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramAdvanced.gif" width="53" height="16" alt="Advanced"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="413"><font size="2">Since 
+				readings from the Light Sensor will vary depending on the 
+				surface and lighting conditions, you may want to measure the 
+				sensor readings under your test conditions to determine good 
+				brightness values to test against. </font>
+				<p><font size="2">The <b>H2-DispLight</b> 
+				program is a utility program that simply displays the current 
+				reading from the Light Sensor on the NXT screen and keeps 
+				updating it, so you can use this program to determine what 
+				brightness values to expect from your robot in different 
+				circumstances.&nbsp; </font></p>
+				<p><font size="2">The <b>H2-DispLight</b> 
+				program uses the <b>DisplayNum</b> My Block, which provides a 
+				convenient way to display a number on the NXT screen with a 
+				label in front, which is useful in a variety of different 
+				situations. </font></p>
+				<p><font size="2">As an alternative to measuring brightness 
+				values and modifying your programs for different conditions, the 
+				NXT software includes a tool to <i>calibrate</i> the Light 
+				Sensor, which is a way to adjust its readings so that the 
+				minimum expected brightness will be output as 0, and the maximum 
+				expected brightness will be output as 100.&nbsp; After 
+				calibrating, you can be sure that, for example, the brightness 
+				test of &quot;<i>&lt; 50</i>&quot; in the <b>H1-FindLine</b> program will be True over the line but False 
+				over the open floor, without needing to adjust the <i>50</i> 
+				value in the program for different lighting or floor conditions.</font></p>
+				<p><font size="2">To the use the NXT calibration tool, in the <i>
+				Tools</i> menu, pick <i>Calibrate Sensors</i>, then select <i>
+				Light Sensor</i> and the correct port on the NXT (3 here).&nbsp; 
+				The software will download a program named <b>Calibrate</b> to 
+				the NXT (and will also run it right away).&nbsp; Take the robot 
+				to the surface to be used and place it all the way on the floor 
+				as if it were driving (don't hold it off the floor in your 
+				hands, that will change the readings).&nbsp; Follow the prompts 
+				in the <b>Calibrate</b> program to sample the <i>Min</i> 
+				(darkest, typically with the sensor centered over the black 
+				line) and <i>Max</i> (lightest, typically over open floor) 
+				brightness values.</font></p>
+				<p><font size="2">After using the <b>Calibrate</b> program, you 
+				should be able to use the <b>H2-DispLight</b> program to verify that the sensor reads 0 (or 
+				close to 0) directly over the black line, and close to 100 over 
+				the open floor.&nbsp; You can then go on to test the <i>
+				calibrated brightness</i> of other colors or areas on the 
+				surface for more detailed tests in your programs.</font></p>
+				<p><font size="2">Note that the <b>H2-DispLight</b> program always displays <i>calibrated</i> 
+				brightness values, which are the same values that your programs 
+				will get from the Light Sensor.&nbsp; In contrast, the <i>View 
+				Reflected Light</i> feature in the NXT brick menu displays <i>
+				un-calibrated</i> brightness, which is not as useful.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="variations/steps.html#treads">Treads</a></font><p>
+				<font size="2">
+				<a href="line/steps.html">Line Sensor</a></font><br>
+				<font size="2">(Substitute <br>
+				Light Sensor)</font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="188">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">H3-SumoLight</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="413"><font size="2">This 
+				program extends the <b>H1-FindLine</b> 
+				program to make the robot back up and turn when it sees a black 
+				line, and then the whole sequence is repeated in a <b>Loop</b>.&nbsp; </font>
+				<p><font size="2">Now if you make a large black square (or any 
+				shape) with electrical tape on a light-colored floor and start 
+				Multi-Bot inside the box, it will try to drive around inside the 
+				box &quot;bouncing off&quot; the borders and staying inside.&nbsp; </font>
+				<p><font size="2">Staying inside an area marked with a colored 
+				border is the first step in playing a &quot;Robot Sumo&quot; game, where 
+				two robots try to push each other outside of the &quot;ring&quot;.&nbsp; 
+				You can play a simple practice Robot Sumo game with one 
+				Multi-Bot robot by placing various objects inside the ring with 
+				the robot, and see if Multi-Bot with an attachment such as the
+				<a href="pusher/steps.html">Sumo Pusher</a> can push them all 
+				outside of the ring while staying inside itself.&nbsp; Try 
+				changing the time of the back up and the angle of the turn in 
+				the <b>LeftPivotAngle</b> block to get different driving 
+				patterns and see which work best.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="variations/steps.html#treads">Treads</a></font><p>
+				<font size="2">
+				<a href="line/steps.html">Line Sensor</a></font><br>
+				<font size="2">(Substitute <br>
+				Light Sensor)</font><p><font size="2"><a href="pusher/steps.html">Sumo Pusher</a><br>
+				(Optional)</font><p>
+				&nbsp;</td>
+			</tr>
+			</table>
+		<h3>&nbsp;</h3>
+		<h3><font size="3"><a name="Follow"></a>Line Following with the Light 
+		Sensor</font></h3>
+		<table border="1" width="100%" bordercolorlight="#808080" bordercolordark="#808080" style="border-collapse: collapse" cellpadding="3">
+			<tr>
+				<td align="left" valign="top" width="198"><b><font size="2">
+				Program</font></b></td>
+				<td align="left" valign="top" width="405"><b><font size="2">
+				Description and Observations</font></b></td>
+				<td align="right" valign="top"><b><font size="2">Attachments</font></b></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="198">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">H4-LineFollow2</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramIntermediate.gif" width="53" height="16" alt="Intermediate"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="405"><font size="2">This 
+				program shows a simple way to make a 
+				line following program using the Light Sensor in <i>Light Sensor</i> 
+				mode.&nbsp; If you put a black line with electrical tape on a 
+				light-colored floor, then Multi-Bot will follow the line, even 
+				if the line has curves in it.&nbsp; Be sure to <i>calibrate</i> 
+				the light sensor first, as explained in the
+				<b>H2-DispLight</b> program above. </font>
+				<p><font size="2">Note that in this kind of line following, the 
+				robot is actually following the <i>right</i> <i>edge</i> of the 
+				line, not down the middle of the line as you might expect.&nbsp; 
+				The robot tries to keep the black line just to the left of the 
+				sensor and the open floor to the right of the sensor, by 
+				zigzagging back and forth on either side of the edge, 
+				alternately seeing the line and the floor.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="variations/steps.html#treads">Treads</a></font><p>
+				<font size="2">
+				<a href="line/steps.html">Line Sensor</a></font><br>
+				<font size="2">(Substitute <br>
+				Light Sensor)</font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="198">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">H5-LineFollow4</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+				<b>
+<img border="0" src="../../images/ProgramAdvanced.gif" width="53" height="16" alt="Advanced"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="405"><font size="2">This 
+				program extends the
+				<b>H4-LineFollow2</b> program to 
+				use more detailed motor control for the line following, which 
+				will allow it to drive faster and smoother but still be able to 
+				take tight turns when necessary.&nbsp; </font>
+				<p><font size="2">The <b>H4-LineFollow2</b> program is an example of a &quot;Two State&quot; line 
+				follower, because it chooses from two different motor settings 
+				(turn left or turn right) depending on the brightness seen from 
+				the sensor.&nbsp; A limitation of a two state line follower is 
+				that it can only do one kind of turn in each direction.&nbsp; If 
+				you make the turns gradual, it will drive smoothly but not be 
+				able to follow tight turns in the line.&nbsp; If you make the 
+				turns tight, it will be able to follow tight turns in the line 
+				but will drive slowly and zigzag a lot even when the line is 
+				straight.</font></p>
+				<p><font size="2">The &quot;Four State&quot; strategy in
+				<b>H5-LineFollow4</b> will choose 
+				between four different kinds of turns (sharp right, gradual 
+				right, gradual left, sharp left) depending on the sensor value.&nbsp; 
+				This will allow it to use the gradual turns when close to the 
+				line edge (when the line is mostly straight) but switch to the 
+				tight turns when the sensor falls away from the edge, as will 
+				happen for tight turns in the line.</font></p>
+				<p><font size="2">In order to divide the sensor values into four 
+				useful ranges, it is necessary to know the exact range of values 
+				expected, so it is important to <i>calibrate</i> the Light 
+				Sensor first.&nbsp; When the sensor values are known to be from 0 
+				to 100, the program can easily assign a tight turn to the last 
+				10% of the top and bottom of the range, but use gradual turns 
+				elsewhere.</font></p>
+				<p><font size="2">You can try adjusting the motor speeds used in 
+				the four different kinds of turns used in
+				<b>H5-LineFollow4</b> to change the 
+				response to suit different robots and different courses.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="variations/steps.html#treads">Treads</a></font><p>
+				<font size="2">
+				<a href="line/steps.html">Line Sensor</a></font><br>
+				<font size="2">(Substitute <br>
+				Light Sensor)</font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="198">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">H6-ProFollow</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+				<img border="0" src="../../images/ProgramExpert.gif" width="53" height="16" alt="Expert"></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="405"><font size="2">This 
+				program shows a mathematical approach to line following that is 
+				the logical extension of the technique used in
+				<b>H5-LineFollow4</b>, where 
+				different sensor readings result in different tightness of 
+				turns.&nbsp; This approach is called a &quot;Proportional&quot; line 
+				follower and produces results that are superior to a two 
+				state or four state line follower.</font><p><font size="2">
+				Thinking about how the &quot;Four State&quot; line follower in
+				<b>H5-LineFollow4</b> works, can 
+				you imagine an &quot;Eight State&quot; approach with four different 
+				degrees of turn tightness in each direction?&nbsp; How about 
+				even more states?&nbsp; Programming each of these states 
+				individually would be very tedious.&nbsp; Fortunately, we can 
+				come up with a mathematical relationship between the sensor 
+				reading and the motor power desired and simply calculate the 
+				motor power based on the sensor reading directly, without the 
+				need for any <b>Switch</b> blocks to separate the cases.</font></p>
+				<p><font size="2">In the <b>H6-ProFollow</b> program, <b>Math</b> blocks are used to 
+				calculate a motor response for each possible sensor reading, so 
+				that the amount of turning is <i>proportional</i> to the 
+				approximate distance that the sensor is away from the edge of 
+				the line that it is following.&nbsp; The farther away from 
+				center, the tighter the turn.&nbsp; The approximate distance 
+				from the center of the line is calculated as the difference 
+				between the expected sensor reading at the center (50) and the 
+				actual sensor reading.</font></p>
+				<p><font size="2">Understanding the math behind this approach 
+				may be harder than understanding the
+				<b>H5-LineFollow4</b> program, but 
+				note that the resulting program is actually simpler in some ways, 
+				and it should result in much better line following.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="variations/steps.html#treads">Treads</a></font><p>
+				<font size="2">
+				<a href="line/steps.html">Line Sensor</a></font><br>
+				<font size="2">(Substitute <br>
+				Light Sensor)</font></td>
+			</tr>
+			</table>
+		<h3>&nbsp;</h3>
+		<p><font size="2"><a href="programs.html">[Back to Programs Index]</a></font></p>
+		</td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana" size="1">Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2010 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

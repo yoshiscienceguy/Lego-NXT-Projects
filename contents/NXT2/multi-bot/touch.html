@@ -1,0 +1,705 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Multi-Bot Programs</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../../index.html">
+<img border="0" src="../../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">Multi-Bot Programs</font></td>
+		<td width="174" align="right">
+		<table border="0">
+			<tr>
+				<td height="23" align="right">
+				<font size="2"><a href="programs.html">Programs Index</a></font></td>
+			</tr>
+			<tr>
+				<td height="23" align="right">
+				<font size="2"><a href="Multi-Bot-Programs">Programs Folder</a></font></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p><a href="../../index.html"><img border="0" src="../../images/ForNXT2.png" width="737" height="21"></a></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<h2><font size="4">(F) Using the Touch Sensors</font></h2>
+		<p><font size="2">The programs in this section show different ways to 
+		use Multi-Bot's <a href="touch/steps.html">Touch Sensors</a> 
+		attachment.</font></p>
+		<h3><font size="3"><a name="Single"></a>Single Touch Sensor</font></h3>
+		<table border="1" width="100%" bordercolorlight="#808080" bordercolordark="#808080" style="border-collapse: collapse" cellpadding="3">
+			<tr>
+				<td align="left" valign="top" width="194"><b><font size="2">
+				Program</font></b></td>
+				<td align="left" valign="top" width="384"><b><font size="2">
+				Description and Observations</font></b></td>
+				<td align="right" valign="top"><b><font size="2">Attachments</font></b></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="194">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">F1-Shoot1</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="384"><font size="2">This 
+				program shows the simplest way to use a touch sensor, which is 
+				with the <b>Wait for Touch Sensor</b> block.&nbsp; After waiting 
+				for touch sensor 1 to be <i>Pressed</i>, motor A is turned one 
+				rotation, which will fire one ball from the
+				<a href="shooter/steps.html">Ball Shooter Arm</a> attachment.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Wired Remote) </font>
+				<p><font size="2"><a href="shooter/steps.html">Ball Shooter 
+				Arm</a></font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="194">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">F2-Shoot2</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="384"><font size="2">This 
+				program makes a simple improvement to the
+				<b>F1-Shoot1</b> program by putting it in a
+				<b>Loop</b>.&nbsp; Now you can keep shooting balls each time you 
+				press the touch sensor.&nbsp; </font>
+				<p><font size="2">Note that if you press and hold the touch 
+				sensor down, the ball shooter will keep firing over and over 
+				like a machine gun in &quot;automatic&quot; mode.&nbsp; This is because a
+				<b>Wait for Sensor</b> block will complete immediately if the 
+				sensor test is already true.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Wired Remote) </font>
+				<p><font size="2"><a href="shooter/steps.html">Ball Shooter 
+				Arm</a></font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="194">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">F3-Shoot3</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="384"><font size="2">This 
+				program changes the behavior of the <b>F2-Shoot2</b> program by changing the <b>Wait for Touch Sensor</b> 
+				block to test for <i>Bumped</i> instead of <i>Pressed</i>.&nbsp; 
+				Now the shooter will shoot only one ball each time you press and 
+				release the button, no matter how long you hold the button down.&nbsp; 
+				This is sort of like a &quot;semi-automatic&quot; gun, except that the 
+				balls fire on the button release instead of the button press.</font><p>
+				<font size="2"><i>Bumped</i> means &quot;pressed and then released&quot;, 
+				but more specifically, a button is <i>Bumped</i> if it has been 
+				pressed and released <i>since the last time you asked</i> 
+				whether or not it was bumped.&nbsp; The touch sensor maintains 
+				an internal press count, which is tested and then zeroed 
+				whenever you test for <i>Bumped</i>.</font></p>
+				<p><font size="2">An advantage of testing <i>Bumped</i> instead 
+				of <i>Pressed</i> is that the button does not need to be pressed 
+				right at the time of the test, it only needs to have been 
+				pressed and released at some time before the test.&nbsp; This is 
+				handy if the touch sensor test is inside of a loop which 
+				contains other lengthy operations, such as waiting for motors to 
+				complete.</font></p>
+				<p><font size="2">The <i>Bumped</i> behavior in this program 
+				means that if you press and release the button quickly twice in 
+				a row, the shooter will fire two balls, because although the 
+				second &quot;bump&quot; (press and release) probably occurred during the 
+				motor rotation, the bump is remembered and thus <i>Bumped</i> 
+				will be true right away when tested the second time after the 
+				motor finishes.&nbsp; However, if you are fast enough to press 
+				and release the button three times during the first loop 
+				iteration, only two balls will be fired.&nbsp; If you understand 
+				why, then I think you finally understand how <i>Bumped</i> 
+				works!</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Wired Remote) </font>
+				<p><font size="2"><a href="shooter/steps.html">Ball Shooter 
+				Arm</a></font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="194">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">F4-Shoot4</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="384"><font size="2">This 
+				program improves on the <b>F3-Shoot3</b> 
+				program by making the balls fire on the button press instead of 
+				the release, but still fire only one ball for each press, no 
+				matter how long the button is held down.&nbsp; This makes it 
+				respond more quickly and more like a real &quot;semi-automatic&quot; gun.&nbsp;
+				</font>
+				<p><font size="2">This behavior is done by using two separate <b>
+				Wait for Touch Sensor</b> blocks, one that waits for <i>Pressed</i>, 
+				and one that waits for <i>Released</i> after the ball is fired.&nbsp; 
+				Note that if you release the button during the firing of the 
+				ball, then <i>Released</i> will already be true when the second
+				<b>Wait for Touch Sensor </b>block tests it, so it won't wait 
+				for anything and will continue right away.</font></p>
+				<p><font size="2">Now try to predict what will happen before 
+				trying this:&nbsp; What will happen if you press and release the 
+				button quickly twice in a row?</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Wired Remote) </font>
+				<p><font size="2"><a href="shooter/steps.html">Ball Shooter 
+				Arm</a></font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="194">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">F5-PathBug</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramIntermediate.gif" width="53" height="16" alt="Intermediate"></b></td>
+					</tr>
+					<tr>
+						<td><b><font size="2">F6-PathDebug</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramIntermediate.gif" width="53" height="16" alt="Intermediate"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="384"><font size="2">These 
+				two program show a way that you can use a touch sensor as a tool 
+				to help you &quot;debug&quot; a program (find a problem or mistake in it).&nbsp; 
+				Because you can't see a program execute inside the NXT, you 
+				can't always tell which block is executing when.&nbsp; This can 
+				lead to confusion that makes it hard to find a problem, even if 
+				the problem is just a simple mistake.</font><p><font size="2">By 
+				inserting temporary <b>Wait for Touch Sensor</b> <i>Bumped</i> 
+				blocks into a program, you can make the robot step through the 
+				program one step (or one section) at a time and wait for you to 
+				bump (press and release) the touch sensor button before going on 
+				to the next step.&nbsp; This can make it easier to determine 
+				which part of the program has the problem.</font></p>
+				<p><font size="2">The <b>F5-PathBug</b> 
+				program is supposed to make Multi-Bot drive in an &quot;N&quot;-shaped 
+				path.&nbsp; However, it has a simple bug in it, so the resulting 
+				path will not be shaped like an &quot;N&quot;.&nbsp; The <b>F6-PathDebug</b> program is a 
+				modified version of the program that inserts a <b>Wait for Touch 
+				Sensor</b> <i>Bumped</i> between each block.&nbsp; By holding 
+				the wired touch sensor remote in your hand (or just a single 
+				touch sensor on a wire) while the robot is running the program, 
+				can you step through the program and find where the problem is?&nbsp; 
+				Try it now before reading on if you want to try to find the 
+				problem yourself.</font></p>
+				<p><font size="2">Once you find the problem and understand how 
+				the debug stepping works, can you explain why it is important 
+				that the <b>Wait for Touch Sensor</b> blocks test for <i>Bumped</i> 
+				instead of <i>Pressed</i>?</font></p>
+				<p><font size="2"><i>The Bug:</i>&nbsp; In the configuration 
+				panel of the <b>LeftPivotAngle</b> My Block, the programmer 
+				accidentally typed the desired angle of 135 in the <i>Power</i> 
+				parameter instead of in the <i>Angle</i> parameter and left the
+				<i>Angle</i> parameter zero.&nbsp; This will cause this turn to 
+				have no effect.&nbsp; Because the steps before and after the 
+				turn are both <b>Move</b> blocks going forward, it may make it 
+				appear that the problem is that the <b>Move</b> before the left 
+				turn goes for too long.&nbsp; But in fact, there is an invisible 
+				turn of zero degrees in the middle of the movement.&nbsp; By 
+				stepping through with the touch sensor, you can see that it is 
+				actually two separate <b>Move</b> actions but the step where the
+				<b>LeftPivotAngle</b> does nothing. </font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Wired Remote) </font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="194">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">F7-SeqControl1</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="384"><font size="2">This 
+				program shows how you can use a touch sensor to make a simple 
+				form of one-button remote control for your robot.&nbsp; In this 
+				program the robot does a sequence of events:</font><ol>
+					<li><font size="2">Pivot turn left&nbsp; </font></li>
+					<li><font size="2">Go straight</font></li>
+					<li><font size="2">Pivot turn right</font></li>
+					<li><font size="2">Stop and shoot a ball</font></li>
+				</ol>
+				<p><font size="2">In-between each step of the sequence is a <b>
+				Wait for Touch Sensor</b> <i>Bumped</i>, and the movement blocks 
+				use <i>Unlimited</i> for the <i>Duration</i>.&nbsp; This will 
+				cause each movement to continue until the touch sensor is 
+				bumped.&nbsp; So, by holding the wired touch sensor remote in 
+				your hand, you can control the driving with touch sensor 1 
+				(touch sensor 2 is not used).</font></p>
+				<p><font size="2">With this technique, you can only control the 
+				duration of the movements, but not the sequence.&nbsp; This can 
+				make it tricky to drive, but give it a try.&nbsp; Put a target 
+				on the floor and try to drive to it and shoot it.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Wired Remote) </font>
+				<p><font size="2"><a href="shooter/steps.html">Ball Shooter 
+				Arm</a></font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="194">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">F8-SeqControl2</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="384"><font size="2">This 
+				program shows an alternative to the <b>F7-SeqControl1</b> program that uses a different strategy for 
+				one-button remote control that may feel more natural.&nbsp; In 
+				this program, each step in the sequence is started by a press of 
+				the touch sensor and continues until the touch sensor is 
+				released, and the robot is stopped between each step. </font>
+				<p><font size="2">This form of remote control is usually more 
+				natural and easier to control (although after practicing the
+				<b><br>
+				F7-SeqControl1</b> program, you may 
+				need to spend some time to unlearn that method).&nbsp; Give it a 
+				try and see if it is easier (or at least less nerve-wracking) to 
+				drive.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Wired Remote) </font>
+				<p><font size="2"><a href="shooter/steps.html">Ball Shooter 
+				Arm</a></font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="194">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">F9-CountPress</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramAdvanced.gif" width="53" height="16" alt="Advanced"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="384"><font size="2">This 
+				program uses a <b>Variable</b> and a <b>Loop</b> along with 
+				touch sensor tests to count how many times you can press a touch 
+				sensor in one second.&nbsp; Instructions and your results are 
+				displayed on the screen.&nbsp; Give it a try.&nbsp; How fast can 
+				you press?</font><p><font size="2">A careful combination of 
+				testing for <i>Pressed</i> and <i>Released</i> is used for this, 
+				since neither <i>Pressed</i> by itself nor <i>Bumped</i> will 
+				work easily.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Wired Remote) </font></td>
+			</tr>
+		</table>
+		<h3>&nbsp;</h3>
+		<h3><font size="3"><a name="Remote"></a>Double Touch Sensor Remote 
+		Control</font></h3>
+		<table border="1" width="100%" bordercolorlight="#808080" bordercolordark="#808080" style="border-collapse: collapse" cellpadding="3">
+			<tr>
+				<td align="left" valign="top" width="193"><b><font size="2">
+				Program</font></b></td>
+				<td align="left" valign="top" width="383"><b><font size="2">
+				Description and Observations</font></b></td>
+				<td align="right" valign="top"><b><font size="2">Attachments</font></b></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="193">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">F10-Remote1</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramIntermediate.gif" width="53" height="16" alt="Intermediate"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="383"><font size="2">This 
+				program shows a simple way to make a two-button remote control 
+				to control driving with Multi-Bot.&nbsp; The left touch sensor 
+				controls the direction of the left motor (forward or backwards), 
+				and the right touch sensor controls the direction of the right 
+				motor.</font><p><font size="2">Because two sensors are being 
+				tested, <b>Switches</b> and <b>Motor</b> <i>Unlimited</i> blocks 
+				are used, so that the <b>Loop</b> keeps repeating fast enough 
+				(more than 100 times per second) to see changes in either sensor 
+				when they occur.</font></p>
+				<p><font size="2">This kind of motor control results in the 
+				following actions:</font></p>
+				<ul>
+					<li><font size="2">Press and hold the left button to turn 
+					left</font></li>
+					<li><font size="2">Press and hold the right button to turn 
+					right</font></li>
+					<li><font size="2">Press and hold both buttons to back up</font></li>
+					<li><font size="2">Release both buttons to go forward</font></li>
+				</ul>
+				<p><font size="2">Note that there are four different actions, 
+				corresponding to the four different states that the two buttons 
+				can be in.&nbsp; A noteable problem with this control is that 
+				there is no way to stop. </font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Wired Remote) </font>
+				</td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="193">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">F11-Remote2</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramIntermediate.gif" width="53" height="16" alt="Intermediate"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="383"><font size="2">This 
+				program shows another way to make a two-button remote control 
+				for Multi-Bot.&nbsp; The two touch sensors are tested in 
+				sequence by <i>nesting</i> <b>Touch Sensor Switches</b>, which 
+				separates the program into four different sequences 
+				corresponding to the four different button states (left, right, 
+				both, neither).&nbsp; </font>
+				<p><font size="2">With this method, different actions for the 
+				four different button states can be assigned however you want.&nbsp; 
+				In this program, the actions assigned are:</font></p>
+				<ul>
+					<li><font size="2">Press and hold the left button to turn 
+					left</font></li>
+					<li><font size="2">Press and hold the right button to turn 
+					right</font></li>
+					<li><font size="2">Press and hold both buttons to go forward</font></li>
+					<li><font size="2">Release both buttons to stop</font></li>
+				</ul>
+				<p><font size="2">Compared to the <b>F10-Remote1</b> program, this approach adds a way to stop, but 
+				loses the ability to back up. </font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Wired Remote) </font>
+				</td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="193">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">F12-PivotShoot</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramIntermediate.gif" width="53" height="16" alt="Intermediate"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="383"><font size="2">This 
+				program is similar to the <b>F11-Remote2</b> 
+				program but uses the <a href="shooter/steps.html">Ball Shooter 
+				Arm</a> and assigns the four actions as follows:</font><ul>
+					<li><font size="2">Press and hold the left button to turn 
+					left</font></li>
+					<li><font size="2">Press and hold the right button to turn 
+					right</font></li>
+					<li><font size="2">Press/hold both buttons to shoot a ball</font></li>
+					<li><font size="2">Release both buttons to stop</font></li>
+				</ul>
+				<p><font size="2">So this program adds the ability to shoot, but 
+				can no longer go forward or backwards (only turn).&nbsp; This 
+				would be OK to control a gun on a turret, but is not great for a 
+				driving robot.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Wired Remote)</font><p><font size="2"><a href="shooter/steps.html">Ball Shooter 
+				Arm</a> </font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="193">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">F13-DriveShoot</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+				<img border="0" src="../../images/ProgramExpert.gif" width="53" height="16" alt="Expert"></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="383"><font size="2">The
+				<b>F10-Remote1</b>,
+				<b>F11-Remote2</b>, and
+				<b>F12-PivotShoot</b> programs all 
+				assign exactly four different actions that correspond to the 
+				four states that two touch sensors can be in (left pushed, right 
+				pushed, both pushed, neither pushed).&nbsp; Each program seemed 
+				like it was missing important features, because ultimately more 
+				than four actions is desired.</font><p><font size="2">The
+				<b>F13-DriveShoot</b> program shows a 
+				complex method to surpass the four-state limit of two touch 
+				sensors by using a <i>Timer</i> to distinguish the difference 
+				between a button being briefly pressed and released and the 
+				button being pushed and held down.&nbsp; This allows different 
+				actions to be assigned to these two cases.&nbsp; This same 
+				technique is often used by desktop computers to distinguish a 
+				mouse click, a drag, and a double-click, for example.</font></p>
+				<p><font size="2">This program uses the two touch sensors to 
+				control the following actions:</font></p>
+				<ul>
+					<li><font size="2">Press and hold the left button to turn 
+					left</font></li>
+					<li><font size="2">Press and hold the right button to turn 
+					right</font></li>
+					<li><font size="2">Press and hold both button to go forward</font></li>
+					<li><font size="2">Tap the left button to back up until the 
+					left button is tapped again</font></li>
+					<li><font size="2">Tap the right button to shoot one ball</font></li>
+					<li><font size="2">Release both buttons to stop</font></li>
+				</ul>
+				<p><font size="2">Note that there are four different actions, 
+				corresponding to the four different states that the two buttons 
+				can be in.&nbsp; A problem with this control is that there is no 
+				way to stop. </font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Wired Remote) </font>
+				<p><font size="2"><a href="shooter/steps.html">Ball Shooter 
+				Arm</a></font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="193">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">F14-Golfer</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+				<img border="0" src="../../images/ProgramExpert.gif" width="53" height="16" alt="Expert"></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="383"><font size="2">This 
+				program is a variation on the <b>F13-DriveShoot</b> program that allows you to drive Multi-Bot 
+				with the Touch Sensors remote control as above, but instead of 
+				shooting a ball when you tap the right button, it will swing the
+				<a href="golf/steps.html">Golfing Arm</a>.</font><p>
+				<font size="2">You can use this program to make a remote 
+				controlled golfing robot.&nbsp; Start with the
+				<a href="golf/steps.html">Golfing Arm</a> straight down and 
+				place a ball somewhere on the carpet.&nbsp; See if you can drive 
+				up to the ball and hit it in the direction you want.&nbsp; Make 
+				a course and see how many shots it takes to get the ball into 
+				the hole or other target that you make.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Wired Remote) </font>
+				<p><font size="2"><a href="golf/steps.html">Golfing Arm</a></font></td>
+			</tr>
+			</table>
+		<h3>&nbsp;</h3>
+		<h3><font size="3"><a name="Bumper"></a>Double Touch Sensor Bumper</font></h3>
+		<table border="1" width="100%" bordercolorlight="#808080" bordercolordark="#808080" style="border-collapse: collapse" cellpadding="3">
+			<tr>
+				<td align="left" valign="top" width="192"><b><font size="2">
+				Program</font></b></td>
+				<td align="left" valign="top" width="396"><b><font size="2">
+				Description and Observations</font></b></td>
+				<td align="right" valign="top"><b><font size="2">Attachments</font></b></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="192">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">F15-Bumper</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramIntermediate.gif" width="53" height="16" alt="Intermediate"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="396"><font size="2">This 
+				program uses the
+				<a href="touch/steps.html">Touch Sensors</a> as a bumper on 
+				the front of Multi-Bot to allow the robot to detect a collision 
+				with something on either side of the bumper.&nbsp; The program 
+				will cause Multi-Bot to wander around the room and try to turn 
+				away from things that it bumps into.</font><p><font size="2">Use 
+				Multi-Bot with <a href="variations/steps.html#treads">Treads</a> 
+				for best traction on carpet or uneven surfaces.&nbsp; Wheels 
+				will also work on smooth floors.</font></p>
+				<p><font size="2">Because two sensors are being tested, <b>
+				Switches</b> are used, so that the <b>Loop</b> keeps repeating 
+				fast enough (more than 100 times per second) to see changes in 
+				either sensor when they occur.&nbsp; The <b>LeftPivotAngle</b> 
+				and <b>RightPivotAngle</b> My Blocks are used to achieve strong 
+				pivot turns for turning on carpet (where turning with the <b>
+				Move</b> block is not as good). </font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Bumper) </font>
+				</td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="192">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">F16-Bumper2</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramAdvanced.gif" width="53" height="16" alt="Advanced"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="396"><font size="2">This 
+				program is a re-write of the <b>F15-Bumper</b> program that is reorganized to reduce some 
+				repeated blocks.&nbsp; Looking at the <b>F15-Bumper</b> program, you will see that the <b>Move</b> block 
+				to go forward is repeated three times, and the <b>Move</b> block 
+				to back up is repeated twice.&nbsp; The
+				<b>F16-Bumper2</b> program uses a more 
+				complex Switch structure to eliminate the duplicated blocks.</font><p><font size="2">
+				The <b>F16-Bumper2</b> program also adds 
+				a single <b>Sound</b> block that will apply to both collision 
+				directions, and note that if added to <b>F15-Bumper</b>, the <b>Sound</b> block would need to be repeated 
+				twice.&nbsp; Although <b>F16-Bumper2</b> 
+				is more complex than <b>F15-Bumper</b>, 
+				as programs get more complex it often becomes more desirable to 
+				eliminate duplicated parts.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Bumper) </font>
+				</td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="192">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">F17-WallTouch</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramAdvanced.gif" width="53" height="16" alt="Advanced"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="396"><font size="2">This 
+				program uses the double touch sensor bumper to allow Multi-Bot 
+				to align itself perpendicular to a wall and then back up 
+				straight away from the wall.&nbsp; You can start Multi-Bot 
+				pointing at various different angles to the wall, and it should 
+				always straighten itself out perpendicular to the wall.</font><p>
+				<font size="2">The robot will drive straight towards the wall 
+				until one side touches the wall, then it will pivot until the 
+				other side also touches, then it will back up when both sides 
+				are touching.</font></p>
+				<p><font size="2">Compared to the &quot;stalling&quot; techniques for 
+				aligning with a wall that are shown in the
+				<a href="straight.html#Advanced">Driving Straight - Advanced</a> 
+				section (<b>B7-SquareWall</b> and <b>B8-StallWall</b>), using two touch sensors may be 
+				faster, less forceful, and better able to handle a variety of 
+				different angles.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Bumper) </font>
+				</td>
+			</tr>
+			</table>
+		<p>&nbsp;</p>
+		<p><font size="2"><a href="programs.html">[Back to Programs Index]</a></font></p>
+		</td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana" size="1">Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2010 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

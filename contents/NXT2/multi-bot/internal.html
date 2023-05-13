@@ -1,0 +1,294 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Multi-Bot Programs</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../../index.html">
+<img border="0" src="../../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">Multi-Bot Programs</font></td>
+		<td width="174" align="right">
+		<table border="0">
+			<tr>
+				<td height="23" align="right">
+				<font size="2"><a href="programs.html">Programs Index</a></font></td>
+			</tr>
+			<tr>
+				<td height="23" align="right">
+				<font size="2"><a href="Multi-Bot-Programs">Programs Folder</a></font></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p><a href="../../index.html"><img border="0" src="../../images/ForNXT2.png" width="737" height="21"></a></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<h2><font size="4">(J) Using the Internal and Motor Sensors</font></h2>
+		<p><font size="2">In addition to the external sensors that attach to the 
+		sensor ports on the NXT (ports 1-4), the NXT brick itself also has some 
+		built-in sensors, and the NXT motors also have built-in <i>Rotation 
+		Sensors</i> that communicate to the NXT through ports A-C.</font></p>
+		<h3><font size="3"><a name="Buttons"></a>Using the NXT Buttons</font></h3>
+		<p><font size="2">The three buttons on the face of the NXT Brick (Left 
+		Arrow, Right Arrow, Orange Enter button) are accessible as sensors from 
+		a program and act almost exactly like Touch Sensors.&nbsp; See the <a href="touch.html#Single">Single Touch Sensor</a> 
+		section for ideas on basic use of these sensors.&nbsp; One important 
+		difference between the NXT Buttons and Touch Sensors, however, is that 
+		the NXT cannot detect multiple NXT buttons being pressed at the same 
+		time, so strategies involving simultaneous presses, such as those used 
+		in the double-touch sensor remote controls, will not work with NXT 
+		buttons.&nbsp; Also note that the fourth NXT button (dark gray 
+		Back/Abort button) is not accessible from NXT-G programs, as pressing 
+		this button will always abort the program.&nbsp; </font></p>
+		<table border="1" width="100%" bordercolorlight="#808080" bordercolordark="#808080" style="border-collapse: collapse" cellpadding="3">
+			<tr>
+				<td align="left" valign="top" width="197"><b><font size="2">
+				Program</font></b></td>
+				<td align="left" valign="top" width="397"><b><font size="2">
+				Description and Observations</font></b></td>
+				<td align="right" valign="top"><b><font size="2">Attachments</font></b></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="197">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">J1-AskNumbers</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+				<img border="0" src="../../images/ProgramExpert.gif" width="53" height="16" alt="Expert"></td>
+					</tr>
+					</table>
+				</td>
+				<td align="left" valign="top" width="397"><font size="2">This 
+				program uses the <b>AskNumber</b> My Block, which shows an 
+				advanced use of the NXT Buttons to allow the user to enter a 
+				number into a running program using the NXT Buttons and the 
+				display.</font><p><font size="2">The 
+				<b>J1-AskNumbers</b> program uses the <b>AskNumber</b> My Block 
+				twice to allow the user to enter a number of degrees and a power 
+				level, then uses the results to configure a <b>Move</b> block to 
+				make the robot drive the specified distance at the specified 
+				power level. </font></p>
+				<p><font size="2">The <b>AskNumber</b> My Block is complex 
+				internally, but using it in a program is simple.&nbsp; You 
+				simply specify the <i>name</i> for the value to be displayed on 
+				the screen, and the <i>minimum</i>, <i>maximum</i>, increment <i>
+				step</i>, and default (<i>start</i>) values in the block's 
+				configuration panel, and then the block handles all of the user 
+				interaction and display and outputs the final number chosen from 
+				the <i>Number Out</i> data port.</font></td>
+				<td align="right" valign="top"><font size="2">(none required)</font></td>
+			</tr>
+			</table>
+		<p>&nbsp;</p>
+		<h3><font size="3"><a name="Timer"></a>Using a Timer</font></h3>
+		<p><font size="2">The NXT-G programming system provides a few simple ways 
+		to do timing that are built into other blocks, such as the <b>Wait</b> 
+		block with <i>Control</i> set to <i>Time</i>, the <b>Move</b> block with
+		<i>Duration</i> set to <i>Seconds</i>, and the duration of <b>Sound</b>
+		<i>Tone</i>.&nbsp;&nbsp; However, these controls do not allow you to 
+		keep track of time while other blocks in the program are running.&nbsp; 
+		To measure time without pausing the program, you can use the <b>Timer</b> 
+		block.</font></p><table border="1" width="100%" bordercolorlight="#808080" bordercolordark="#808080" style="border-collapse: collapse" cellpadding="3">
+			<tr>
+				<td align="left" valign="top" width="204"><b><font size="2">
+				Program</font></b></td>
+				<td align="left" valign="top" width="371"><b><font size="2">
+				Description and Observations</font></b></td>
+				<td align="right" valign="top"><b><font size="2">Attachments</font></b></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="204">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">J2-ReactionTest</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramAdvanced.gif" width="53" height="16" alt="Advanced"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="371"><font size="2">This program uses 
+				the <b>Timer</b> block to play a little reaction test game on the NXT.&nbsp; 
+				The program will display &quot;Ready...&quot; then wait a random of time 
+				(using the <b>Random</b> block), then display &quot;GO!&quot; and time how 
+				long it takes for the user to press touch sensor 1.&nbsp; You 
+				can use the 
+				<a href="touch/steps.html">Touch Sensors</a> remote or just a loose touch sensor on a wire to the 
+				NXT.&nbsp; </font>
+				<p><font size="2">Since the program does not know how long to wait 
+				(and is in fact waiting for a sensor press), it must time the 
+				action with the <b>Timer</b> block.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Wired Remote) </font></td>
+			</tr>
+			</table>
+		<p>&nbsp;</p>
+		<h3><font size="3"><a name="Rotation"></a>Using the Rotation Sensors</font></h3>
+		<p><font size="2">The NXT motors each have a built-in <i>Rotation Sensor
+		</i>that can measure the rotation or angle change in a motor accurate to 
+		1 degree and keep track of the total degrees turned since the program 
+		started or the last time the sensor was <i>Reset</i>.&nbsp;&nbsp; In 
+		addition to the simple uses of the Rotation Sensors built into the <b>
+		Motor</b> and <b>Move</b> blocks (see the <a href="straight.html">Driving Straight</a> 
+		and <a href="turn.html">Turning</a> sections), you can also measure 
+		rotations independently in a program using the <b>Rotation Sensor</b> 
+		block.</font></p>
+		<table border="1" width="100%" bordercolorlight="#808080" bordercolordark="#808080" style="border-collapse: collapse" cellpadding="3">
+			<tr>
+				<td align="left" valign="top" width="200"><b><font size="2">
+				Program</font></b></td>
+				<td align="left" valign="top" width="376"><b><font size="2">
+				Description and Observations</font></b></td>
+				<td align="right" valign="top"><b><font size="2">Attachments</font></b></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="200">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">J3-DispMotors</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+				<b>
+<img border="0" src="../../images/ProgramIntermediate.gif" width="53" height="16" alt="Intermediate"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="376"><font size="2">This 
+				program uses the <b>DisplayMotors</b> My Block to simply display 
+				the rotation angle of all three motors while the motors are idle 
+				(not being powered).&nbsp; Run the program, then turn Multi-Bots 
+				wheels/treads and/or arm by hand and watch the degrees displayed 
+				on the screen.&nbsp; Press the Enter button on the NXT at any 
+				time to reset (zero) all three rotation sensors.</font><p>
+				<font size="2">Motors do not have to be powered to measure their 
+				rotation.&nbsp; You can turn the motors by hand or any other 
+				action, and the rotation sensors will measure the amount of 
+				their rotation.&nbsp; This can be useful or making things like a 
+				hand-turned dial, using an unpowered motor.&nbsp; </font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="golf/steps.html">Golfing Arm</a><br>
+				(Optional)</font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="200">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">J4-PathRemote</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+				<img border="0" src="../../images/ProgramExpert.gif" width="53" height="16" alt="Expert"></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="376"><font size="2">This 
+				program uses the <b>DisplayMotors</b> My Block and the
+				<a href="touch/steps.html">Touch Sensors</a> remote control 
+				to make a remote-controlled path measuring robot.&nbsp; You 
+				control the robot with the remote control, and the program will 
+				display the number of degrees travelled by each motor.&nbsp; You 
+				can zero the sensors at any time and also adjust the motors by 
+				hand at the end of a motion.&nbsp; This can be used to measure 
+				the <i>Duration</i> (in <i>Degrees</i>) needed by a sequence of
+				<b>Move</b> and <b>Motor</b> blocks to get the robot to travel 
+				along a desired path by itself. </font>
+				<p><font size="2">Control the robot as follows:</font></p>
+				<ul>
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">Enter the Power 
+					(speed) to use at the beginning of the program using the NXT 
+					buttons.&nbsp; Slower speeds will generally be easier to 
+					control.</font></li>
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">Press and hold 
+					both touch sensors to drive straight forward.</font></li>
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">Press and hold 
+					the left touch sensor (1) to do a <br>
+					one-wheeled left turn.</font></li>
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">Press and hold 
+					the right touch sensor (2) to do a one-wheeled right turn.</font></li>
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">Release both 
+					buttons to stop.</font></li>
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">After stopping 
+					a motion, you can adjust the desired robot position by 
+					turning the wheels by hand if desired.</font></li>
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">Press the Enter 
+					button on the NXT at any time to reset (zero) all of the 
+					sensors.&nbsp; Typically you will want to reset after each 
+					type of motion, to measure for a sequence of <b>Move</b> and
+					<b>Motor</b> blocks.</font></li>
+				</ul>
+				</td>
+				<td align="right" valign="top"><font size="2">
+				<a href="touch/steps.html">Touch Sensors</a><br>
+				(as Wired Remote) </font></td>
+			</tr>
+		</table>
+		<p>&nbsp;</p>
+		<p><font size="2"><a href="programs.html">[Back to Programs Index]</a></font></td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana" size="1">Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2010 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,507 @@
+// GuitarShared -- Shared data and routines for both recording and playing
+// NXT Guitar Challenge Game
+// (c)Copyright 2009 by Dave Parker.  All Rights Reserved.
+// www.nxtprograms.com
+
+// Misc Constants
+#define TICK_INTERVAL     25       // Our timing tick interval in ms
+#define TICK_MAX          32000    // max song length in ticks
+#define TICKS_NOTE_MAX    255      // max length of a note (fits in byte)
+#define TICKS_SCREEN_MAX  59       // tick count visible on screen
+#define MAX_NOTES         1000     // max note count in a song
+#define Y_START           5        // bottom of strings display
+#define DX_SCREEN         100      // screen in 100 pixels wide
+#define DY_SCREEN         64       // screen is 64 pixels tall
+#define DX_CHAR           6        // width of a character in pixels
+#define X_MAX             (DX_SCREEN - 1)     // last x value
+#define Y_MAX             (DY_SCREEN - 1)     // last y value
+
+// Static constants
+string STR_EMPTY = "";             // empty string
+
+// Screen metric calculations
+#define X_FRET(fret)      ((fret) * 16)            // x position of a fret
+#define DX_STR(str)       (StrLen(str) * DX_CHAR)  // pixel width of a string
+
+// Constants for the song data file
+#define STR_FILENAME_BASE   "Song "    // base file name
+#define STR_FILENAME_EXT    "gcs"     // file name extension
+#define MAX_FILES           99        // max index to append to base name
+#define VER_FILE            1         // data file version
+
+// Simple data types for use in data files
+typedef byte Byte;
+typedef int Int;
+
+// Data for the song data file header (written in this order)
+#define CB_SIG             4    // length of file signature
+#define CB_SZ_FILE         16   // string length including terminator
+#define CB_RESERVED        20   // length of reserved data area
+#define CB_FILE_HEADER     (CB_SIG + 2 + (CB_SZ_FILE*3) + 2 + CB_RESERVED + 2)
+char szFileSignature[CB_SIG];   // file signature (same as file ext)
+Byte bFileVersion;              // file version number
+Byte bFileReserved;             // reserved (0)
+char szSongTitle[CB_SZ_FILE];   // song title
+char szSongArtist[CB_SZ_FILE];  // song artist
+char szSongAlbum[CB_SZ_FILE];   // song album
+Byte bSongHighScore;            // high score so far on this song (0-100)
+Byte bSecStartDelay;            // approx delay in sec before first note
+Byte rgbFileRes[CB_RESERVED];   // reserved (0)
+Int cNotesSong;                 // total number of notes in the song
+
+// Data for the notes in the song
+struct Note
+{
+   Int tickStart;      // start time of note
+   Byte ticksLength;   // length of note
+   Byte fret;          // note fret (1-5, or 0 at end of song)
+};
+#define SIZEOF_NOTE      4   // struct Note is 4 bytes long
+Note rgNote[MAX_NOTES];      // the notes in the song [cNotesSong]
+
+// Data for the processing state within a song
+int iNoteFirst;    // index of first note in rgNote still being processed
+int iNoteLast;     // index of last note in rgNote still being processed
+
+// Misc globlal state
+unsigned long tickSysStart;  // system tick count at start of song
+int tickCur;                 // the current timing tick
+int cmLast;                  // last ultrasonic reading in cm
+int fretCur;                 // current fret position for the slider 1-5
+DrawLineType dlArgs;         // Param data for fast line drawing
+byte hFile;                  // data file handle
+bool fPressed;               // true if a strum button is currently pressed
+
+// Sound Tones
+#define NormalBeep()      PlayTone(TONE_E5, 50)
+#define ErrorBeep()       PlayTone(TONE_E4, 200)
+#define MissedNoteBeep()  PlayTone(TONE_A4, 50)
+#define ExtraNoteBeep()   PlayTone(TONE_A5, 50)
+
+
+// Initialize the ultrasonic sensor readings for frets
+inline void InitFretReadings()
+{
+    cmLast = SensorUS(S4);
+}
+
+// Get a new reading from the US sensor and return the fret (1-5)
+inline int FretReading()
+{
+    // Get a new reading from the US sensor
+    int cm = SensorUS(S4);
+
+    // If the reading appears bogus, ignore it and use the previous reading
+    if ((cm < 2) | (cm > 25))  // The || operator has a bug
+       cm = cmLast;
+    else
+       cmLast = cm;
+
+    // Calculate and return the fret
+    int fret = 5 - ((cm - 6) / 3);
+    if (fret < 1)
+       fret = 1;
+    else if (fret > 5)
+       fret = 5;
+    return fret;
+}
+
+// Return the current timing tick value or 0 if the song has not started.
+// fStart is true if the song can be started if not started yet.
+inline int TickCurrent(bool fStart)
+{
+    // If the song has started, return ticks since the start
+    if (tickSysStart != 0)
+       return (CurrentTick() - tickSysStart) / TICK_INTERVAL;
+
+    // Song has not started yet, start if allowed
+    if (fStart)
+       tickSysStart = CurrentTick();   // start timing
+    return 0;
+}
+
+// Wait for the end of a screen refresh interval.
+// Drawing immediately after this will minimize flicker.
+inline void WaitForDisplayRefresh()
+{
+    while (!(DisplayFlags() & DISPLAY_BUSY)) ;
+    while (DisplayFlags() & DISPLAY_BUSY) ;
+}
+
+// Draw a note at the given fret, starting tick, and tick length
+inline void DrawNote(int fret, int ticksAway, int ticksLength)
+{
+    // Clip to visible part of fret board
+    if (ticksAway > TICKS_SCREEN_MAX)
+       return;   // completely off top of fret board
+    int ticksEnd = ticksAway + ticksLength;
+    if (ticksEnd < 0)
+       return;   // completely off bottom of fret board
+    if (ticksAway < 0)
+       ticksAway = 0;   // clip to bottom of fret board
+    if (ticksEnd > TICKS_SCREEN_MAX)
+       ticksEnd = TICKS_SCREEN_MAX;   // avoid y-coord overflow
+
+    // Draw the first vertical line on the left
+    dlArgs.StartLoc.X = X_FRET(fret) - 2;
+    dlArgs.EndLoc.X = dlArgs.StartLoc.X;
+    dlArgs.StartLoc.Y = Y_START + ticksAway;
+    dlArgs.EndLoc.Y = Y_START + ticksEnd;
+    dlArgs.Options = 0;
+    SysDrawLine(dlArgs);
+
+    // Draw the next three adjacent vertical lines
+    dlArgs.StartLoc.X++;
+    dlArgs.EndLoc.X = dlArgs.StartLoc.X;
+    SysDrawLine(dlArgs);
+    dlArgs.StartLoc.X += 2;   // skip over the fret string
+    dlArgs.EndLoc.X = dlArgs.StartLoc.X;
+    SysDrawLine(dlArgs);
+    dlArgs.StartLoc.X++;
+    dlArgs.EndLoc.X = dlArgs.StartLoc.X;
+    SysDrawLine(dlArgs);
+}
+
+// Draw the triangle that indicates the current fret position of the slider,
+// which is a filled triangle if fPressed, else a hollow triangle.
+inline void DrawFretSel()
+{
+    // The starting point is the top tip of the triangle
+    dlArgs.StartLoc.X = X_FRET(fretCur);
+    dlArgs.StartLoc.Y = 4;
+    dlArgs.Options = 0;
+
+    // Draw filled or open triangle?
+    if (fPressed)
+    {
+       // Draw filled triangle with horizontal lines from the top down
+       dlArgs.EndLoc.X = dlArgs.StartLoc.X;
+       dlArgs.EndLoc.Y = 4;
+       SysDrawLine(dlArgs);
+
+       dlArgs.StartLoc.X--;
+       dlArgs.EndLoc.X++;
+       dlArgs.StartLoc.Y = 3;
+       dlArgs.EndLoc.Y = 3;
+       SysDrawLine(dlArgs);
+
+       dlArgs.StartLoc.X--;
+       dlArgs.EndLoc.X++;
+       dlArgs.StartLoc.Y = 2;
+       dlArgs.EndLoc.Y = 2;
+       SysDrawLine(dlArgs);
+
+       dlArgs.StartLoc.X--;
+       dlArgs.EndLoc.X++;
+       dlArgs.StartLoc.Y = 1;
+       dlArgs.EndLoc.Y = 1;
+       SysDrawLine(dlArgs);
+
+       dlArgs.StartLoc.X--;
+       dlArgs.EndLoc.X++;
+       dlArgs.StartLoc.Y = 0;
+       dlArgs.EndLoc.Y = 0;
+       SysDrawLine(dlArgs);
+    }
+    else
+    {
+       // Draw open triangle as three lines
+       dlArgs.EndLoc.X = dlArgs.StartLoc.X - 4;
+       dlArgs.EndLoc.Y = 0;
+       SysDrawLine(dlArgs);
+
+       dlArgs.EndLoc.X += 8;
+       SysDrawLine(dlArgs);
+
+       dlArgs.StartLoc.X -= 4;
+       dlArgs.StartLoc.Y = 0;
+       SysDrawLine(dlArgs);
+    }
+}
+
+// Draw the strings and border of the fret board
+inline void DrawStrings()
+{
+    // Draw horizontal line at bottom of fret board
+    dlArgs.StartLoc.X = X_FRET(1);
+    dlArgs.EndLoc.X = X_FRET(5);
+    dlArgs.StartLoc.Y = Y_START;
+    dlArgs.EndLoc.Y = Y_START;
+    dlArgs.Options = 0;
+    SysDrawLine(dlArgs);
+
+    // Draw vertical fret lines
+    dlArgs.EndLoc.X = X_FRET(1);
+    dlArgs.EndLoc.Y = Y_MAX;
+    SysDrawLine(dlArgs);
+
+    dlArgs.StartLoc.X = X_FRET(2);
+    dlArgs.EndLoc.X = X_FRET(2);
+    SysDrawLine(dlArgs);
+
+    dlArgs.StartLoc.X = X_FRET(3);
+    dlArgs.EndLoc.X = X_FRET(3);
+    SysDrawLine(dlArgs);
+
+    dlArgs.StartLoc.X = X_FRET(4);
+    dlArgs.EndLoc.X = X_FRET(4);
+    SysDrawLine(dlArgs);
+
+    dlArgs.StartLoc.X = X_FRET(5);
+    dlArgs.EndLoc.X = X_FRET(5);
+    SysDrawLine(dlArgs);
+}
+
+// Display a string centered horizontally at the given y coord
+void CenterTextOut(int y, const string &str)
+{
+    TextOut((DX_SCREEN - DX_STR(str)) / 2, y, str);
+}
+
+// Make a string with the number n and the optional labels before and after,
+// and display it at (x, y)
+void DisplayNumLine(int x, int y, const string &strBefore, int n,
+                    const string &strAfter)
+{
+    string strNum = NumToStr(n);
+    string str = StrCat(strBefore, strNum, strAfter);
+    if (x < 0)
+       CenterTextOut(y, str);
+    else
+       TextOut(x, y, str);
+}
+
+// Make a string with the number n and the optional labels before and after,
+// and center it horizontally at the given y coord.
+inline void CenterNumLine(int y, const string &strBefore, int n,
+                          const string &strAfter)
+{
+    DisplayNumLine(-1, y, strBefore, n, strAfter);
+}
+
+// Display the given fatal error string and wait for user to abort
+void FatalError(const string &strError)
+{
+    ClearScreen();
+    CenterTextOut(LCD_LINE4, strError);
+    CenterTextOut(LCD_LINE8, "(Abort to End)");
+    ErrorBeep();
+    for (;;)
+    {
+        // Wait until user aborts the program
+    }
+}
+
+// Display button labels for an alert of 1 to 3 buttons and prepare
+// the buttons for an alert.  Pass empty strings for unneeded labels.
+void PrepareAlert(const string &strLeft, const string &strEnter,
+                  const string &strRight)
+{
+    // Display the labels left, center, and right justified
+    TextOut(0, LCD_LINE8, strLeft);
+    CenterTextOut(LCD_LINE8, strEnter);
+    TextOut(X_MAX - DX_STR(strRight), LCD_LINE8, strRight);
+
+    // Beep to alert the user, and prepare the buttons
+    NormalBeep();
+    SetButtonPressCount(BTNLEFT, 0);
+    SetButtonPressCount(BTNCENTER, 0);
+    SetButtonPressCount(BTNRIGHT, 0);
+}
+
+
+// Display prompt to press Enter then wait for Enter
+void EnterAlert()
+{
+    PrepareAlert(STR_EMPTY, "OK", STR_EMPTY);
+    while (ButtonPressCount(BTNCENTER) == 0) ;
+}
+
+// Display a two-button prompt to press Enter or Right Arrow with the
+// given button lables.  Return true if Enter was pressed.
+bool FEnterTwoButtonAlert(const string &strEnter, const string &strRight)
+{
+    PrepareAlert(STR_EMPTY, strEnter, strRight);
+    for (;;)
+    {
+        if (ButtonPressCount(BTNCENTER))
+           return TRUE;
+        if (ButtonPressCount(BTNRIGHT))
+           return FALSE;
+    }
+}
+
+// Display a 3-button alert with the given button labels,
+// return -1 for Left, 0 for Enter, 1 for Right
+int IDo3ButtonAlert(const string &strLeft, const string &strEnter,
+                    const string &strRight)
+{
+    PrepareAlert(strLeft, strEnter, strRight);
+    for (;;)
+    {
+        if (ButtonPressCount(BTNLEFT))
+           return -1;
+        if (ButtonPressCount(BTNCENTER))
+           return 0;
+        if (ButtonPressCount(BTNRIGHT))
+           return 1;
+    }
+}
+
+// Display a Prev/OK/Next alert, return -1 for Prev, 0 for OK, 1 for Next
+int IDoPrevOKNextAlert()
+{
+    return IDo3ButtonAlert("Prev", "OK", "Next");
+}
+
+// Return a song file name by appending the base name, index, and extension
+string StrMakeSongFileName(int index)
+{
+    string strIndex = NumToStr(index);
+    return StrCat(STR_FILENAME_BASE, strIndex, ".", STR_FILENAME_EXT);
+}
+
+// Write str to the given byte buffer of size cb and zero the remaining space
+void WriteStringToBuf(const string &str, byte &buf[], int cbBuf)
+{
+    int i;
+    int len = StrLen(str);
+    for (i = 0; i < cbBuf; i++)
+    {
+       if (i < len)
+          buf[i] = StrIndex(str, i);
+       else
+          buf[i] = 0;
+    }
+}
+
+// Init the song state for an empty song
+void InitEmptySong()
+{
+    cNotesSong = 0;
+    iNoteFirst = 0;
+    iNoteLast = -1;
+}
+
+// Write the given note to the song data file.
+// Success is assumed (errors ignored) since the file was pre-sized.
+inline void WriteNote(int iNote)
+{
+    int i = rgNote[iNote].tickStart;
+    Write(hFile, i);
+    byte b = rgNote[iNote].ticksLength;
+    Write(hFile, b);
+    b = rgNote[iNote].fret;
+    Write(hFile, b);
+}
+
+// Read a note from the data file into the given note index.
+inline void ReadNote(int iNote)
+{
+    int i;
+    Read(hFile, i);
+    rgNote[iNote].tickStart = i;
+    byte b;
+    Read(hFile, b);
+    rgNote[iNote].ticksLength = b;
+    Read(hFile, b);
+    rgNote[iNote].fret = b;
+}
+
+// Write the song header to the song data file.
+// Success is assumed (errors ignored) since the file was pre-sized.
+inline void WriteSongHeader()
+{
+    int cb = CB_SIG;
+    WriteBytesEx(hFile, cb, szFileSignature);
+    Write(hFile, bFileVersion);
+    Write(hFile, bFileReserved);
+    cb = CB_SZ_FILE;
+    WriteBytesEx(hFile, cb, szSongTitle);
+    cb = CB_SZ_FILE;
+    WriteBytesEx(hFile, cb, szSongArtist);
+    cb = CB_SZ_FILE;
+    WriteBytesEx(hFile, cb, szSongAlbum);
+    Write(hFile, bSongHighScore);
+    Write(hFile, bSecStartDelay);
+    cb = CB_RESERVED;
+    WriteBytesEx(hFile, cb, rgbFileRes);
+    Write(hFile, cNotesSong);
+}
+
+// Read the song header from the data file.  Errors are ignored (TODO)
+inline void ReadSongHeader()
+{
+    int cb = CB_SIG;
+    ReadBytes(hFile, cb, szFileSignature);
+    Read(hFile, bFileVersion);
+    Read(hFile, bFileReserved);
+    cb = CB_SZ_FILE;
+    ReadBytes(hFile, cb, szSongTitle);
+    cb = CB_SZ_FILE;
+    ReadBytes(hFile, cb, szSongArtist);
+    cb = CB_SZ_FILE;
+    ReadBytes(hFile, cb, szSongAlbum);
+    Read(hFile, bSongHighScore);
+    Read(hFile, bSecStartDelay);
+    cb = CB_RESERVED;
+    ReadBytes(hFile, cb, rgbFileRes);
+    Read(hFile, cNotesSong);
+}
+
+// Write the song data file to a file named strFileName
+void WriteSongFile(const string &strFileName)
+{
+    // Calculate the file size
+    unsigned int cbFile = CB_FILE_HEADER + cNotesSong * SIZEOF_NOTE;
+
+    // Create the file
+    DeleteFile(strFileName);    // delete file if it already exists
+    unsigned int err = CreateFile(strFileName, cbFile, hFile);
+    if (err)
+       FatalError("Can't save song");   // probably out of memory (TODO?)
+
+    // Make sure the required file header fields are correct
+    WriteStringToBuf(STR_FILENAME_EXT, szFileSignature, CB_SIG);
+    bFileVersion = VER_FILE;
+    bFileReserved = 0;
+
+    // Write the song file header then the notes
+    WriteSongHeader();
+    int iNote;
+    for (iNote = 0; iNote < cNotesSong; iNote++)
+        WriteNote(iNote);
+
+    // Close the song file
+    CloseFile(hFile);
+}
+
+// Attempt to read the song data file with the given file name,
+// and return true if seccessful.  If fNotes then read the full song
+// with the notes, otherwise just the header.
+bool FReadSongFile(const string &strFileName, bool fNotes)
+{
+    // Init an empty song
+    InitEmptySong();
+    
+    // Open the song file
+    int cbFile;
+    if (OpenFileRead(strFileName, cbFile, hFile) != LDR_SUCCESS)
+       return FALSE;
+
+    // Read the song header and then the notes if requested
+    ReadSongHeader();
+    if (fNotes)
+    {
+       int iNote;
+       for (iNote = 0; iNote < cNotesSong; iNote++)
+           ReadNote(iNote);
+       iNoteFirst = 0;
+       iNoteLast = cNotesSong - 1;
+    }
+
+    // Close the song file and return success
+    CloseFile(hFile);
+    return TRUE;
+}
+

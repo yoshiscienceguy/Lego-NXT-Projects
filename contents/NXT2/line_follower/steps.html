@@ -1,0 +1,227 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>NXT Line Follower</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt" onload="FP_preloadImgs(/*url*/'../../images/buttons/instructions/buttonC.jpg', /*url*/'../../images/buttons/instructions/buttonB.jpg')">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../../index.html">
+<img border="0" src="../../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">Line Follower</font></td>
+		<td width="150" align="right">
+		<table border="0">
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html">Building</a>:</font></td>
+				<td height="23" align="right">
+				<img border="0" src="../../images/BuildIntermediate.gif" width="53" height="16" alt="Intermediate"></td>
+			</tr>
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="#Program">Program</a>: </font>
+				</td>
+				<td height="23" align="right">
+				<img border="0" src="../../images/ProgramIntermediate.gif" width="53" height="16" alt="Intermediate"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p><a href="../../index.html"><img border="0" src="../../images/ForNXT2.png" width="737" height="21"></a></p>
+<h3><span style="font-weight: 400">Building Instructions</span></h3>
+<hr>
+<p><b><font face="Arial" size="7">1-6</font></b></p>
+<p>Start by building the <a href="../five_minute_bot/index.html">Five Minute Bot</a>.&nbsp; 
+Click the picture for building instructions.</p>
+<p><a href="../five_minute_bot/steps.html">
+<img border="1" src="../five_minute_bot/DCP_2667.JPG" width="736" height="487"></a></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<p align="center"><a href="../five_minute_bot/steps.html">
+		<img border="0" id="img1" src="../../images/buttons/instructions/buttonA.jpg" height="36" width="180" alt="Building Instructions" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'../../images/buttons/instructions/buttonB.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'../../images/buttons/instructions/buttonA.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'../../images/buttons/instructions/buttonC.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'../../images/buttons/instructions/buttonB.jpg')" fp-style="fp-btn: Glow Capsule 3; fp-font: Arial; fp-orig: 0" fp-title="Building Instructions"></a><font size="2"><br>
+		</font></td>
+	</tr>
+</table>
+<hr>
+<p><b><font face="Arial" size="7">7</font></b></p>
+<p><img border="1" src="DCP_3076.JPG" width="736" height="308"></p>
+<p><img border="1" src="DCP_3075.JPG" width="736" height="369"></p>
+<p><img border="1" src="DCP_3074.JPG" width="736" height="319"></p>
+<p><img border="1" src="DCP_3073.JPG" width="736" height="449"></p>
+<p><img border="1" src="DCP_3072.JPG" width="736" height="495"></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<p align="left"><font size="2">Connect the Color Sensor to port <b>3</b> 
+		on the NXT.</font></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_3071-1.JPG" width="736" height="515"></p>
+<hr>
+<p><a name="Program"></a></p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td bgcolor="#C0C0C0"><font face="Arial Rounded MT Bold" size="5">Line 
+		Follower Programming</font><p>
+		<font size="2">There are two programs provided for the Line Follower.&nbsp; 
+		Both programs use the Color Sensor in the &quot;Light Sensor&quot; mode, where the 
+		sensor shines an LED lamp of one color (red is used here) and measures 
+		the amount of light that is reflected back into the sensor, as a number 
+		from 0 to 100.&nbsp; Although under good conditions it is possible to 
+		follow a line using the Color Sensor in Color Sensor mode, the Light 
+		Sensor mode is better for this task.&nbsp; </font></p>
+		<ol>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">The<b> </b>
+			<a href="../../programs2/LineFollow.rbt">LineFollow</a><b> </b>
+			program is a simple &quot;Two State&quot; line following strategy without any 
+			sensor calibration.&nbsp; It will repeatedly turn either left or 
+			right in a &quot;zig-zag&quot; pattern, alternating back and forth on either 
+			side of the right edge of the line.&nbsp; Start the robot near the 
+			right edge of the line.&nbsp; </font></p></li>
+		</ol>
+		<blockquote>
+			<p style="margin-bottom: 6px"><font size="2">To use this program, 
+			you will usually want to first determine a good brightness value to 
+			use as the &quot;cut-off&quot; between the two states (light and dark).&nbsp; 
+			To do this, you can use the <a href="../../programs2/LightMeter.rbt">LightMeter</a> program to measure the brightness over the center of 
+			the line (darkest), then over the open floor (brightest), then 
+			average them to find the cut-off.&nbsp; For example, if the Light 
+			Meter reads 20 over the line and 40 over the floor, then 30 would be 
+			a good cut-off value.</font></p>
+		</blockquote>
+		<ol start="2">
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">The 
+			<a href="../../programs2/SmoothFollow.rbt">SmoothFollow</a><b> </b>
+			program is a much more complex &quot;Proportional Line Follower&quot; which 
+			continually adjusts the steering response of the robot depending on 
+			how far off the line the robot appears to be.&nbsp; If the robot is 
+			only slightly off of the edge of the line, then only a small amount 
+			of steering is applied.&nbsp; When the robot is exactly over the 
+			right edge of the line, the robot will drive straight ahead at the 
+			full power specified.&nbsp; This allows the driving to be smoother 
+			and faster than the <a href="../../programs2/LineFollow.rbt">LineFollow</a> program.&nbsp; </font>
+			</p></li>
+		</ol>
+		<blockquote>
+			<p style="margin-bottom: 6px"><font size="2">In addition, the 
+			<a href="../../programs2/SmoothFollow.rbt">SmoothFollow</a> program does an automatic &quot;calibration&quot; sequence at 
+			the beginning, where the robot scans the line and the surface to 
+			determine darkest and brightest light values to expect, so there is 
+			no need to manually determine a cut-off value.&nbsp; To get a proper 
+			calibration, start the robot with the sensor directly over the 
+			center of the line.</font></p>
+		</blockquote>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 6px">&nbsp;</p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="5">Challenges</font><ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Try designing your own 
+			course for the Line Follower, with a mixture of gradual turns and 
+			sharper turns.&nbsp; Electrical tape works well because it is dark, 
+			flexible, and leaves no residue when removed.&nbsp; Adjust the Power 
+			levels used in the programs as necessary to allow the robot to still 
+			follow the course.&nbsp; The tighter the turns that the course 
+			contains, the slower the robot will have to drive to avoid missing 
+			the turns. </font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Add the Color Sensor to 
+			another robot and see if you can make it follow lines too.&nbsp; 
+			Which robots follow lines better than others?&nbsp; Among other 
+			things, it will depend on how the wheels are spaced and where the 
+			sensor is placed on the robot.&nbsp; Try modifying the &quot;Gain&quot; 
+			variable in the <b>SmoothFollow</b> program to try to tune the 
+			steering response needed for your robot.</font></li>
+		</ul>
+		</td>
+	</tr>
+</table>
+<table border="0" width="740" cellpadding="24">
+	<tr>
+		<td align="center">
+		&nbsp;</td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center"><font face="Verdana" size="1"><br>
+Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2010 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+// GuitarRecord -- Song Recorder
+// NXT Guitar Challenge Game
+// (c)Copyright 2009 by Dave Parker.  All Rights Reserved.
+// www.nxtprograms.com
+
+// Include data and code shared by both recording and playing
+#include "GuitarShared.nxc"
+
+
+// Song file header data for NXT-recorded songs
+#define STR_SONG_TITLE       "Recorded Song"
+#define STR_SONG_ARTIST      "NXT Recorder"
+#define STR_SONG_ALBUM       STR_EMPTY
+
+// Constants
+#define TICKS_NOTE_MIN    3      // min length of a note when recording
+
+
+// Start a new note at the current tick and fret
+inline void AddNote()
+{
+    // Add the note to the end of the song
+    iNoteLast++;
+    rgNote[iNoteLast].tickStart = tickCur;
+    rgNote[iNoteLast].ticksLength = TICKS_NOTE_MIN;
+    rgNote[iNoteLast].fret = fretCur;
+    cNotesSong++;
+}
+
+// Draw the notes that still appear on the screen and adjust the range
+// to remove any that have scrolled off the screen.
+inline void DrawNotes()
+{
+    // Draw notes that still appear on the screen, most recent first
+    int iNote;
+    for (iNote = iNoteLast; iNote >= iNoteFirst; iNote--)
+    {
+       // Get timing data for this note
+       int tickStart = rgNote[iNote].tickStart;
+       int ticksLength = rgNote[iNote].ticksLength;
+       int tickEnd = tickStart + ticksLength;
+
+       // Draw the note if it is still on screen, else adjust note range
+       int ticksAgoEnd = tickCur - tickEnd;
+       if (ticksAgoEnd <= TICKS_SCREEN_MAX)
+          DrawNote(rgNote[iNote].fret, ticksAgoEnd, ticksLength);
+       else
+          iNoteFirst = iNote + 1;
+    }
+    
+    // For degugging, display the number of notes on screen
+    // NumOut(0, 0, iNoteLast - iNoteFirst + 1);
+}
+
+// Redraw the entire screen display
+inline void RedrawAll()
+{
+    // Wait for a good time to draw, then draw the background items
+    WaitForDisplayRefresh();
+    ClearScreen();
+    DrawFretSel();
+    DrawStrings();
+
+    // Draw notes that still appear on the screen, most recent first
+    DrawNotes();
+}
+
+// Find an unused song index and return the index and the file name
+void FindUnusedFileIndex(int &index, string &strFileName)
+{
+    // Find an index without an existing file
+    int cbFile;
+    for (index = 1; index <= MAX_FILES; index++)
+    {
+       strFileName = StrMakeSongFileName(index);
+       unsigned int err = OpenFileRead(strFileName, cbFile, hFile);
+       if (err == LDR_FILENOTFOUND)
+          return;      // file by this name doen't exist
+       if (err == LDR_SUCCESS)
+          CloseFile(hFile);     // close existing file and try again
+    }
+    
+    // We didn't find an unused name
+    FatalError("Song list full");
+}
+
+// Save the song data file
+void SaveSong()
+{
+    // Get a filename for this song
+    int index;
+    string strFileName;
+    FindUnusedFileIndex(index, strFileName);
+
+    // Fill in the song info in the song file header
+    WriteStringToBuf(STR_SONG_TITLE, szSongTitle, CB_SZ_FILE);
+    WriteStringToBuf(STR_SONG_ARTIST, szSongArtist, CB_SZ_FILE);
+    WriteStringToBuf(STR_SONG_ALBUM, szSongAlbum, CB_SZ_FILE);
+    bSongHighScore = 0;
+
+    // Write the song file
+    WriteSongFile(strFileName);
+    
+    // Display the file name for the user
+    ClearScreen();
+    CenterTextOut(LCD_LINE3, "Song saved as");
+    CenterNumLine(LCD_LINE5, STR_FILENAME_BASE, index, STR_EMPTY);
+    EnterAlert();
+}
+
+// Let the user record a song
+void RecordSong()
+{
+    // Start with an empty song
+    InitEmptySong();
+
+    // Prepare the sensors and timer
+    SetSensorTouch(S1);
+    SetSensorTouch(S2);
+    SetSensorLowspeed(S4);
+    SetButtonPressCount(BTNCENTER, 0);
+    InitFretReadings();
+    tickSysStart = 0;
+
+    // Main loop repeats until Enter button is pressed (or song full)
+    fPressed = FALSE;
+    bool fNoteHeld = FALSE;
+    while (ButtonPressCount(BTNCENTER) == 0)
+    {
+       // Get the current fret and pressed state from the sensors
+       fretCur = FretReading();
+       fPressed = Sensor(S1) | Sensor(S2);  // || operator has a bug
+
+       // Get current timing tick and check for song time limit
+       tickCur = TickCurrent(fPressed);
+       if (tickCur > TICK_MAX)
+       {
+          ClearScreen();
+          CenterTextOut(LCD_LINE4, "Song Time Limit");
+          EnterAlert();
+          break;   // end the main loop
+       }
+              
+       // Determine whether to start, end, change, or continue a note
+       if (!fPressed)
+          fNoteHeld = FALSE;   // no note playing now
+       else
+       {
+          if (!fNoteHeld)
+             AddNote();  // Start a new note
+          else
+          {
+             // If the fret changed or the note has not exceeded the
+             // max note length, then we need to start a new note,
+             // otherwise we can extend the current note.
+             int fret = rgNote[iNoteLast].fret;
+             int ticksLength = tickCur - rgNote[iNoteLast].tickStart;
+             if (fret != fretCur)
+                AddNote();      // Change to new note
+             else if (ticksLength > TICKS_NOTE_MAX)
+             {
+                // End note at max length and start another right afterwards
+                AddNote();
+                rgNote[iNoteLast].tickStart = rgNote[iNoteLast - 1].tickStart
+                                                 + TICKS_NOTE_MAX;
+             }
+             else if (ticksLength > TICKS_NOTE_MIN)
+                rgNote[iNoteLast].ticksLength = ticksLength;  // Extend note
+          }
+          fNoteHeld = TRUE;      // a note is now in progress
+       }
+
+       // Have we reached the note limit?
+       if (cNotesSong == MAX_NOTES)
+       {
+          ClearScreen();
+          CenterTextOut(LCD_LINE4, "Song is full");
+          EnterAlert();
+          break;   // end the main loop
+       }
+
+       // Redraw the display
+       RedrawAll();
+       
+	} // end of main loop
+}
+
+// Main program
+task main()
+{
+    // Let the user record a song
+    RecordSong();
+
+    // Display number of notes written and prompt to save the song
+    ClearScreen()
+    CenterTextOut(LCD_LINE3, "Song recorded");
+    CenterNumLine(LCD_LINE4, "with " cNotesSong, " notes.");
+    if (FEnterTwoButtonAlert("Save", "No"))
+       SaveSong();
+}
+

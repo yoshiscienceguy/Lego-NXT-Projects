@@ -1,0 +1,201 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>NXT 1-Button Remote Control</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt" onload="FP_preloadImgs(/*url*/'../images/buttons/instructions/buttonC.jpg',/*url*/'../images/buttons/instructions/buttonB.jpg')">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../index.html">
+<img border="0" src="../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">1-Button Remote Control</font></td>
+		<td width="150" align="right">
+		<table border="0">
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html">Building</a>:</font></td>
+				<td height="23" align="right">
+				<img border="0" src="../images/BuildAdvanced.gif" width="53" height="16" alt="Advanced"></td>
+			</tr>
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="#Program">Program</a>: </font>
+				</td>
+				<td height="23" align="right">
+				<img border="0" src="../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p><a href="../index.html">
+<img border="0" src="../images/ForNXT1X.png" width="737" height="21"></a></p>
+<h3><span style="font-weight: 400">Building Instructions</span></h3>
+<hr>
+<p><b><font face="Arial" size="7">1-11</font></b></p>
+<p>Start by building the <a href="../castor_bot/steps.html">Castor Bot</a>.&nbsp; 
+Click the picture for building instructions.</p>
+<p><a href="../castor_bot/steps.html">
+<img border="1" src="../castor_bot/DCP_3166.jpg" width="736" height="485"></a></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<p align="center"><a href="../castor_bot/steps.html">
+		<img border="0" id="img1" src="../images/buttons/instructions/buttonA.jpg" height="36" width="180" alt="Building Instructions" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonB.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonA.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonC.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonB.jpg')" fp-style="fp-btn: Glow Capsule 3; fp-font: Arial; fp-orig: 0" fp-title="Building Instructions"></a><font size="2"><br>
+		</font></td>
+	</tr>
+</table>
+<hr>
+<p><b><font face="Arial" size="7">12</font></b></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">Use one of the longest wires to connect the touch sensor to port <b>1</b> 
+		on the NXT.</font></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_6644.jpg" width="736" height="453"></p>
+<p><img border="1" src="DCP_6643.jpg" width="736" height="507"></p>
+<hr>
+<p><a name="Program"></a></p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td bgcolor="#C0C0C0"><font face="Arial Rounded MT Bold" size="5">
+		1-Button Remote Control Programming</font><p style="margin-bottom: 6px">
+		<font size="2">Use the program <a href="../programs/1-Button_Remote.rbt">
+		1-Button_Remote</a> for your 1 button remote control.&nbsp; This program 
+		shows an easy way to have a single button control do more than one thing 
+		by cycling through the different functions.&nbsp; It also shows how you 
+		can use a touch sensor to control how long something happens by waiting 
+		for the press to start it and then waiting for the release to stop it.</font></p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 6px">&nbsp;</p>
+<table border="0" width="740" cellpadding="4">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="5">Using the 1-Button 
+		Remote Control</font><p style="margin-bottom: 6px"><font size="2">The
+		<a href="../programs/1-Button_Remote.rbt">1-Button_Remote</a> program 
+		cycles between three actions each time the button is pressed:</font></p>
+		<ol>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Go straight while the 
+			touch sensor is held down</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Pivot turn to the left 
+			while the touch sensor is held down</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Pivot turn to the right 
+			while the touch sensor is held down</font></li>
+		</ol>
+		<p style="margin-bottom: 6px"><font size="2">After doing each of these 
+		three in sequence, it goes back to the beginning and repeats them over 
+		and over.&nbsp; Before each of the motions, the NXT display will show a 
+		hand pointing in the direction that the robot will go during the next 
+		sequence.</font></p>
+		<p style="margin-bottom: 6px"><font size="2">Although the program always 
+		does the three moves in the sequence shown above, you can actually 
+		choose your direction while driving by quickly pressing the touch sensor 
+		and releasing it right away, one or more times, to cycle through the 
+		directions until the one you want is shown on the display, then press 
+		and hold the button to drive or turn in that direction.</font></td>
+	</tr>
+</table>
+<p style="margin-bottom: 6px">&nbsp;</p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="5">Challenges</font><ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Practice driving your 
+			robot with the remote control and see if you can get it to go where 
+			you want.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Try using the
+			<a href="../programs/1-Button_Remote.rbt">1-Button_Remote</a> 
+			program to control one of your own robots, modifying it if 
+			necessary.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Try adding on to the
+			<a href="../programs/1-Button_Remote.rbt">1-Button_Remote</a> 
+			program to add even more functions, like going in reverse perhaps?</font></li>
+		</ul>
+		</td>
+	</tr>
+</table>
+<p align="center">&nbsp;</p>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana" size="1">Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2009 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

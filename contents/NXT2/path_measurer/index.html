@@ -1,0 +1,162 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>NXT Path Measurer</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt" onload="FP_preloadImgs(/*url*/'../../images/buttons/instructions/buttonC.jpg', /*url*/'../../images/buttons/instructions/buttonB.jpg')">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../../index.html">
+<img border="0" src="../../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">Path Measurer</font></td>
+		<td width="150" align="right">
+		<table border="0">
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html">Building</a>:</font></td>
+				<td height="23" align="right">
+				<img border="0" src="../../images/BuildIntermediate.gif" width="53" height="16" alt="Intermediate"></td>
+			</tr>
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html#Program">Program</a>: </font>
+				</td>
+				<td height="23" align="right">
+				<img border="0" src="../../images/ProgramAdvanced.gif" width="53" height="16" alt="Advanced"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p>
+<a href="../../index.html"><img border="0" src="../../images/ForNXT2.png" width="737" height="21"></a></p>
+<p><a href="steps.html">
+<img border="1" src="DCP_2685.JPG" width="736" height="503"></a></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">This project gives you a way to easily plot and 
+		measure a path that you want your robot to navigate using Move and Motor 
+		blocks that use Degrees as their duration.&nbsp; You start by guiding 
+		the robot along the desired path using a simple wired remote control 
+		that can be connected to any robot that uses 2-motor drive.&nbsp; Then 
+		you can read the degree measurements that are displayed on the NXT 
+		screen and use these measurements to configure Move and Motor blocks in 
+		your own programs that will get the NXT to duplicate that path on its 
+		own.</font><p><font size="2">Two different programs are provided.&nbsp; 
+		In the first program, you can select from three movement directions for 
+		each segment of the path using the three buttons on the NXT: straight 
+		forward, or one-wheeled turns to the left and right.&nbsp; In the more 
+		complex alternate program, you can select from eight different motions 
+		including one-wheeled turns, pivot turns (wheels turning in opposite 
+		directions), reverse turns, and straight backward motion. </font></p>
+		<table border="0" width="100%">
+			<tr>
+				<td align="center" width="33%" valign="top"><font size="2">
+				<img border="0" src="DCP_2689.JPG" width="226" height="160"></font></td>
+				<td align="center" width="33%" valign="top"><font size="2">
+				<img border="0" src="DCP_2691.JPG" width="222" height="160"></font></td>
+				<td align="center" width="33%" valign="top">
+				<img border="0" src="DCP_2695.JPG" width="221" height="160"></td>
+			</tr>
+			<tr>
+				<td align="center" width="33%" valign="top"><font size="2">
+				Measuring a straight segment</font></td>
+				<td align="center" width="33%" valign="top"><font size="2">
+				Measuring a left turn</font></td>
+				<td align="center" width="33%" valign="top"><font size="2">An 
+				alternate program allows 8 different motions to be selected, 
+				including pivot turns and reverse.</font></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td width="100" valign="bottom">
+		&nbsp;</td>
+		<td>
+		<p align="center"><font face="Verdana" size="2"><br>
+		</font><a href="steps.html">
+		<img border="0" id="img2" src="../../images/buttons/instructions/buttonA.jpg" height="36" width="180" alt="Building Instructions" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'../../images/buttons/instructions/buttonB.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'../../images/buttons/instructions/buttonA.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'../../images/buttons/instructions/buttonC.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'../../images/buttons/instructions/buttonB.jpg')" fp-style="fp-btn: Glow Capsule 3; fp-font: Arial; fp-orig: 0" fp-title="Building Instructions"></a></td>
+		<td width="100">
+		&nbsp;</td>
+	</tr>
+</table>
+<p align="center">&nbsp;</p>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center"><font face="Verdana" size="1"><br>
+Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2010 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

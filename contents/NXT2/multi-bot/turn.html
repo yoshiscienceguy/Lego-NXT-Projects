@@ -1,0 +1,464 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Multi-Bot Programs</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../../index.html">
+<img border="0" src="../../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">Multi-Bot Programs</font></td>
+		<td width="174" align="right">
+		<table border="0">
+			<tr>
+				<td height="23" align="right">
+				<font size="2"><a href="programs.html">Programs Index</a></font></td>
+			</tr>
+			<tr>
+				<td height="23" align="right">
+				<font size="2"><a href="Multi-Bot-Programs">Programs Folder</a></font></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p><a href="../../index.html"><img border="0" src="../../images/ForNXT2.png" width="737" height="21"></a></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<h2><font size="4">(C-D) Turning</font></h2>
+		<p><font size="2">The programs in the section show different ways to 
+		make Multi-Bot turn.&nbsp; Working through the examples in order will 
+		help you learn the different options for motor control.</font></p>
+		<h3><font size="3"><a name="Basic"></a>Basic Turning</font></h3>
+		<table border="1" width="100%" bordercolorlight="#808080" bordercolordark="#808080" style="border-collapse: collapse" cellpadding="3">
+			<tr>
+				<td align="left" valign="top" width="202"><b><font size="2">
+				Program</font></b></td>
+				<td align="left" valign="top" width="392"><b><font size="2">
+				Description and Observations</font></b></td>
+				<td align="right" valign="top"><b><font size="2">Attachments</font></b></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="202">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">C1-MoveCurve</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="392"><font size="2">This 
+				program uses the <i>Steering</i> option of the <b>Move</b> block 
+				to make the robot drive in a gradual arc turn.</font><p>
+				<font size="2">When <i>Steering</i> is used on a <b>Move</b> 
+				block, the <i>Power</i> and <i>Duration</i> apply to the outside 
+				motor (the one travelling the longer distance), and the inside 
+				motor will go a lesser speed and distance that is calculated 
+				based on the amount of steering.</font></td>
+				<td align="right" valign="top"><font size="2">(none required)</font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="202">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">C2-MoveTurn</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="392"><font size="2">This 
+				program uses uses the <i>Steering</i> option of the <b>Move</b> 
+				block with the <i>Steering</i> slider at the second to last 
+				position, which will produce a turn with the inside wheel 
+				approximately stopped.&nbsp; </font>
+				<p><font size="2">Although similar to turning with only one 
+				motor (see below), these turns with the <i>Steering</i> option 
+				are usually significantly less accurate.</font></td>
+				<td align="right" valign="top"><font size="2">(none required)</font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="202">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">C3-MovePivot</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="392"><font size="2">This 
+				program uses uses the <i>Steering</i> option of the <b>Move</b> 
+				block with the <i>Steering</i> slider at the last position 
+				(tightest turn).&nbsp; This will produce a turn where both 
+				wheels move with the <i>Power</i> and <i>Duration</i> specified, 
+				but the inside motor moves in the opposite direction, producing 
+				a very tight &quot;pivot&quot; turn.</font><p><font size="2">Although this 
+				is the easiest way to create a tight &quot;pivot&quot; turn, it is usually 
+				less accurate than a pivot turn created by controlling the two 
+				motors separately (see the <i>Turning - Advanced</i>) section 
+				below.</font></td>
+				<td align="right" valign="top"><font size="2">(none required)</font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="202">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">C4-1WheelMove</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="392"><font size="2">This 
+				program uses the the <b>Move</b> block with only one motor 
+				selected to make the robot turn by moving one wheel while 
+				keeping the other stopped.&nbsp; </font>
+				<p><font size="2">Although similar to the turn produced by the
+				<b>C2-MoveTurn</b> program (<b>Move</b> 
+				block with <i>Steering</i>), these turns are typically much more 
+				accurate.</font></td>
+				<td align="right" valign="top"><font size="2">(none required)</font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="202">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">C5-1WheelMotor</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="392"><font size="2">This 
+				program uses the <b>Motor</b> block to make the robot turn by 
+				moving one wheel while keeping the other stopped.&nbsp; </font>
+				<p><font size="2">Although similar to the
+				<b>C4-1WheelMove</b> program (<b>Move</b> 
+				block with one motor selected), you will notice that the <b>
+				Motor</b> block maintains the selected power throughout the turn 
+				rather than slowing down at the end.&nbsp; This may result in a 
+				more accurate turn for heavier robots. </font></td>
+				<td align="right" valign="top"><font size="2">(none required)</font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="202">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">C6-LetterN</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="392"><font size="2">This 
+				program uses five <b>Move</b> blocks to make Multi-Bot move in 
+				an &quot;N&quot; shaped path in a simple but reasonably accurate way 
+				(using only motor for the turns). </font></td>
+				<td align="right" valign="top"><font size="2">(none required)</font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="202">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">C7-PathNTest</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="392"><font size="2">This 
+				program is an extension of the <b>C6-LetterN</b> program that retraces the N-shaped path in 
+				reverse afterwards, so that the robot should end up 
+				approximately where it started.</font><p><font size="2">You can 
+				use this program to test how accurately a robot design turns and 
+				drives.&nbsp; It is possible to design a robot that is 
+				significantly more accurate than Multi-Bot.&nbsp; Give it a try!</font></td>
+				<td align="right" valign="top"><font size="2">(none required)</font></td>
+			</tr>
+		</table>
+		<p>&nbsp;</p>
+		<h3><font size="3"><a name="Advanced"></a>Advanced Turning</font></h3>
+		<table border="1" width="100%" bordercolorlight="#808080" bordercolordark="#808080" style="border-collapse: collapse" cellpadding="3">
+			<tr>
+				<td align="left" valign="top" width="192"><b><font size="2">
+				Program</font></b></td>
+				<td align="left" valign="top" width="402"><b><font size="2">
+				Description and Observations</font></b></td>
+				<td align="right" valign="top"><b><font size="2">Attachments</font></b></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="192">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">D1-Pivot</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="402"><font size="2">This 
+				program shows one simple way to do a pivot turn (wheels turning 
+				opposite directions) using two <b>Motor</b> blocks instead of 
+				the <b>Move</b> block with the Steering slider all the way to 
+				the side.</font><p><font size="2">Unfortunately, similar to the
+				<b>B2-Motors</b> program above which goes 
+				straight, the <i>Brake</i> option will not work if selected on 
+				the first motor (both motors use <i>Coast</i> in this example), 
+				so the end of the turn will not be accurate.</font></td>
+				<td align="right" valign="top"><font size="2">(none required)</font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="192">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">D2-PivotWait1</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="402"><font size="2">This 
+				program fixes the braking problem with the
+				<b>D1-Pivot</b> program by measuring 
+				rotations separately with a <i>Rotation Sensor</i> and then 
+				using a <i>Stop</i> to brake both motors.</font><p>
+				<font size="2">However, a remaining problem is that the 
+				rotations on motor C are not being measured, so it possible that 
+				motor C may travel fewer or more than the desired rotations.</font></td>
+				<td align="right" valign="top"><font size="2">(none required)</font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="192">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">D3-PivotWait2</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramAdvanced.gif" width="53" height="16" alt="Advanced"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="402"><font size="2">This 
+				program is a more complete variation on the <b>D2-PivotWait1</b> technique that 
+				stops only after <i>both</i> motors have completed the full 
+				rotations required.</font><p><font size="2">Now both motors are 
+				guaranteed to travel the required rotations.&nbsp; However, it 
+				is now possible that either motor may travel <i>more</i> than 
+				the desired rotations.</font></td>
+				<td align="right" valign="top"><font size="2">(none required)</font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="192">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">D4-PivotSeq</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramIntermediate.gif" width="53" height="16" alt="Intermediate"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="402"><font size="2">This 
+				program shows a more accurate way to do a pivot turn using two
+				<b>Motor</b> blocks, by using two sequence beams.</font><p>
+				<font size="2">Compared to the <b>D2-PivotWait1</b> program, this 
+				technique measures rotations independently on both motors, so 
+				both motors are told to stop when they finish.</font></p>
+				<p><font size="2">However, one subtle problem remains.&nbsp; 
+				Because the program will stop when the main sequence finishes, 
+				if motor C gets hung up for some reason (try stopping or slowing 
+				it by hand), it may not finish the requested rotations.</font></td>
+				<td align="right" valign="top"><font size="2">(none required)</font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="192">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">D5-PivotSeq2</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramAdvanced.gif" width="53" height="16" alt="Advanced"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="402"><font size="2">This 
+				program solves the subtle problem with the <b>D4-PivotSeq</b> 
+				program by using a block wired between the two sequences to 
+				force the main sequence to wait for the second sequence to 
+				finish before continuing.&nbsp; 
+				</font>
+				<p><font size="2">Now the program will sound the tone and then 
+				end (or continue if there was another motion after the turn) 
+				only after <i>both</i> motors have completed their rotations.
+				</font></td>
+				<td align="right" valign="top"><font size="2">(none required)</font></td>
+			</tr>
+		</table>
+		<p>&nbsp;</p>
+		<h3><font size="3"><a name="MyBlocks"></a>Using My Blocks to Turn</font></h3>
+		<table border="1" width="100%" bordercolorlight="#808080" bordercolordark="#808080" style="border-collapse: collapse" cellpadding="3">
+			<tr>
+				<td align="left" valign="top" width="232"><b><font size="2">
+				Program</font></b></td>
+				<td align="left" valign="top" width="362"><b><font size="2">
+				Description and Observations</font></b></td>
+				<td align="right" valign="top"><b><font size="2">Attachments</font></b></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="232">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">D6-PivotBlocks</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+				<img border="0" src="../../images/ProgramExpert.gif" width="53" height="16" alt="Expert"></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="362"><font size="2">This 
+				program does a left and right pivot turn using two <i>My Blocks</i> 
+				named <b>PivotLeft</b> and <b>PivotRight</b>. These My Blocks 
+				make it easy to reproduce accurate pivot turns using parallel <b>
+				Motor</b> blocks (instead of the <b>Move</b> block) internal to 
+				the My Blocks.</font><p><font size="2">Note that the fix for the 
+				two <b>Motor</b> block pivot turn included in the
+				<b>D5-PivotSeq2</b> program is not 
+				necessary in these My Blocks, because a My Block with multiple 
+				sequences will wait for all of the sequences to complete before 
+				finishing and returning to the main program.</font></td>
+				<td align="right" valign="top"><font size="2">(none required)</font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="232">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">D7-PivotAngleBlocks</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+				<img border="0" src="../../images/ProgramExpert.gif" width="53" height="16" alt="Expert"></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="362"><font size="2">This 
+				program does a left and right pivot turn using two more advanced 
+				My Blocks named <b>LeftPivotAngle</b> and <b>RightPivotAngle</b>, 
+				which are extensions of the simple <b>PivotLeft</b> and <b>
+				PivotRight</b> My Blocks.</font><p><font size="2">The <b>
+				LeftPivotAngle</b> and <b>RightPivotAngle</b> My Blocks allow 
+				the program to specify the amount of <i>robot heading angle</i> 
+				desired in the turn, rather than the amount of <i>motor rotation</i>.&nbsp; 
+				This makes it significantly easier to do, say, a &quot;90 degree 
+				turn&quot; by simply specifying 90 degrees of robot heading angle.
+				</font></td>
+				<td align="right" valign="top"><font size="2">(none required)</font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="232">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">D8-PathBlocks</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+				<img border="0" src="../../images/ProgramExpert.gif" width="53" height="16" alt="Expert"></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="362"><font size="2">This 
+				program is similar to the <b>C6-LetterN</b> 
+				program, which drives the robot along an N-shaped path, except 
+				that it uses the My Blocks <b>Forward</b>, <b>LeftPivotAngle,</b> 
+				and <b>RightPivotAngle</b>, and it is currently configured for a 
+				robot with treads.</font><p><font size="2">If the three My 
+				Blocks are already written, the main program is easy to create.&nbsp; 
+				Comparing the program to <b>C6-LetterN</b>, 
+				note how straight distances in <i>centimeters</i> and turns in
+				<i>robot heading angle</i> make the program even easier to write 
+				and understand compared to using motor degrees.&nbsp;&nbsp; The 
+				program can also be easily re-configured for Multi-Bot using 
+				wheels vs. treads.</font></td>
+				<td align="right" valign="top"><font size="2">(none required)</font></td>
+			</tr>
+		</table>
+		<p>&nbsp;</p>
+		<p><font size="2"><a href="programs.html">[Back to Programs Index]</a></font></p>
+		</td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana" size="1">Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2010 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

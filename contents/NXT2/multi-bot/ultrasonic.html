@@ -1,0 +1,381 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Multi-Bot Programs</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../../index.html">
+<img border="0" src="../../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">Multi-Bot Programs</font></td>
+		<td width="174" align="right">
+		<table border="0">
+			<tr>
+				<td height="23" align="right">
+				<font size="2"><a href="programs.html">Programs Index</a></font></td>
+			</tr>
+			<tr>
+				<td height="23" align="right">
+				<font size="2"><a href="Multi-Bot-Programs">Programs Folder</a></font></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p><a href="../../index.html"><img border="0" src="../../images/ForNXT2.png" width="737" height="21"></a></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<h2><font size="4">(E) Using the Ultrasonic Sensor</font></h2>
+		<p><font size="2">The programs in this section show different ways to 
+		use Multi-Bot's <a href="ultrasonic/steps.html">Ultrasonic Sensor</a> 
+		attachment.</font></p>
+		<h3><font size="3"><a name="Distance"></a>Ultrasonic Distance Measurement</font></h3>
+		<table border="1" width="100%" bordercolorlight="#808080" bordercolordark="#808080" style="border-collapse: collapse" cellpadding="3">
+			<tr>
+				<td align="left" valign="top" width="200"><b><font size="2">
+				Program</font></b></td>
+				<td align="left" valign="top" width="389"><b><font size="2">
+				Description and Observations</font></b></td>
+				<td align="right" valign="top"><b><font size="2">Attachments</font></b></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="200">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">E1-FindWall</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramEasy.gif" width="53" height="16" alt="Easy"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="389"><font size="2">This 
+				program shows a simple use of the ultrasonic sensor that makes 
+				the robot drive forward until it gets close to something then 
+				stop.</font><p><font size="2">Using the <b>Wait for Sensor</b> 
+				block is the typically easiest way to use a sensor.&nbsp; Note 
+				that <b>Move</b> <i>Unlimited</i> is used to make the robot 
+				drive an unknown distance until the sensor test triggers.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="ultrasonic/steps.html">Ultrasonic Sensor</a><br>
+				(Front Mounted) </font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="200">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">E2-ExploreWalls</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramIntermediate.gif" width="53" height="16" alt="Intermediate"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="389"><font size="2">This 
+				program extends the <b>E1-FindWall</b> 
+				program to make the robot back up and turn when it sees a wall, 
+				then repeat the process with a <b>Loop</b> to keep exploring for 
+				walls until the program is aborted.</font><p><font size="2">The 
+				main challenge when using a <b>Loop</b> like this is to make 
+				sure the sequence of actions is correct at the beginning and end 
+				of the loop, and also for the first and last time through the 
+				loop.&nbsp; Note that an additional <b>Move</b> <i>Unlimited</i> 
+				block is used to cover all the cases here.</font></p>
+				<p><font size="2">The <b>LeftPivotAngle</b> My Block is used for 
+				convenience, but another type of turn would be fine too.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="ultrasonic/steps.html">Ultrasonic Sensor</a><br>
+				(Front Mounted) </font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="200">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">E3-MagicPush1</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramIntermediate.gif" width="53" height="16" alt="Intermediate"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="389"><font size="2">With 
+				this program, you should attach the Ultrasonic Sensor attachment 
+				to the rear of Multi-Bot, pointing backwards.&nbsp; The program 
+				will cause the robot to drive forward whenever your hand is 
+				close to it and stop whenever your hand is far away, as if your 
+				hand was pushing the robot with an invisible force.</font><p>
+				<font size="2">Note that the <b>Wait for Sensor</b> (with<i> 
+				Ultrasonic Sensor</i>) block can be configured to test for 
+				something closer (less than) a certain distance, or farther 
+				(greater than), and both are used in this strategy.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="ultrasonic/steps.html">Ultrasonic Sensor</a><br>
+				(<i>Rear</i> Mounted) </font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="200">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">E4-MagicPush2</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramIntermediate.gif" width="53" height="16" alt="Intermediate"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="389"><font size="2">This 
+				program achieves the same result as the
+				<b>E3-MagicPush1</b> program in a 
+				different way, this time using a <b>Switch</b> configured with
+				<i>Ultrasonic Sensor</i> to test the sensor and choose which of 
+				the two actions to do each time through the loop.</font><p>
+				<font size="2">Although somewhat harder to understand than the
+				<b>E3-MagicPush1</b> program, it is 
+				important to understand how this technique works, as it builds 
+				the foundation for more complex programs (such as the revisions 
+				below).&nbsp; In particular, note that the loop in this version 
+				of the program is <i>always</i> repeating over 100 times per 
+				second, whereas the loop in <b>E3-MagicPush1</b> only repeats once 
+				for each time the robot restarts from a stop.&nbsp; </font></p>
+				<p><font size="2">In most of the repetitions of the loop in this 
+				program, the robot will be &quot;retold&quot; to do the same thing it was 
+				told last time (go forward or stop), which may seem redundant, 
+				but this repetition has advantages in more complex cases.&nbsp; 
+				In particular, the rapid repeating of the loop allows the 
+				program to add additional processing inside the loop that will 
+				get executed no matter what state the robot is in (moving or 
+				stopped) and won't get postponed because the program is stuck at 
+				a <b>Wait</b> block.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="ultrasonic/steps.html">Ultrasonic Sensor</a><br>
+				(<i>Rear</i> Mounted) </font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="200">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">E5-MagicPush3</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramIntermediate.gif" width="53" height="16" alt="Intermediate"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="389"><font size="2">This 
+				program is exactly equivalent to the <b>E4-MagicPush2</b> program, except that it uses a <b>Logic Switch</b> 
+				and a separate <b>Ultrasonic Sensor</b> block instead of a <b>
+				Sensor Switch</b>, which requires the use of a <i>data wire</i> 
+				to connect the <i>Yes/No</i> result of the <b>Ultrasonic Sensor</b> 
+				block to the logic input on the <b>Logic Switch</b>. </font>
+				<p><font size="2">Understanding how to use the individual <b>
+				Sensor</b> blocks (yellow colored blocks) and how they differ 
+				from the <b>Wait for Sensor</b> blocks (orange) is very 
+				important for more complex tasks.&nbsp; Although they look 
+				similar and have similar configuration panels, note that the 
+				(yellow) <b>Sensor</b> blocks <i>do not wait</i> for the 
+				requested condition to become true, but rather just perform an 
+				instantaneous test of the condition and produce the <i>Yes/No</i> 
+				result on their data hub.&nbsp; This allows a rapidly-repeating 
+				loop to keep repeating as fast as possible without waiting or 
+				anything.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="ultrasonic/steps.html">Ultrasonic Sensor</a><br>
+				(<i>Rear</i> Mounted) </font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="200">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">E6-MagicPush4</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+<b>
+<img border="0" src="../../images/ProgramAdvanced.gif" width="53" height="16" alt="Advanced"></b></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="389"><font size="2">This 
+				program makes a significant improvement to the behavior of the
+				<b>E5-MagicPush3</b> program by using 
+				the numeric <i>Distance</i> in inches as reported from the <b>
+				Ultrasonic Sensor</b> block to adjust the power of the driving 
+				motors, based on the distance your hand is away from the robot.&nbsp; 
+				The closer your hand is to the robot, the faster the robot will 
+				drive.&nbsp; The result is smoother and more realistic, as if 
+				the invisible force was a magnetic repulsion.</font><p>
+				<font size="2">Note that the <b>Ultrasonic Sensor</b> block 
+				produces both a <i>Distance</i> result (a <i>Number</i> in <i>
+				inches)</i> and a <i>Yes/No</i> (<i>Logic</i>) result based on 
+				the threshold test built into the block, and both are used in 
+				this program.</font></p>
+				<p><font size="2">The <i>Distance</i> result is only available 
+				from the individual <b>Ultrasonic Sensor</b> block, and it is 
+				also important that the block does not wait for a result, so 
+				that the loop can rapidly repeat and continuously update the 
+				motor power many times per second.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="ultrasonic/steps.html">Ultrasonic Sensor</a><br>
+				(<i>Rear</i> Mounted) </font></td>
+			</tr>
+		</table>
+		<p>&nbsp;</p>
+		<h3><font size="3"><a name="Detection"></a>Advanced Object Detection</font></h3>
+		<table border="1" width="100%" bordercolorlight="#808080" bordercolordark="#808080" style="border-collapse: collapse" cellpadding="3">
+			<tr>
+				<td align="left" valign="top" width="187"><b><font size="2">
+				Program</font></b></td>
+				<td align="left" valign="top" width="401"><b><font size="2">
+				Description and Observations</font></b></td>
+				<td align="right" valign="top"><b><font size="2">Attachments</font></b></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="187">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">E7-FindObject</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+				<img border="0" src="../../images/ProgramExpert.gif" width="53" height="16" alt="Expert"></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="401"><font size="2">This 
+				program contains a My Block named <b>FindObject</b>, which is 
+				easy to use but has a complex implementation inside it.&nbsp; 
+				The <b>FindObject</b> My Block will use the ultrasonic sensor to 
+				attempt to locate a nearby object and point the robot at it, by 
+				turning the robot until the robot is pointing at the object.</font><p>
+				<font size="2">To use the program, put the robot in an open area 
+				on the floor away from furniture and other objects, and place an 
+				object that is large and tall enough to be seen by the 
+				ultrasonic sensor (a soda can for example) near the robot (no 
+				more than about a foot away), but not right in front of it.</font></p>
+				<p><font size="2">Locating an object in an unknown direction and 
+				at an unknown distance is tricky with the ultrasonic sensor, 
+				because you don't know what specific distance to test for, and 
+				the ultrasonic sensor has a fairly wide field of view, so it 
+				will &quot;see&quot; an object before it is really pointing at it.&nbsp; 
+				To try to solve these problems, the <b>FindObject</b> My Block 
+				attempts to scan for both the left and right &quot;edges&quot; of the 
+				object and then determine a center direction from that.</font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="ultrasonic/steps.html">Ultrasonic Sensor</a><br>
+				(Front Mounted) </font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="187">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">E8-FindPush</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+				<img border="0" src="../../images/ProgramExpert.gif" width="53" height="16" alt="Expert"></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="401"><font size="2">This 
+				program makes an addition to the <b>E7-FindObject</b> program so that after finding the object, the 
+				robot tries to drive into it to knock it over.&nbsp; Set it up 
+				the same way.</font><p><font size="2">Note that once the 
+				difficult task of finding an object has been solved with the <b>
+				FindObject</b> My Block, the result is easy to re-use in 
+				different programs. </font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="ultrasonic/steps.html">Ultrasonic Sensor</a><br>
+				(Front Mounted) </font></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" width="187">
+				<table border="0">
+					<tr>
+						<td><b><font size="2">E9-FindShoot</font></b></td>
+						<td width="4">&nbsp;</td>
+						<td>
+				<img border="0" src="../../images/ProgramExpert.gif" width="53" height="16" alt="Expert"></td>
+					</tr>
+				</table>
+				</td>
+				<td align="left" valign="top" width="401"><font size="2">This 
+				program makes another more complex addition to the <br>
+				<b>E7-FindObject</b> and
+				<b>E8-FindPush</b> programs.&nbsp; Now 
+				after finding the object using the <b>FindObject</b> My Block, 
+				the robot tries to move to 30 cm away from the object (forward 
+				or backward as required), and then shoot the object with the
+				<a href="shooter/steps.html">Ball Shooter Arm</a> attachment.</font><p>
+				<font size="2">If you place an empty soda can somewhere near 
+				Multi-Bot (about 5-15 inches away) at the beginning of the 
+				program,&nbsp; Multi-Bot will usually be able to find it and 
+				shoot it down! </font></td>
+				<td align="right" valign="top"><font size="2">
+				<a href="ultrasonic/steps.html">Ultrasonic Sensor</a><br>
+				(Front Mounted)</font><p><font size="2">
+				<a href="shooter/steps.html">Ball Shooter Arm</a></font></p>
+				<p><font size="2">&nbsp;</font></td>
+			</tr>
+		</table>
+		<p>&nbsp;</p>
+		<p><font size="2"><a href="programs.html">[Back to Programs Index]</a></font></p>
+		</td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana" size="1">Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2010 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

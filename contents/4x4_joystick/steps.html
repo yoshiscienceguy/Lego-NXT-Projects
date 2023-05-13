@@ -1,0 +1,260 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>NXT 4x4 Car with Joystick Control</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt" onload="FP_preloadImgs(/*url*/'../images/buttons/instructions/buttonC.jpg',/*url*/'../images/buttons/instructions/buttonB.jpg')">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../index.html">
+<img border="0" src="../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">4x4 Car with Joystick 
+		Control</font></td>
+		<td width="150" align="right">
+		<table border="0">
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html">Building</a>:</font></td>
+				<td height="23" align="right">
+				<img border="0" src="../images/BuildAdvanced.gif" width="53" height="16" alt="Advanced"></td>
+			</tr>
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html#Program">Program</a>: </font>
+				</td>
+				<td height="23" align="right">
+				<img border="0" src="../images/ProgramAdvanced.gif" width="53" height="16" alt="Advanced"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p><a href="../index.html">
+<img border="0" src="../images/ForNXT1X.png" width="737" height="21"></a></p>
+<h3><span style="font-weight: 400">Building Instructions</span></h3>
+<hr>
+<p><b><font face="Arial" size="7">1-9</font></b></p>
+<p>Start by building the <a href="../4x4_chassis/steps.html">4x4 Chassis</a>.&nbsp; 
+Click the picture for building instructions.</p>
+<p><a href="../4x4_chassis/steps.html"><img border="1" src="../4x4_chassis/DCP_2680.JPG" width="736" height="528"></a></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<p align="center"><a href="../4x4_chassis/steps.html">
+		<img border="0" id="img1" src="../images/buttons/instructions/buttonA.jpg" height="36" width="180" alt="Building Instructions" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonB.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonA.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonC.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonB.jpg')" fp-style="fp-btn: Glow Capsule 3; fp-font: Arial; fp-orig: 0" fp-title="Building Instructions"></a><font size="2"><br>
+&nbsp;</font></td>
+	</tr>
+</table>
+<hr>
+<p><b><font face="Arial" size="7">10</font></b></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">Attach two medium length wires (save the longest 
+		wires for the joystick control) to the motors and route them through the 
+		chassis as shown.<br>
+&nbsp;</font></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_2679.JPG" width="736" height="575"></p>
+<p>&nbsp;</p>
+<hr>
+<p><b><font face="Arial" size="7">11</font></b></p>
+<p><img border="1" src="DCP_2678.JPG" width="736" height="452"></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">After attaching the NXT, connect the motor wires to 
+		ports <b>B </b>and <b>C</b> on the NXT.&nbsp; Make sure that the wires 
+		do not cross (tug on them to test which is which, since they are hard to 
+		see).&nbsp; When looking at the NXT brick right side up, The left side 
+		wire should stay on the left side of the car and be connected to <b>B</b>, 
+		and the right side wire should stay on the right side and be connected 
+		to <b>C</b>.<br>
+&nbsp;</font></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_2703.JPG" width="736" height="548"></p>
+<p>&nbsp;</p>
+<hr>
+<p><b><font face="Arial" size="7">12</font></b></p>
+<p><img border="1" src="DCP_2676.JPG" width="736" height="530"></p>
+<p><img border="1" src="DCP_2675.JPG" width="736" height="349"></p><hr>
+<p><b><font face="Arial" size="7">13</font></b></p>
+<p><img border="1" src="DCP_2674.JPG" width="736" height="465"></p>
+<p><img border="1" src="DCP_2673.JPG" width="736" height="262"></p><hr>
+<p><b><font face="Arial" size="7">14</font></b></p>
+<table border="0" width="720">
+	<tr>
+		<td><font size="2">Use the two longest wires in the kit to connect port
+		<b>A </b>on the NXT to the motor part of the joystick and port <b>1</b> 
+		on the NXT to the button part of the joystick.<br>
+&nbsp;</font></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_2702.JPG" width="736" height="493"></p>
+<hr>
+<p><b><font face="Arial" size="7">15</font></b></p>
+<table border="0" width="720">
+	<tr>
+		<td><font size="2">Build two wire clips and use them to bundle the two 
+		joystick control wires into a single cable.<br>
+&nbsp;</font></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_2672.JPG" width="736" height="511"></p>
+<p><img border="1" src="DCP_2671.JPG" width="736" height="486"></p>
+<p><img border="1" src="DCP_2670.JPG"></p>
+<hr>
+<p><a name="Program"></a></p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td bgcolor="#C0C0C0"><font face="Arial Rounded MT Bold" size="5">4x4 
+		Car with Joystick Control Programming</font><p style="margin-bottom: 6px">
+		<font face="Verdana" size="2">Use the 
+			program <a href="../programs/Joystick_Drive.rbt">Joystick Drive</a> for your 
+		4x4 Car with Joystick Control.</font></p>
+		</td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+<hr>
+<h2><span style="font-weight: 400"><font face="Arial Rounded MT Bold">How to 
+Drive Using the Joystick Control</font></span></h2>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<ol>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Hold the motor part of 
+			the joystick in your left hand <b>with the blue peg facing you</b>, 
+			and hold the lever part of the joystick with your right hand, with 
+			your right thumb on the touch sensor button.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">When you first run the
+			<a href="../programs/Joystick_Drive.rbt">Joystick Drive</a> 
+			program, the NXT will ask you to center the joystick (move the lever 
+			part straight up) and press the sensor button.&nbsp; This is done to 
+			determine which direction is straight on the joystick.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">After you press the 
+			touch sensor for the first time, the NXT will display &quot;Drive!&quot;, and 
+			you are now in control.&nbsp; To turn the drive motors on, hold down 
+			the touch sensor button with your thumb.&nbsp; While the button is 
+			held down, you can steer left and right with the lever part of the 
+			joystick.&nbsp; The farther you tilt the joystick, the tighter the 
+			car will turn.&nbsp; Release the button to stop.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">A special case is added 
+			to back up.&nbsp; Pivot the joystick lever all the way down next to 
+			the motor part and the press the button to back up straight in 
+			reverse.</font></li>
+		</ol>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 6px">&nbsp;</p>
+<table border="0" width="740">
+	<tr>
+		<td valign="top" align="center">
+		<img border="1" src="DCP_2728.JPG" width="118" height="218"></td>
+		<td valign="top" align="center">
+		<img border="1" src="DCP_2729.JPG" width="165" height="218"></td>
+		<td valign="top" align="center">
+		<img border="1" src="DCP_2730.JPG" width="194" height="218"></td>
+		<td valign="top" align="center">
+		<img border="1" src="DCP_2731.JPG" width="233" height="218"></td>
+	</tr>
+	<tr>
+		<td align="center" valign="top"><font size="2">Go Straight</font></td>
+		<td align="center" valign="top"><font size="2">Turn Left</font></td>
+		<td align="center" valign="top"><font size="2">Turn Right</font></td>
+		<td align="center" valign="top"><font size="2">Back up</font></td>
+	</tr>
+</table>
+<p align="left">&nbsp;</p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="5">Challenge</font><p>
+		<font size="2">Lay out an obstacle course for your 4x4 and see how 
+		accurately you can drive through it.&nbsp; The 4x4 will have pretty good 
+		traction climbing over small obstacles, but this makes it more 
+		challenging to drive!<br>
+&nbsp;</font></td>
+	</tr>
+</table>
+<p align="center">&nbsp;</p>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana" size="1">Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2009 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

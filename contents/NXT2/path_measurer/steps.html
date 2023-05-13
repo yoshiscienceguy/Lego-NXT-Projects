@@ -1,0 +1,405 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>NXT Path Measurer</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt" onload="FP_preloadImgs(/*url*/'../../images/buttons/instructions/buttonC.jpg',/*url*/'../../images/buttons/instructions/buttonB.jpg')">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../../index.html">
+<img border="0" src="../../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">Path Measurer</font></td>
+		<td width="150" align="right">
+		<table border="0">
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html">Building</a>:</font></td>
+				<td height="23" align="right">
+				<img border="0" src="../../images/BuildIntermediate.gif" width="53" height="16" alt="Intermediate"></td>
+			</tr>
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="#Program">Program</a>: </font>
+				</td>
+				<td height="23" align="right">
+				<img border="0" src="../../images/ProgramAdvanced.gif" width="53" height="16" alt="Advanced"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p>
+<a href="../../index.html"><img border="0" src="../../images/ForNXT2.png" width="737" height="21"></a></p>
+<h3><span style="font-weight: 400">Building Instructions</span></h3>
+<hr>
+<p><b><font face="Arial" size="7">1-6</font></b></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">Start by building a robot vehicle with 2-motor drive, 
+		such as the <a href="../five_minute_bot/index.html">Five Minute Bot</a> 
+		(Click the picture for building instructions).</font></td>
+	</tr>
+</table>
+<p><a href="../five_minute_bot/steps.html">
+<img border="1" src="../five_minute_bot/DCP_2667.JPG" width="736" height="487"></a></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<p align="center"><a href="../five_minute_bot/steps.html">
+		<img border="0" id="img1" src="../../images/buttons/instructions/buttonA.jpg" height="36" width="180" alt="Building Instructions" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'../../images/buttons/instructions/buttonB.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'../../images/buttons/instructions/buttonA.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'../../images/buttons/instructions/buttonC.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'../../images/buttons/instructions/buttonB.jpg')" fp-style="fp-btn: Glow Capsule 3; fp-font: Arial; fp-orig: 0" fp-title="Building Instructions"></a><font size="2"><br>
+&nbsp;</font></td>
+	</tr>
+</table>
+<hr>
+<p><b><font face="Arial" size="7">7</font></b></p>
+<p><img border="1" src="DCP_2687.JPG" width="736" height="382"></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">Connect the wire from the touch sensor to port <b>1</b> 
+		on the NXT.&nbsp; </font></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_2685.JPG" width="736" height="503"></p>
+<hr>
+<p><a name="Program"></a></p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td bgcolor="#C0C0C0"><font face="Arial Rounded MT Bold" size="5">Path 
+		Measurer Programming</font><p style="margin-bottom: 6px">
+		<font size="2">Two different programs are provided for the Path 
+		Measurer.&nbsp; These programs can be used on any robot with standard 
+		2-motor drive (one motor drives a left wheel and one motor drives a 
+		right wheel), although you may need to modify the programs to account 
+		for differences in orientation of the motors (forward vs. backward) or 
+		the NXT (which motor port is on the left side).&nbsp; See the 
+		instructions below.</font></p>
+		<p style="margin-bottom: 6px">
+		<font size="2">The <a href="../../programs2/PathMeasure.rbt">PathMeasure</a> 
+		program provides an easy way to measure path segments with three types 
+		of movement: straight forward, and one-wheeled turns to the left and 
+		right.&nbsp; See the instructions below.&nbsp; </font></p>
+		<p style="margin-bottom: 6px">
+		<font size="2">The <a href="../../programs2/MoveMeasure.rbt">MoveMeasure</a> 
+		is a more complex program that provides eight types of movement, 
+		including three types of turns in each direction, and straight forward 
+		and backward motions.&nbsp; See the instructions below.</font></p>
+		</td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<h3>&nbsp;</h3>
+		<h3><span style="font-weight: 400">
+		<font face="Arial Rounded MT Bold" size="5">Using the PathMeasure 
+		Program</font></span></h3>
+		<p><font size="2">The <a href="../../programs2/PathMeasure.rbt">PathMeasure</a> 
+		program allows you to select from three directions for each of the 
+		segments in your path: straight forward and one-wheeled turns left and 
+		right.&nbsp; If you want to measure different kinds of turns, such as 
+		pivot turns where the wheels turn opposite directions, use the
+		<a href="../../programs2/MoveMeasure.rbt">MoveMeasure</a> program instead.&nbsp; 
+		The PathMeasure program can be used as follows:</font></p>
+		<table border="0" width="100%" cellpadding="5">
+			<tr>
+				<td align="center" width="33%" valign="top">
+				<img border="0" src="DCP_2688.JPG" width="233" height="160"></td>
+				<td align="center" width="33%" valign="top">
+				<img border="0" src="DCP_2689.JPG" width="226" height="160"></td>
+				<td align="center" width="33%" valign="top">
+				<img border="0" src="DCP_2690.JPG" width="230" height="160"></td>
+			</tr>
+			<tr>
+				<td align="center" width="33%" valign="top">
+				<p align="left"><font size="2"><b>1. </b>At the beginning of 
+				each segment, select the direction using the NXT buttons:<br>
+&nbsp;&nbsp; <b>Left Arrow</b>: Left Turn<br>
+&nbsp;&nbsp; <b>Enter Button</b>: Straight Forward<br>
+&nbsp;&nbsp; <b>Right Arrow</b>: Right Turn<br>
+				The rotation sensors for the B and C motors will be reset to 
+				zero.</font></td>
+				<td align="center" width="33%" valign="top">
+				<p align="left"><font size="2"><b>2.</b> Press and hold the 
+				touch sensor on the remote control to make the robot move in the 
+				direction indicated.&nbsp; You can press the sensor more than 
+				once, and you can also adjust the wheel positions by hand at the 
+				end of the segment if needed.&nbsp; The degrees travelled by 
+				each motor are displayed on the screen.</font></td>
+				<td align="center" width="33%" valign="top">
+				<p align="left"><font size="2"><b>3.</b> To begin a new segment, 
+				press the NXT button for the new direction as in step 1, and the 
+				rotation sensors will be reset back to zero to begin the next 
+				measurement.</font></td>
+			</tr>
+		</table>
+		<p align="left"><b><font face="Arial">Modifying</font></b><span style="font-weight: 700"><font face="Arial"> 
+		the PathMeasure Program to Match your Robot</font></span></p>
+		<table border="0" width="100%">
+			<tr>
+				<td width="405" valign="top"><font size="2">As written, the
+				<a href="../../programs2/PathMeasure.rbt">PathMeasure</a> program 
+				assumes that the motors should be run in the &quot;forward&quot; direction 
+				to make the robot move forward, and that motor B is on the left 
+				of the robot and motor C is on the right (like the settings on 
+				the configuration panel for the Move block).&nbsp; If your robot 
+				needs different settings, you will need to modify the program.&nbsp;
+				</font>
+				<p><font size="2">To modify the PathMeasure program, find the 
+				3-tabbed Switch in the lower sequence of the program pictured to 
+				the right.&nbsp; Click on the three tabs to show the Motor and 
+				Move blocks used for the three motion directions (left, 
+				straight, right) and change them as necessary.</font></td>
+				<td valign="top">&nbsp;</td>
+				<td width="296" valign="top">
+				<img border="1" src="PathMeasureMoves.png" width="290" height="167"></td>
+			</tr>
+		</table>
+		<h3><span style="font-weight: 400">
+		<font face="Arial Rounded MT Bold" size="5"><br>
+		Using the MoveMeasure Program</font></span></h3>
+		<p><font size="2">The <a href="../../programs2/MoveMeasure.rbt">MoveMeasure</a> 
+		program is a more complex alternative to the
+		<a href="../../programs2/PathMeasure.rbt">PathMeasure</a> program that 
+		allows you to select from eight directions for each of the segments in 
+		your path.&nbsp; The MoveMeasure program is used as follows:</font></p>
+		<div align="center">
+			<table border="1" bordercolorlight="#808080" bordercolordark="#808080" style="border-collapse: collapse" cellpadding="3">
+				<tr>
+					<td><font size="2">Left Arrow Button: </font></td>
+					<td><font size="2">Select Previous Motion Type</font></td>
+				</tr>
+				<tr>
+					<td><font size="2">Right Arrow Button:</font></td>
+					<td><font size="2">Select Next Motion Type</font></td>
+				</tr>
+				<tr>
+					<td><font size="2">Enter Button:</font></td>
+					<td><font size="2">Reset Rotation Sensors to Zero </font>
+					</td>
+				</tr>
+				<tr>
+					<td><font size="2">Press and Hold Touch Sensor: </font></td>
+					<td><font size="2">Drive in the Selected Direction</font></td>
+				</tr>
+			</table>
+			<p align="left"><font size="2">As with the PathMeasure program, you 
+			can press the touch sensor more than once to complete a motion if 
+			desired, and you can also adjust the wheel positions by hand at the 
+			end of the motion if desired. </font></div>
+		<div align="left">
+&nbsp;</div>
+		<div align="left">
+			<font size="2">Using the arrow buttons to select the motion type 
+			will rotate continuously through a cycle of eight different 
+			directions (starting at 4 = Straight Forward) as follows:<br>
+&nbsp;</font></div>
+		<div align="center">
+			<table border="1" bordercolorlight="#808080" bordercolordark="#808080" style="border-collapse: collapse" cellpadding="3">
+				<tr>
+					<td>&nbsp;</td>
+					<td><b><font size="2">Motion</font></b></td>
+					<td><b><font size="2">Motor B</font></b></td>
+					<td><b><font size="2">Motor C</font></b></td>
+				</tr>
+				<tr>
+					<td><font size="2">1</font></td>
+					<td><font size="2">Left Reverse Turn</font></td>
+					<td><font size="2">Backward</font></td>
+					<td><font size="2">Stop</font></td>
+				</tr>
+				<tr>
+					<td><font size="2">2</font></td>
+					<td><font size="2">Left Pivot Turn</font></td>
+					<td><font size="2">Backward</font></td>
+					<td><font size="2">Forward</font></td>
+				</tr>
+				<tr>
+					<td><font size="2">3</font></td>
+					<td><font size="2">Left one-wheeled Turn</font></td>
+					<td><font size="2">Stop</font></td>
+					<td><font size="2">Forward</font></td>
+				</tr>
+				<tr>
+					<td><font size="2">4</font></td>
+					<td><font size="2">Straight Forward</font></td>
+					<td><font size="2">Forward</font></td>
+					<td><font size="2">Forward</font></td>
+				</tr>
+				<tr>
+					<td><font size="2">5</font></td>
+					<td><font size="2">Right one-wheeled Turn</font></td>
+					<td><font size="2">Forward</font></td>
+					<td><font size="2">Stop</font></td>
+				</tr>
+				<tr>
+					<td><font size="2">6</font></td>
+					<td><font size="2">Right Pivot Turn</font></td>
+					<td><font size="2">Forward</font></td>
+					<td><font size="2">Backward</font></td>
+				</tr>
+				<tr>
+					<td><font size="2">7</font></td>
+					<td><font size="2">Right Reverse Turn</font></td>
+					<td><font size="2">Stop</font></td>
+					<td><font size="2">Backward</font></td>
+				</tr>
+				<tr>
+					<td><font size="2">8</font></td>
+					<td><font size="2">Straight Reverse</font></td>
+					<td><font size="2">Backward</font></td>
+					<td><font size="2">Backward</font></td>
+				</tr>
+			</table>
+		</div>
+		<div align="left">
+&nbsp;</div>
+		<table border="0" width="100%" cellpadding="5">
+			<tr>
+				<td align="center" width="33%" valign="top">
+				<img border="0" src="DCP_2694.JPG" width="230" height="160"></td>
+				<td align="center" width="33%" valign="top">
+				<img border="0" src="DCP_2695.JPG" width="221" height="160"></td>
+				<td align="center" width="33%" valign="top">
+				<img border="0" src="DCP_2693.JPG" width="232" height="160"></td>
+			</tr>
+			<tr>
+				<td align="center" width="66%" valign="top" colspan="2">
+				<p align="left"><font size="2">Two icons on the top of the 
+				screen display the selected motion type by indicating which 
+				direction the motor on that side of the robot will move 
+				(forward, backward, or stop).</font></td>
+				<td align="center" width="33%" valign="top">
+				<p align="left"><font size="2">Rotation measurements in degrees 
+				are displayed for the left and right motors.</font></td>
+			</tr>
+		</table>
+		<p align="left"><b><font face="Arial">Modifying</font></b><span style="font-weight: 700"><font face="Arial"> 
+		the MoveMeasure Program to Match your Robot</font></span></p>
+		<table border="0" width="100%">
+			<tr>
+				<td width="321" valign="top"><font size="2">As written, the
+				<a href="../../programs2/MoveMeasure.rbt">MoveMeasure</a> program 
+				assumes that the motors should be run in the &quot;forward&quot; direction 
+				to make the robot move forward, and that motor B is on the left 
+				of the robot and motor C is on the right (like the settings on 
+				the configuration panel for the Move block).&nbsp; If your robot 
+				needs different settings, you will need to modify the 
+				MoveMeasure program.&nbsp; </font>
+				<p><font size="2">To modify the MoveMeasure program, find the 
+				8-tabbed Switch in the lower sequence of the program pictured to 
+				the right.&nbsp; Click on the tabs to show the Motor and Move 
+				blocks used for the eight motion directions and change them as 
+				necessary (see the table of motions above).</font></td>
+				<td valign="top">&nbsp;</td>
+				<td width="296" valign="top">
+				<img border="1" src="MoveMeasureMoves.png" width="385" height="167"></td>
+			</tr>
+		</table>
+		<p align="left">&nbsp;</td>
+	</tr>
+</table>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="5">Challenges</font><ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Use the Path Measurer 
+			to map out and measure a path from a starting point to a goal, 
+			including two or three turns along the way.&nbsp; Then use the 
+			measurements to write your own autonomous (not remote controlled) 
+			program using Move and/or Motor blocks to make the NXT follow that 
+			path.&nbsp; Test your program and adjust the durations if necessary 
+			to see how accurately you can get to the goal.&nbsp;&nbsp; </font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Try using the
+			<a href="../../programs2/PathMeasure.rbt">PathMeasure</a> or
+			<a href="../../programs2/MoveMeasure.rbt">MoveMeasure</a> program on a 
+			different robot, perhaps one of your own design.&nbsp; If your robot 
+			goes backwards when forward is indicated, or if left and right are 
+			reversed, then you will need to modify the programs to suit your 
+			robot (see instructions above).&nbsp; </font></li>
+		</ul>
+		</td>
+	</tr>
+</table>
+<table border="0" width="740" cellpadding="24">
+	<tr>
+		<td align="center">
+		&nbsp;</td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center"><font face="Verdana" size="1"><br>
+Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2010 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>
