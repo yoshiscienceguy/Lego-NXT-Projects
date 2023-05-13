@@ -1,0 +1,345 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>NXT Voice Controlled Car</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt" onload="FP_preloadImgs(/*url*/'../images/buttons/instructions/buttonC.jpg',/*url*/'../images/buttons/instructions/buttonB.jpg')">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../index.html">
+<img border="0" src="../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">Voice Controlled Car</font></td>
+		<td width="150" align="right">
+		<table border="0">
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html">Building</a>:</font></td>
+				<td height="23" align="right">
+				<img border="0" src="../images/BuildAdvanced.gif" width="53" height="16" alt="Advanced"></td>
+			</tr>
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="#Program">Program</a>: </font>
+				</td>
+				<td height="23" align="right">
+				<img border="0" src="../images/ProgramExpert.gif" width="53" height="16" alt="Expert"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p><a href="../index.html">
+<img border="0" src="../images/ForNXT1X.png" width="737" height="21"></a></p>
+<h3><span style="font-weight: 400">Building Instructions</span></h3>
+<hr>
+<p><b><font face="Arial" size="7">1-11</font></b></p>
+<p>Start by building the <a href="../castor_bot/steps.html">Castor Bot</a>.&nbsp; 
+Click the picture for building instructions.</p>
+<p><a href="../castor_bot/steps.html">
+<img border="1" src="../castor_bot/DCP_3166.jpg" width="736" height="485"></a></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<p align="center"><a href="../castor_bot/steps.html">
+		<img border="0" id="img1" src="../images/buttons/instructions/buttonA.jpg" height="36" width="180" alt="Building Instructions" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonB.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonA.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonC.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonB.jpg')" fp-style="fp-btn: Glow Capsule 3; fp-font: Arial; fp-orig: 0" fp-title="Building Instructions"></a><font size="2"><br>
+&nbsp;</font></td>
+	</tr>
+</table>
+<hr>
+<p><b><font face="Arial" size="7">12</font></b></p>
+<p><img border="1" src="DCP_3639.JPG" width="736" height="393"></p>
+<p><img border="1" src="DCP_3638.JPG" width="736" height="395"></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">The rubber pieces help isolate the sound sensor from 
+		the vibrations of the motors when the car is moving.</font></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_3637.JPG" width="736" height="368"></p>
+<hr>
+<p><b><font face="Arial" size="7">13</font></b></p>
+<p><img border="1" src="DCP_3636.JPG" width="736" height="324"></p>
+<p><img border="1" src="DCP_3640.JPG" width="736" height="193"></p>
+<p><img border="1" src="DCP_3634.JPG" width="736" height="177"></p>
+<hr>
+<p><b><font face="Arial" size="7">14</font></b></p>
+<p><img border="1" src="DCP_3633.JPG" width="736" height="261"></p>
+<p><img border="1" src="DCP_3632.JPG" width="736" height="235"></p>
+<p><img border="1" src="DCP_3631.JPG" width="736" height="358"></p>
+<p><img border="1" src="DCP_3630.JPG" width="736" height="570"></p>
+<hr>
+<p><b><font face="Arial" size="7">15</font></b></p>
+<p><img border="1" src="DCP_3629.JPG" width="736" height="222"></p>
+<p><img border="1" src="DCP_3628.JPG" width="736" height="179"></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">The sound sensor is mounted on a tall tower to try to 
+		get away from the noise of the motors when the robot is moving.&nbsp; 
+		The NXT motors make a lot of noise.</font></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_3627.JPG" width="736" height="602"></p>
+<hr>
+<p><b><font face="Arial" size="7">16</font></b></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">Connect a wire from the sound sensor to port <b>2</b> 
+		on the NXT.</font></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_3625.JPG" width="736" height="616"></p>
+<hr>
+<p><a name="Program"></a></p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td bgcolor="#C0C0C0"><font face="Arial Rounded MT Bold" size="5">Voice 
+		Controlled Car Programming</font><p style="margin-bottom: 6px">
+		<font size="2">Use the program <a href="../programs/Voice_Bot.rbt">Voice 
+		Bot</a> for the Voice Controlled Car.&nbsp; The program uses a couple of 
+		tricks to distinguish between the four voice commands that the robot can 
+		understand.&nbsp; Actually, real computer voice recognition programs use 
+		tricks too (just better and much more complicated), because no computer 
+		really understands what you are saying.</font></p>
+		<p style="margin-bottom: 6px">
+		<font size="2">It takes a little practice to learn how to say the words 
+		in the right way for it to work (see the instructions below), so the 
+		program also draws a graph of the sound that it hears on the NXT's 
+		display to help you practice saying the sounds right.</font></p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 6px">&nbsp;</p>
+<p style="margin-bottom: 6px"><font face="Arial Rounded MT Bold" size="5">Using 
+the Voice Controlled Car</font></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">The car is designed to drive on the floor with you 
+		standing over and slightly behind it (the sound sensor is pointing 
+		backwards), giving voice commands.&nbsp; However, you may want to 
+		practice your voice commands while holding the robot in your hands 
+		first.</font><p><font size="2">The NXT's sound sensor is very simple and 
+		is only capable of measuring the loudness of sound that it hears, so the
+		<a href="../programs/Voice_Bot.rbt">Voice Bot</a> program uses a few 
+		simple tricks based on the loudness and timing of your voice to 
+		determine what command you are saying.&nbsp; It will take a little 
+		practice to learn to say the commands properly, so the program helps out 
+		by drawing a graph of the &quot;shape&quot; and timing of your voice that it 
+		hears.&nbsp; </font></p>
+		<p><font size="2">Here is a description of how each command should 
+		sound, along with a picture of what the graph might look like for that 
+		sound on the NXT's display:<br>
+&nbsp;</font></p>
+		<table border="0" width="740" cellspacing="5" cellpadding="3">
+			<tr>
+				<td width="50%" align="left" valign="top">
+				<img border="1" src="DCP_3641.JPG" width="354" height="248"></td>
+				<td width="50%" align="left" valign="top">
+				<img border="1" src="DCP_3642.JPG" width="336" height="248"></td>
+			</tr>
+			<tr>
+				<td width="50%" align="left" valign="top"><font size="2">The <b>
+				&quot;Go&quot;</b> command must be a short sound with no noise afterwards.&nbsp; 
+				The tick mark that shows the position of the loudest part of the 
+				sound on the graph must be in the left part of the graph.</font></td>
+				<td width="50%" align="left" valign="top"><font size="2">The 
+				only command that the robot understands when it is going forward 
+				is <b>&quot;Stop&quot;</b>.&nbsp; So, <i>you must be stopped before doing 
+				any turns</i>.&nbsp; Also, the &quot;Stop&quot; command must be pretty 
+				loud, to get through the noise of the motors when the robot is 
+				moving.</font></td>
+			</tr>
+			<tr>
+				<td width="50%" align="left" valign="top">&nbsp;</td>
+				<td width="50%" align="left" valign="top">&nbsp;</td>
+			</tr>
+			<tr>
+				<td width="50%" align="left" valign="top">
+				<img border="1" src="DCP_3643.JPG" width="355" height="257"></td>
+				<td width="50%" align="left" valign="top">
+				<img border="1" src="DCP_3644.JPG" width="358" height="257"></td>
+			</tr>
+			<tr>
+				<td width="50%" align="left" valign="top"><font size="2">The <b>
+				&quot;Turn Right&quot;</b> command must be said with &quot;Right&quot; louder than 
+				&quot;Turn&quot;, and at a fairly normal speaking speed.&nbsp; The tick 
+				mark that shows the position of the loudest part of the sound on 
+				the graph must be in the middle part of the graph.</font></td>
+				<td width="50%" align="left" valign="top"><font size="2">The <b>
+				&quot;Turn Left&quot;</b> command must be said with &quot;Left&quot; louder than 
+				&quot;Turn&quot;, and a brief pause between the two words (otherwise it 
+				will sound just like &quot;Turn Right&quot; to the program).&nbsp; The 
+				tick mark that shows the position of the loudest part of the 
+				sound on the graph must be in the right part of the graph.</font></td>
+			</tr>
+		</table>
+		<p style="margin-bottom: 6px"><font size="2">So, the four voice commands 
+		must be said something like this:</font></p>
+		<ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">&quot;<b>Go</b>&quot;</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">&quot;<b>STOP!!</b>&quot;</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">&quot;Turn <b>RIGHT!</b>&quot;</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">&quot;Turn ... <b>LEFT!</b>&quot;</font></li>
+		</ul>
+		<p style="margin-bottom: 6px"><font size="2">And remember that when the 
+		robot is moving forward you can only give the &quot;Stop&quot; command, and when 
+		the robot is stopped you can only give the &quot;Go&quot;, &quot;Turn Right&quot;, or &quot;Turn 
+		Left&quot; commands.</font></p>
+		<p style="margin-bottom: 6px"><font size="2">Finally, <i>you must pause 
+		for about a second between voice commands</i>, to allow there to be some 
+		quiet between commands, so you can't yell &quot;Turn Right&quot; immediately after 
+		saying &quot;Stop&quot;, for example.</font></p>
+		<p style="margin-bottom: 6px"><font size="2">The key to getting the 
+		&quot;Go&quot;, &quot;Turn Right&quot;, and &quot;Turn Left&quot; commands right is the timing of the 
+		loudest part of the command.&nbsp; Note that the graph is divided into 
+		three parts by the two vertical lines, and the program will draw a tick 
+		mark along the horizontal line at the top of graph where the loudest 
+		part of the command was heard:</font></p>
+		<ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">If the tick mark ends 
+			up in the left part of the graph, it will be &quot;Go&quot;.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">If the tick mark ends 
+			up in the middle part of the graph, it will be &quot;Turn Right&quot;.&nbsp;
+			</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">If the tick mark ends 
+			up in the right part of the graph, it will be &quot;Turn Left&quot;.</font></li>
+		</ul>
+		<p style="margin-bottom: 6px"><font size="2">You can practice the timing 
+		of your commands with the robot held in your hands and speaking at a 
+		normal talking volume.&nbsp; Note that when you do this, the clattering 
+		of the wheels spinning in the air when the robot is &quot;going&quot; may cause a 
+		&quot;Stop&quot; command to be heard when you didn't say one.&nbsp; You can take 
+		the wheels off for practice if this is a problem.&nbsp; Then when the 
+		robot is on the floor and you are standing over it talking to it, you 
+		will need to talk louder for it to hear you well enough. </font>
+		<h3 style="margin-bottom: 6px">Adjusting the Sound Levels</h3>
+		<p style="margin-bottom: 6px"><font size="2">If you are having trouble 
+		with the car stopping by itself before you say &quot;Stop&quot;, or going or 
+		turning before you say anything, you may need to adjust some of the 
+		numbers used in the program, because currently the program does not have 
+		any &quot;calibration&quot; for the sound levels, and some sound sensors are more 
+		sensitive than others (and some rooms are more noisy than others).&nbsp; 
+		The first three blocks in the
+			<a href="../programs/Voice_Bot.rbt">Voice Bot</a> program set three 
+		variables to numbers that are the sound levels required for the various 
+		commands to work:</font><p style="margin-bottom: 6px" align="center">
+		<img border="1" src="Constants.jpg" width="335" height="85"><p style="margin-bottom: 6px" align="left">
+		<font size="2">You can change one of these sound levels by selecting the 
+		block and changing the &quot;Value&quot; for the variable.&nbsp; If the robot 
+		stops before you say &quot;Stop&quot;, try increasing the value for the <b>Stop</b> 
+		variable.&nbsp; If the robot goes or turns before you say anything, try 
+		increasing the value for the <b>Go</b> variable.&nbsp;&nbsp; If your 
+		room is very noisy and the robot doesn't seem to listen to anything 
+		after hearing one command, you could try increasing the <b>Quiet</b> 
+		variable.</font></td>
+	</tr>
+</table>
+<p style="margin-bottom: 6px">&nbsp;</p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="5">Challenges</font><ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Practice saying the 
+			four commands so that the robot can understand them, then see if you 
+			can control the robot using only your voice to drive around your 
+			house.&nbsp; Make sure you understand all the rules explained above.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">The
+			<a href="../programs/Voice_Bot.rbt">Voice Bot</a> program is 
+			complex, but if you know something about NXT programming, open it 
+			and take a look at parts of it and see if you can understand how any 
+			part of it works.&nbsp; Try looking at just small parts of it at 
+			time and read the comments that describe those parts.&nbsp; If you 
+			can find the parts that control the motors, you could modify the 
+			program to make a new program to control something else that did 
+			different things in response to similar-sounding voice commands.&nbsp; 
+			Actually, the voice commands you use don't even need to sound 
+			similar, they just need to follow the same rules of the tricks that 
+			this program uses.</font></li>
+		</ul>
+		</td>
+	</tr>
+</table>
+<p align="center">&nbsp;</p>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana" size="1">Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2009 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

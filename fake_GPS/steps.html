@@ -1,0 +1,264 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>NXT Fake GPS Receiver</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../index.html">
+<img border="0" src="../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">Fake GPS Receiver</font></td>
+		<td width="150" align="right">
+		<table border="0">
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html">Building</a>:</font></td>
+				<td height="23" align="left">
+				<font size="2">(none)</font><font face="Verdana" size="2"> </font></td>
+			</tr>
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="#Program">Program</a>: </font>
+				</td>
+				<td height="23" align="left">
+				<img border="0" src="../images/ProgramExpert.gif" width="53" height="16" alt="Expert"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p><a href="../index.html">
+<img border="0" src="../images/ForNXT1X.png" width="737" height="21"></a></p>
+<h3><span style="font-weight: 400">Building Instructions</span></h3>
+<hr>
+<p><b><font face="Arial" size="7">1</font></b></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">This project requires no building.&nbsp; All you need 
+		to do is download the program to the NXT brick.</font></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_5753-1.JPG" width="736" height="463"></p>
+<hr>
+<p><a name="Program"></a></p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td bgcolor="#C0C0C0"><font face="Arial Rounded MT Bold" size="5">Fake 
+		GPS Receiver Programming</font><p style="margin-bottom: 6px">
+		<font face="Verdana" size="2">Use the 
+			program <a href="../programs/GPS.rbt">GPS</a> for 
+		the fake GPS Receiver.&nbsp; This program is designed to be 
+		intentionally tricky and even misleading when you examine it.&nbsp; But 
+		can you figure it out anyway?&nbsp; Here are some hints:</font></p>
+		<ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">The stuff about &quot;back 
+			door&quot; variables and system traps is all fake.&nbsp; The variables 
+			with strange names are just regular NXT-G variables, and they behave 
+			in the same way as all variables.&nbsp; Don't worry if you don't 
+			know what a &quot;thread&quot;, a &quot;trap&quot;, or a &quot;stack&quot; is.&nbsp; This is all 
+			fake mumbo-jumbo.</font></p></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">The rebooting into 
+			another operating system (a &quot;debug micro-kernel&quot;) is fake.&nbsp; 
+			Everything is done using normal NXT functionality.&nbsp; But can you 
+			explain the results you see on screen?</font></p></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Don't get bogged down 
+			in the math calculations in the program.&nbsp; They don't do 
+			anything.</font></p></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">The comments in the 
+			program are designed to be intentionally misleading.&nbsp; Don't 
+			believe what you read.&nbsp; Look at the what the program blocks are 
+			actually doing.</font></p></li>
+		</ul>
+		<p style="margin-bottom: 6px"><font size="2">And here are some general techniques to help you figure out how an unfamiliar program 
+		works.&nbsp; You can also use these techniques when you are trying to 
+		find a problem with (&quot;debug&quot;) your own programs.</font></p>
+		<ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">In a program that 
+			contains Switch, Loop, and Sequence splits, it is not always obvious 
+			where the program will go when.&nbsp; To help you figure this out, 
+			you can add Sound or Display blocks to the program that will signal 
+			to you when the program reaches that point.&nbsp; For example, if 
+			you put a &quot;Hello&quot; sound block at the beginning of a loop, then you will 
+			hear the &quot;Hello&quot; each time the loop repeats.&nbsp; And if you put 
+			different sounds in different conditions of a Switch, you will be 
+			able to hear which way the switch went.</font></p></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">To slow down the 
+			normally rapid execution of blocks in a program, to help you trace 
+			through it while it is running, you can add Wait blocks that wait 
+			for a time delay, a touch sensor, or one of the NXT buttons (e.g. 
+			orange Enter button) to be pressed.&nbsp; This works well combined 
+			with the Sound and Display blocks suggested above.&nbsp; Try adding 
+			a Display or Sound block immediately followed by a Wait for the 
+			Enter button at a key point in the program.&nbsp; This will tell you 
+			where the program is and give you a chance to notice and think about 
+			it before the program continues.</font></p></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">To help figure out a 
+			program that contains variables (most of the variables in the </font>
+			<font face="Verdana" size="2"><a href="../programs/GPS.rbt">GPS</a>
+			</font><font size="2">program are not important, but a few are), try 
+			this technique to trace through the program by just looking at the 
+			blocks (not running it):</font></p>
+			<ol>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Get out a sheet of 
+				paper and a pencil to write variables down on.</font></p></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Start at the 
+				beginning of the program and carefully follow the program flow 
+				with the white sequence beams, etc., one block at a time.</font></p>
+				</li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Each time a new 
+				variable in introduced, write down its name on the paper, and 
+				next to it write down the value that was written to the 
+				variable.&nbsp; Any variables that are read before being written 
+				will start out with a zero/False/empty value.</font></p></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Any time a variable 
+				is used for a Switch, Math Block, etc., look at your paper to 
+				determine the value for the variable.</font></p></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Any time an 
+				existing variable is re-written with a new value, erase or cross 
+				out the old value on your paper and write the new value.</font></p>
+				</li>
+			</ol>
+			</li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">As an advanced way to 
+			debug a program with variables in it while it is running, you can 
+			add Display blocks to display the values of certain variables 
+			(numbers will need to be converted to text with the Number to Text 
+			block then wired into the Text input hub of the Display block), 
+			followed by a Sound then a Wait for a button press to give you a 
+			chance to notice and read it.</font></p></li>
+		</ul>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 6px">&nbsp;</p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="5">Challenges</font><ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">The coordinates that 
+			you get from your fake GPS might be different from the ones shown 
+			above.&nbsp; Where does your NXT think you are?</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Can you figure out how 
+			the <a href="../programs/GPS.rbt">GPS</a> program works?&nbsp; How 
+			do you explain what you see on screen from the blocks and structures 
+			used in the program, including the fake &quot;boot up&quot; part?</font></li>
+		</ul>
+		<div align="center">
+			<table border="1" cellpadding="6" style="border-collapse: collapse" bordercolor="#000000" width="500">
+				<tr>
+					<td>
+					<p align="left"><b><font size="2">Fake GPS Challenge Winners</font></b></p>
+					<p align="left"><font size="2">When this project was first 
+					posted, there was a contest to see who could be the first 
+					three people to explain how the program works.&nbsp; 
+					Congratulations to the following people for their great 
+					detective work and excellent explanations!</font></p>
+					<p align="center"><font size="2">Gordon Buchanan<br>
+					Patrick Dynes<br>
+					Rong F. Lee</font></td>
+				</tr>
+			</table>
+		</div>
+		<ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Does this project give you 
+			any ideas for other fake programs you could come up with to trick 
+			your friends?&nbsp; You don't need to worry about making the program 
+			blocks confusing, since your friends won't see the program, just 
+			make the end result on the screen look like something they might 
+			believe.&nbsp; Here are some ideas:</font><ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">A fake &quot;Lie Detector&quot; 
+			using the light sensor to &quot;measure&quot; their skin temperature.&nbsp; 
+			After saying something into the sound sensor and pressing the touch 
+			sensor, the NXT will display either &quot;True&quot; or &quot;Lie&quot;.&nbsp; Perhaps 
+			randomly, or using some other pattern trick you come up with (such 
+			as every third statement is labeled as a lie).</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Similar to a lie 
+			detector, perhaps a &quot;Magic 8 Ball&quot;, that randomly comes up with 
+			answers like &quot;Not Likely&quot;, &quot;Yes&quot;, &quot;No way&quot;, etc.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">A fake text messaging 
+			application.&nbsp; Pretend that you can carry on a text conversation 
+			with someone else (like texting on a cell phone).&nbsp; </font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">A fake metal detector.&nbsp; 
+			Use the NXT to scan your friends and locate metal in their pockets, 
+			etc.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">What else?</font></li>
+		</ul>
+			</li>
+		</ul>
+		</td>
+	</tr>
+</table>
+<p align="center">&nbsp;</p>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana" size="1">Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2009 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

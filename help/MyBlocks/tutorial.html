@@ -1,0 +1,1587 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="description" content="Learning to build and program the LEGO MINDSTORMS NXT">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Learning to use the NXT</title>
+<style>
+<!--
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+-->
+</style>
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../../index.html">
+<img border="0" src="../../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<h1><span style="font-weight: 400"><font face="Arial Rounded MT Bold" size="5">
+Creating and Using your own Blocks with My Blocks</font></span></h1>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p><font size="2">This tutorial explains how to use the &quot;My Block&quot; feature of 
+the NXT-G programming system by working through several examples.</font></p>
+<p><font size="2"><a href="#What">What is a My Block?</a></font><br>
+<font size="2">&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Why">Why Use My Blocks?</a></font></p>
+<p><font size="2"><a href="#Making">Making your First My Block</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Creating">Creating a My Block</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Viewing">Viewing and Editing the Contents of a My 
+Block</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Inserting">Inserting a My Block into a Program</a></font></p>
+<p><font size="2"><a href="#Input">Creating My Blocks with Input Parameters</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Params">What are Input Parameters?</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Param">Creating a My Block with an Input Parameter</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#UsingParam">Using a My Block with an Input 
+Parameter</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#DesigningParam">Designing Your Own Input Parameter</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#NameParam">Changing the Name of a Parameter</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#MultiParam">Creating a My Block with Multiple Input 
+Parameters</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Header">Making a Block Header Comment</a></font></p>
+<p><font size="2"><a href="#VarWireEdit">Variables, Wiring, and Editing within a My Block</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#UsingVar">Using Variables to Send Data to a My Block</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#DefiningVar">Defining Variables in a My Block</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Rewriting">Rewriting the Contents of a My Block</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#SharingWires">Sharing Wires in a Tabbed Switch</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#UsingVarMain">Using My Block Variables from the Main Program</a></font></p>
+<p><font size="2"><a href="#ModifiedCopy">Making a Modified Copy of a My Block</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Copying">Copying a My Block</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#ChangingIcon">Changing the Icon for a My Block</a></font></p>
+<p><font size="2"><a href="#Advanced">Creating More Advanced My Blocks</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Nested">Using My Blocks Inside Other My Blocks</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#ShareParams">Using Input Parameters More than Once Inside 
+a My Block</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Output">Creating a My Block with an Output Data Port</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#LocalVar">Using a Local Variable in a My Block</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Testing">Testing a My Block Before and After 
+Creating It</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Process">A Step-by-Step Process for Creating and 
+Testing a Complex My Block</a></font></p>
+<p><font size="2"><a href="#Organizing">Organizing and Sharing My Blocks</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#CopyNameDel">Copying, Renaming, and Deleting My Blocks</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Broken">Broken Blocks</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#PackAndGo">Sharing Programs with Pack and Go</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#SubMenu">Making a Sub-Menu on the Custom Palette</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; </font></p><hr>
+<h2><font size="4"><a name="What"></a>What is a My Block?</font></h2>
+<p><font size="2">The Common and Complete palettes in the NXT-G programming 
+system contain all of the built-in blocks that you can use to create an NXT 
+program. The NXT-G software also allows you to create your own blocks called &quot;My 
+Blocks&quot;. These blocks are blue in color and appear on the Custom palette in 
+NXT-G. A My Block is a sequence of other blocks that is packaged up into a 
+single block to make it easier to use in a program. Users of other programming 
+languages might know this as a &quot;subroutine&quot;, &quot;subprogram&quot;, or &quot;function&quot;.</font></p>
+<p align="center"><img border="0" src="1-13.png" width="499" height="273"></p>
+<p align="center"><i><font size="2">Figure 1: My Blocks are blue in color, and 
+they appear in the Custom palette in NXT-G.<br>
+&nbsp;</font></i></p>
+<h3><font size="3"><a name="Why"></a>Why Use My Blocks?</font></h3>
+<p><font size="2">The most common reason to use a My Block is that it allows you 
+to easily re-use a sequence of blocks over and over again, without needing to 
+re-create the sequence each time. Using a My Block, you only need to create the 
+sequence once, and then you can use it as many times as you want in any of your 
+programs by just inserting a single My Block for each use. Another advantage of 
+using My Blocks is that the program sequence that makes up the My Block is only 
+stored in the NXT’s memory once for each program that uses it, even if the 
+program uses the My Block several times, so My Blocks can be a good way to fit 
+more programming into the NXT’s limited memory. Finally, you might also use My 
+Blocks simply to break up a long program into chunks to make it easier to work 
+with, even if you don’t plan to use a chunk more than once, because working with 
+smaller programs is much easier in NXT-G.</font></p>
+<p><font size="2">In this tutorial, we will walk though several examples of 
+creating and using My Blocks, starting with a very simple example, then 
+increasingly more complex examples that use features such as input parameters, 
+output ports, and variables to make them more powerful and more flexible. A 
+step-by-step process for creating and testing a complex My Block will be 
+developed and presented as guide to creating your own blocks. Finally, we will 
+learn how you can organize and customize your My Blocks and share them with 
+others.</font></p><hr>
+<h2><font size="4"><a name="Making"></a>Making your First My Block</font></h2>
+<p><font size="2">For our first example My Block, we will create a block named
+<b>BeepBeep</b> that will sound two tones from the NXT speaker, and then we will 
+use it in a program along with other blocks that make the robot move. This 
+simple example will show the basic steps needed to create and use any My Block.</font></p>
+<h3><font size="3"><a name="Creating"></a>Creating a My Block</font></h3>
+<p><font size="2">The first step to creating a My Block is to write a program 
+that uses the desired sequence of blocks. Figure 2 shows a program made of up of 
+five blocks that makes a robot move forward, sound two tones from the speaker, 
+then move forward again. The three selected blocks in the middle are responsible 
+for the two sound tones (a <b>Wait</b> block is used to separate the tones into 
+two distinct sounds). We will convert this sequence of three blocks into a My 
+Block named <b>BeepBeep</b>, which will allow us to easily re-use this sequence.</font></p>
+<p align="center"><font size="2"><br>
+</font><img border="0" src="1-2.png" width="577" height="169"></p>
+<p align="center"><font size="2"><i>Figure 2: A sequence of blocks can be 
+selected and converted into a My Block for easier re-use.<br>
+&nbsp;</i></font></p>
+<p align="left"><font size="2">Once you have a working program that includes the 
+behavior for your My Block, select the sequence of blocks that will make up the 
+My Block by dragging a selection rectangle over them as shown in Figure 2. Each 
+selected block should then show a blue selection outline. To make a My Block out 
+of the selected blocks, click the Create My Block button on the toolbar, as 
+shown in Figure 3, which will bring up the <i>My Block Builder</i> window, as 
+shown in Figure 4.</font><p align="center">
+<a name="fig3"></a>
+<img border="0" src="1-3.png" width="691" height="273"><p align="center">
+<font size="2"><i>Figure 3: With a sequence of blocks selected, click the 
+“Create My Block” <br>
+toolbar button to create a My Block<br>
+&nbsp;</i></font><p align="left"><font size="2">The <i>My Block Builder</i> 
+consists of two steps. The first step shown in Figure 4 shows a preview of the 
+My Block’s contents in the <i>Selected Blocks</i> section. In this step you must 
+enter a name for the My Block in the Block Name box (here <b>BeepBeep</b>). 
+Choose a name for your block that is descriptive but short. Although longer 
+names are accepted, they will be cut off when displayed on the block and thus 
+harder to read in a program. You can also enter an optional description of the 
+block in the <i>Block Description</i> box. This description will be printed 
+along with the block diagram if you print the contents of your My Block using 
+the <i>Print</i> command from the <i>File</i> menu, but it won’t be displayed anywhere on the 
+screen. You can also leave the description blank. Press the Next button to go on 
+the second step of the My Block Builder, which will allow you to choose an icon 
+to display on the face of your My Block. Pressing Finish after the first step 
+will skip the icon choice and use a generic My Block face.</font><p align="center">
+<a name="fig4"></a>
+<img border="0" src="1-4.png" width="575" height="516"><p align="center">
+<font size="2"><i>Figure 4: In the first step of the My Block Builder, enter a 
+name and description for the My Block.<br>
+&nbsp;</i></font><p align="left"><font size="2">The second step of the <i>My 
+Block Builder</i> shown in Figure 5 allows you to choose an icon that will 
+display on the face of your My Block. You can select an icon from the list shown 
+and drag it to the white square on the top of the dialog. You can then position 
+the icon on the face of the block by dragging it with the mouse or pressing the 
+arrow keys on the keyboard. You can also resize the icon by dragging the black 
+corners of the selection rectangle. If you want, you can select more than one 
+icon from the list and overlay them as desired to create an image that is a 
+combination of icons. In Figure 5, two copies of the musical note icon (the 
+second icon in the list) are used to create an image that is suggestive of this 
+block’s function of sounding two tones. Press <i>Finish</i> to complete the <i>
+My Block Builder</i> and create your My Block. </font>
+<p align="center"><a name="fig5"></a><img border="0" src="1-6.png" width="575" height="516"><p align="center">
+<font size="2"><i>Figure 5: The Icon Builder step allows you to customize the 
+icon for your My Block.<br>
+&nbsp;</i></font><p align="left"><font size="2">After creating our My Block, the 
+modified program is shown in Figure 6. The three blocks that make up the <b>
+BeepBeep</b> block have been replaced by a single blue My Block displaying the 
+name and image that we chose for the <b>BeepBeep</b> block. The program will 
+still do the same thing as it did before (go forward, sound two tones, then go 
+forward again), but now part of the program is contained inside the My Block.
+<br>
+&nbsp;</font><div align="center">
+	<table border="1" width="550" cellpadding="3">
+		<tr>
+			<td>
+			<p align="left"><font size="2"><b>Note: </b>Sometimes after creating 
+			a My Block in a program, extra space in the white sequence beam will 
+			be left over where the original blocks were. To eliminate this extra 
+			space, you can shrink the sequence beam by placing your cursor in 
+			the location shown in Figure 6 and dragging to the left.</font></td>
+		</tr>
+	</table>
+</div>
+<p align="center"><img border="0" src="1-8.png" width="577" height="121"><p align="center">
+<i><font size="2">Figure 6: Extra space in the sequence beam left after a My 
+Block has been created <br>
+can be shrunk by dragging the sequence beam at the location shown<br>
+&nbsp;</font></i><h3><font size="3"><a name="Viewing"></a>Viewing and Editing 
+the Contents of a My 
+Block</font></h3>
+<p align="left"><font size="2">Once our <b>BeepBeep</b> block has been created, 
+the blocks contained inside it have disappeared from view in the original 
+program, as shown in Figure 7. To view the contents of a My Block or edit the 
+blocks contained inside, you can double-click on the My Block, which will open 
+the contents of the My Block as a new tab in the NXT-G program editor, as shown 
+in Figure 8. This looks similar to having another NXT-G programs open, except 
+that the <b>BeepBeep</b> tab is marked with two blue bars to indicate that the 
+contents is a My Block instead of a normal program.</font><p align="center">
+<img border="0" src="1-10.png" width="385" height="121"><p align="center">
+<font size="2"><i>Figure 7: To view or edit the contents of a My Block in a 
+program, double-click the My Block.<br>
+&nbsp;</i></font><p align="center">
+<img border="0" src="1-11.png" width="385" height="145"><p align="center">
+<font size="2"><i>Figure 8: A My Block opened for viewing or editing will open 
+as another NXT-G program in a new tab, <br>
+with the name of the My Block on it and two blue bars to signify that it is a My 
+Block.<br>
+&nbsp;</i></font><p align="left"><font size="2">To change the contents of a My 
+Block, simply edit the blocks in the contents tab as in a normal program. Any 
+changes made to the contents will affect all uses of the My Block in all 
+programs that use it, after those program(s) are re-compiled and re-downloaded 
+to the NXT.<br>
+&nbsp;</font><div align="center">
+	<table border="1" width="560" cellpadding="3">
+		<tr>
+			<td>
+			<p align="left"><font size="2"><b>Note: </b>After changing the 
+			contents of a My Block, any program that uses it must be 
+			re-downloaded to the NXT to incorporate the changes, otherwise the 
+			program will remain unchanged and use the original contents of the 
+			My Block. A common mistake after editing a My Block is to download 
+			the contents of the My Block itself to the NXT instead of the 
+			program that uses it (because you have that tab selected in the 
+			editor), which not affect any programs that use the block.</font></td>
+		</tr>
+	</table>
+</div>
+<h3><font size="3"><a name="Inserting"></a>Inserting a My Block into a Program</font></h3>
+<p align="left"><font size="2">After creating a My Block, NXT-G will 
+automatically modify the original program to use the My Block in place of the 
+original block sequence as shown in Figure 7 above. Now you can also re-use the 
+My Block by inserting other uses of it in the same program or in other programs. 
+To insert a new use of a My Block into a program, select the Custom Palette as 
+shown in Figure 9. The top menu of blocks in the Custom Palette contains the My 
+Blocks that you have created. Figure 10 shows the <b>BeepBeep</b> block along 
+with seven other My Blocks that I have created. The blocks are ordered 
+alphabetically by the block name in the menu. If you are using multiple NXT-G 
+user profiles, each user profile will contain its own list of My Blocks that 
+were created by that user profile.</font><p align="center">
+<img border="0" src="1-12.png" width="161" height="114"><p align="center">
+<font size="2"><i>Figure 9: To insert a My Block into a program, select the 
+Custom Palette.<br>
+&nbsp;</i></font><p align="center">
+<a name="fig10"></a>
+<img border="0" src="1-14.png" width="595" height="249"><p align="center">
+<font size="2"><i>Figure 10: The top menu in the Custom Palette contains the My 
+Blocks you have created.<br>
+&nbsp;</i></font><p align="left"><font size="2">My Blocks chosen from the Custom 
+Palette can be inserted into a program just like regular blocks. The modified 
+program in Figure 11 now uses the <b>BeepBeep</b> block twice. Compared to the 
+alternative of inserting the 3-block sequence of the <b>BeepBeep</b> block 
+directly into the main program twice, the program using the <b>BeepBeep</b> 
+block is shorter, easier to read, easier to modify, and takes less memory on the 
+NXT.</font><p align="center">
+<img border="0" src="1-15.png" width="480" height="121"><p align="center">
+<font size="2"><i>Figure 11: My Blocks can be easily re-used, saving both 
+programming time and memory on the NXT.<br>
+&nbsp;</i></font><hr>
+<h2><font size="4"><a name="Input"></a>Creating My Blocks with Input Parameters</font></h2>
+<p><font size="2">The <b>BeepBeep</b> block created in the previous section was 
+very easy to create and easy to use, but it is somewhat limited in what it can 
+do. It will always sound the exact same two tones every time is it used. This is 
+fine for some blocks, but many times you will want to create a My Block that can 
+have its behavior modified each time it is used. For example, each time you use 
+the standard <b>Move</b> block, you can specify a different Duration, a 
+different Power level, etc. These aspects of the block that you can modify are 
+called <i>parameters</i>. (more specifically, <i>input parameters</i>, because 
+they provide input data values to the block). It is possible to create your own 
+My Block that contains one or more input parameters that modify its behavior and 
+make it more flexible, and that is what we will learn in this section.</font></p>
+<h3><font size="3"><a name="Params"></a>What are Input Parameters?</font></h3>
+<p align="left"><font size="2">Most of the built-in NXT-G blocks have input 
+parameters. For example, the <b>Move</b> block shown in Figure 12a has several 
+parameters that show up in the configuration panel when the block is selected 
+(Figure 12b). These parameters allow you to change the behavior of each 
+different use of the block.<br>
+&nbsp;</font><div align="center">
+	<table border="0">
+		<tr>
+			<td><a name="fig12"></a><img border="0" src="2-1.png" width="168" height="107">&nbsp;
+			<img border="0" src="2-2.png" width="518" height="109"></td>
+		</tr>
+	</table>
+	<p><font size="2"><i>Figure 12a/b: Many of the built-in NXT-G blocks have 
+	input parameters that can be changed.<br>
+&nbsp;</i></font></div>
+<p align="left"><font size="2">As an example of creating a My Block with an 
+input parameter, let’s create a My Block that is a simplified version of the <b>
+Move</b> block. If you simply select the <b>Move</b> block and create a My Block 
+out of it using the steps shown in the <b>BeepBeep</b> example earlier (a My 
+Block can consist of only one block if you want), then the resulting My Block 
+will have no input parameters and will instead always use the values of the 
+parameters that were entered for the contained block when it was created. For 
+example, the <b>Move</b> block in Figure 12 above was set to have a Duration of 
+500 degrees, Power level 75, etc. Figure 13a shows the result of creating a My 
+Block out of this Move block. Because the My Block will always use a Duration of 
+500 degrees, I named the My Block <b>Forward500</b>. Since there are no 
+parameters, the configuration panel displayed when the My Block is selected is 
+empty (Figure 13b). This might be useful if you wanted to move by this amount 
+over and over in a program, but it would be more useful if the program using the 
+My Block could specify the duration in a parameter, similar to the original <b>
+Move</b> block.<br>
+&nbsp;</font><div align="center">
+	<table border="0">
+		<tr>
+			<td><img border="0" src="2-3.png" width="192" height="120">&nbsp;
+			<img border="0" src="2-4.png" width="350" height="125"></td>
+		</tr>
+	</table>
+	<p><font size="2"><i>Figure 13a/b: A simple My Block created from a single
+	<b>Move</b> block has no parameters that be changed.<br>
+&nbsp;</i></font></div>
+<h3><font size="3"><a name="Param"></a>Creating a My Block with an Input Parameter</font></h3>
+<p align="left"><font size="2">In this section, we will learn how to create a My 
+Block that includes an input parameter. Doing this is more complex than a simple 
+My Block such as the <b>BeepBeep</b> example earlier and requires the use of 
+data hubs, data wires, and Variable and/or Constant blocks. Be sure you are 
+familiar with these concepts before proceeding here. <br>
+&nbsp;</font><div align="center">
+	<table border="1" width="560" cellpadding="3">
+		<tr>
+			<td>
+			<p align="left"><font size="2"><b>Resource:&nbsp; </b>Get
+			<a href="../learn.html">help</a> learning about data hubs, data 
+			wires, and variables.</font></td>
+		</tr>
+	</table>
+</div>
+<p align="left"><font size="2">As an example of a My Block with an input 
+parameter, we will create a new version of a simplified <b>Move</b> block named
+<b>ForwardDeg</b> which will include a <i>Degrees</i> (duration) parameter that 
+will allow the program to specify how many degrees to move, instead of always 
+using 500 degrees as in the <b>Forward500</b> block above. </font>
+<p align="left"><font size="2">To create a My Block with a parameter, you will 
+need to create a <i>wired</i> data connection to each parameter of the contained 
+blocks that you want access to. We will want to access the <i>Duration</i> 
+parameter of the <b>Move</b> block, so we must start by opening the data hub of 
+the <b>Move</b> block as shown in Figure 14. </font>
+<p align="center"><img border="0" src="2-5.png" width="193" height="313"><p align="center">
+<font size="2"><i>Figure 14: To access the data ports for a block, click in the 
+location shown to drop the block’s data hub.<br>
+&nbsp;</i></font><p align="left"><font size="2">To create a wired data 
+connection to the <i>Duration</i> parameter of the <b>Move</b> block, we must 
+create a data source for it. An easy way to do this in the NXT 2.0 software is 
+by using the <b>Constant</b> block (Figure 15).&nbsp; Place the <b>Constant</b> 
+block before the <b>Move</b> block, as shown in Figure 16. <br>
+&nbsp;</font><div align="center">
+	<table border="1" width="560" cellpadding="3">
+		<tr>
+			<td>
+			<p align="left"><font size="2"><b>Note:&nbsp; </b>The <b>Constant</b> 
+			block was added in the NXT 2.0 software.&nbsp; If you are using an 
+			earlier version of NXT-G, you can use a <b>Variable</b> <b>Read</b> 
+			block instead.&nbsp; However, because you cannot specify a value for 
+			a variable in a <b>Variable Read</b> block, you may also want to add 
+			a <b>Variable Write</b> block earlier in the program to give it a 
+			value for testing purposes. </font></td>
+		</tr>
+	</table>
+</div>
+<p align="center"><img border="0" src="2-6.png" width="537" height="192"><p align="center">
+<font size="2"><i>Figure 15: The <b>Constant</b> block on the Data menu can be 
+used to create a connection to a data port.<br>
+&nbsp;</i></font><p align="center">
+<img border="0" src="2-7.png" width="289" height="313"><p align="center">
+<font size="2"><i>Figure 16: Position the <b>Constant</b> block at the beginning 
+of your sequence.<br>
+&nbsp;</i></font><p align="left"><font size="2">Using the configuration panel 
+for the <b>Constant</b> block (Figure 17), configure the constant to have <i>
+Custom</i> for the <i>Action</i>, then set the <i>Data Type</i> to the correct 
+type for the parameter (<i>Number</i> in this case), and give the constant a 
+name that will help you remember what it does (here I chose &quot;Degrees&quot;). You can 
+also enter a value for the constant in the <i>Value</i> field. This value is 
+useful for testing your block sequence before you create the My Block (but the 
+resulting My Block will have a parameter in place of this value). </font>
+<p align="center"><img border="0" src="2-8.png" width="619" height="125"><p align="center">
+<font size="2"><i>Figure 17: In the configuration panel for the <b>Constant</b> 
+block, enter the data type, <br>
+a test value, and a name for the constant.<br>
+&nbsp;</i></font><p align="left"><font size="2">Once the constant block has been 
+correctly configured, connect it to the block parameter that you want to control 
+with a data wire (Figure 18).</font><p align="center">
+<img border="0" src="2-9.png" width="288" height="337"><p align="center">
+<font size="2"><i>Figure 18: Wire the output port of the <b>Constant</b> block 
+to the input port for the input parameter.<br>
+&nbsp;</i></font><p align="left"><font size="2">The two-block program in Figure 
+18 will now do the same thing as the one-block program in <a href="#fig12">Figure 12</a>: It will use 
+the <b>Move</b> block to go forward by 500 degrees. The difference is that we 
+have now “wired in” the <i>Duration</i> parameter using a <b>Constant</b> block 
+set to the number 500 instead of putting the 500 directly into the <b>Move</b> 
+block. Note that all the other parameters for the <b>Move</b> block such as the 
+power level are being taken directly from the <b>Move</b> block’s configuration 
+panel (including the setting <i>Degrees</i> which tells the <b>Move</b> block to 
+interpret the duration value of 500 as degrees and not seconds). Now is a good 
+time to test the program to make sure that it works as expected before creating 
+the My Block.</font><p align="left"><font size="2">After testing the program in 
+Figure 18, you can create the My Block. To create the My Block, select the <b>
+Move</b> block but <i><u>not</u></i> the <b>Constant</b> block, and then click 
+the <i>Create My Block</i> button (Figure 19) and proceed with the <i>My Block 
+Builder </i>to create the My Block named <b>ForwardDeg.</b></font><p align="center">
+<img border="0" src="2-10.png" width="403" height="498"><p align="center"><i>
+<font size="2">Figure 19: When creating the My Block, select the block(s) to be 
+included but <u>not</u> the Constant block(s).<br>
+&nbsp;</font></i><p align="left"><font size="2">Creating the My Block as shown 
+in Figure 19 will result in a My Block with an input parameter for the <b>Move</b> 
+block’s <i>Duration</i> property due to the following rule:<br>
+&nbsp;</font><div align="center">
+	<table border="1" width="560" cellpadding="3">
+		<tr>
+			<td>
+			<p align="left"><font size="2"><b>Rule:&nbsp; </b>When a sequence of 
+			blocks is converted to a My Block, any data wire path that leads to 
+			a data source <i>outside</i> of the My Block (not included in the 
+			selected block) will create an input parameter for that data path in 
+			the My Block. </font></td>
+		</tr>
+	</table>
+</div>
+<p align="left"><font size="2">You can think of the My Block as being “cut” from 
+the program when it is created, and any data paths leading outside of the cut 
+blocks result in “open ends” that needs data sources. These open ends result in 
+input parameters, where the data sources will be specified by the program that 
+uses the My Block. If we had also selected the <b>Constant</b> block in Figure 
+19 when making the My Block, the result would be a My Block that again always 
+moves by 500 degrees, because the number 500 would be specified <i>inside</i> 
+the My Block contents.</font><h3><font size="3"><a name="UsingParam"></a>Using a My Block with an Input 
+Parameter</font></h3>
+<p align="left"><font size="2">After creating a My Block from the selection 
+shown in Figure 19 and naming it <b>ForwardDeg</b>, the modified program is 
+shown in Figure 20a. The <b>Move</b> block (the only block included in the My 
+Block) has been replaced by the <b>ForwardDeg</b> My Block, and the <i>Degrees</i>
+<b>Constant</b> block is still there and is now wired into the data hub of the
+<b>ForwardDeg</b> My Block. Selecting the <b>ForwardDeg</b> block shows the 
+configuration panel in Figure 20b, where we can see that we now have access to 
+the <i>Duration</i> parameter of the <b>Move</b> block inside the My Block. <br>
+&nbsp;</font><div align="center">
+	<table border="0">
+		<tr>
+			<td><img border="0" src="2-11.png" width="289" height="144">&nbsp;
+			<img border="0" src="2-12.png" width="376" height="125"></td>
+		</tr>
+	</table>
+</div>
+<p align="center"><i><font size="2">Figure 20a/b: An input parameter for a My 
+Block is accessible in the block’s <br>
+data hub and configuration panel.<br>
+&nbsp;</font></i><p align="left"><font size="2">As with the built-in NXT-G 
+blocks, if a data source is wired into the data hub of a My Block, that data 
+value will be used, otherwise the value from the block’s configuration panel 
+will be used. Here the value of 500 is wired in by the <i>Degrees</i> <b>
+Constant</b> block, so that value overrides the 0 value for the <i>Duration</i> 
+in the configuration panel, so the resulting program will still do what it did 
+before (move forward by 500 degrees). If you test the modified program after 
+creating a My Block, it should do the same thing as the program used to create 
+the My Block.</font><p align="left"><font size="2">Now that the <b>ForwardDeg</b> 
+My Block has been created, you can delete the <i>Degrees</i> <b>Constant</b> 
+block if you want and specify the <i>Duration</i> directly in the configuration 
+panel of the <b>ForwardDeg</b> block. You can also place more <b>ForwardDeg</b> 
+blocks in your program from the Custom palette and specify the <i>Duration</i> 
+either by the data hub or the configuration panel.</font><p align="left">
+<font size="2">At this point, you may be wondering why you would want to create 
+a My Block out of a single block and provide access to only one of its 
+parameters. In this sense, the <b>ForwardDeg</b> block seems less useful than 
+the <b>Move</b> block by itself, since the <b>Move</b> block is still only one 
+block and also allows you to change the power level, etc. The <b>ForwardDeg</b> 
+block is mainly shown here as a simple example, but there are some situations 
+where you might find something like this useful. For one thing, using the <b>
+ForwardDeg</b> block might make the program that uses it easier to read. If your 
+program has a lot of <b>Move</b> blocks in it, you can’t as easily tell which 
+ones are going forward or backward or using degrees vs. seconds without a closer 
+look at the blocks. Using My Blocks for actions lets you see the names you 
+assigned to each block, which is more suggestive of what it does. Also, you can 
+take advantage of the fact that a change to the contents of a My Block will 
+affect all uses of that block. For example, if I use the <b>ForwardDeg</b> block 
+ten times in a program, all ten uses will use the same power level that was set 
+inside the My Block (75 as above). Then if you edit the My Block contents and 
+change the power level of the single Move block inside it, all ten uses of the
+<b>ForwardDeg</b> block will automatically use the new power level. If you had 
+used ten individual <b>Move</b> blocks, you would need to change all ten power 
+levels individually.</font><h3><font size="3"><a name="DesigningParam"></a>Designing Your Own Input Parameter</font></h3>
+<p align="left"><font size="2">In the <b>ForwardDeg</b> example above, an input 
+parameter was created that provided direct access to one of the parameters of 
+the blocks contained in the My Block (the <i>Duration</i> parameter of the <b>
+Move</b> block). You can also design your own input parameters for a My Block 
+that behave the way you want them to and choose your own names for them. As an 
+example, let’s start over again with our example of a My Block that moves 
+forward, and this time we will make a different version named <b>Forward cm</b>, 
+which has the <i>Duration</i> parameter (which was interpreted as degrees) 
+replaced with a parameter named <i>Distance cm</i>, which is the distance in 
+centimeters that we want the robot to travel. Many users of NXT robots wish they 
+could tell the robot how far to travel in inches or centimeters rather than 
+needing to determine the correct degrees value. With a little math, we can 
+create a My Block that will do this for us in NXT-G.</font><p align="left">
+<font size="2">By running some experiments with a robot that uses the standard 
+NXT 2.0 tires (43.2 x 22) on its drive wheels, you can determine that the drive 
+motors need to turn 27 degrees to make robot travel 1 cm (this is best 
+determined by observing how many degrees are necessary to travel a longer 
+distance such as 100 cm then dividing to determine the 1 cm figure). Note that 
+this figure will vary depending on whether the robot uses treads vs. tires, the 
+tire diameter, and any gears used, but once you have chosen these in your robot 
+design you can determine the conversion from degrees to cm.</font><p align="left">
+<font size="2">Figure 21a shows a program that converts a distance in 
+centimeters (coming from a <b>Constant</b> block named <i>cm</i>) to motor 
+degrees by using a <b>Math</b> block, and then wiring the resulting degrees to 
+the <i>Duration</i> port on a <b>Move</b> block. The <b>Math</b> block is 
+configured to multiply by 27 (Figure 21b). <br>
+&nbsp;</font><div align="center">
+	<table border="0">
+		<tr>
+			<td><a name="fig21"></a><img border="0" src="3-1.png" width="343" height="279">&nbsp;
+			<img border="0" src="3-2.png" width="357" height="125"></td>
+		</tr>
+	</table>
+</div>
+<p align="center"><i><font size="2">Figure 21a/b: The <b>Constant</b> block 
+value is multiplied by 27 before being used as the Duration degrees.<br>
+&nbsp;</font></i><p align="left"><font size="2">By selecting both the <b>Math</b> 
+block and the <b>Move</b> block (but not the <b>Constant</b> block) and creating 
+a My Block (Figure 22), the resulting My Block will have one input parameter 
+that will allow the program using the My Block to supply the distance in cm. 
+Note that the input parameter results from the data wire that leads to the <i>
+&quot;A&quot;</i> port of the <b>Math</b> block when the <b>Math</b> block was “cut” from 
+the <b>Constant</b> block during the My Block creation. The wire leading to the
+<i>Duration</i> port of the <b>Move</b> block does not result in another input 
+parameter, since its data source (the <b>Math</b> Block) is inside the My Block. 
+This is what we want; our input parameter’s value in cm will go into the Math 
+block, get multiplied by 27, and then get sent to the <b>Move</b> block as 
+degrees.</font><p align="center">
+<img border="0" src="3-3.png" width="475" height="424"><p align="center"><i>
+<font size="2">Figure 22: The <b>Math</b> and <b>Move</b> blocks are included in 
+the My Block, but not the <b>Constant</b> block.<br>
+&nbsp;</font></i><h3><font size="3"><a name="NameParam"></a>Changing the Name of a Parameter</font></h3>
+<p align="left"><font size="2">The result of creating a My Block from the 
+program shown in Figure 22, naming the My Block <b>Forward cm</b>, and then 
+opening the contents of the My Block is shown in Figure 23. The <b>Forward cm</b> 
+tab contains the contents of the My Block, which consists of the two blocks that 
+make up the block (a <b>Math</b> block and a <b>Move</b> block), and also a 
+special parameter connection block that represents the source of the input 
+parameter. By default, NXT-G names an input parameter for a My Block by taking 
+the name of the data port that the source wire is wired to, so in this case the 
+parameter is named <i>&quot;A&quot;</i>, because it is wired to the <i>&quot;A&quot;</i> port of the
+<b>Math</b> block. This is also the name that will show up in the My Block’s 
+configuration panel. You can rename a parameter to make it more descriptive, as 
+explained below, and usually you will want to do this.&nbsp; </font>
+<p align="center"><img border="0" src="3-4.png" width="291" height="339"><p align="center">
+<font size="2"><i>Figure 23: The default name of the parameter is usually taken 
+from the first data port it is connected to.<br>
+&nbsp;</i></font><p align="left"><font size="2">To rename a parameter in a My 
+Block, double-click on the name of the parameter, which displays above the 
+parameter connection block in the contents of the My Block, then type a new 
+name. You can also drag the parameter connection block to a different position 
+if desired, as shown in Figure 24. </font>
+<p align="center"><img border="0" src="3-5.png" width="291" height="335"><p align="center">
+<font size="2"><i>Figure 24: A parameter connection block can be moved and 
+renamed.<br>
+&nbsp;</i></font><p align="left"><font size="2">When you rename a parameter, the 
+new name will also be used in the My Block’s configuration panel. However, to 
+see the new name, you will need to delete the first copy of the My Block that 
+was created and insert a new copy of the My Block. Figure 25 shows a new copy of 
+the <b>Forward cm</b> block and its configuration panel showing the input 
+parameter, now named <i>Distance cm</i>.<br>
+&nbsp;</font><div align="center">
+	<table border="0">
+		<tr>
+			<td><img border="0" src="3-6.png" width="192" height="144">&nbsp;
+			<img border="0" src="3-7.png" width="359" height="125"></td>
+		</tr>
+	</table>
+</div>
+<p align="center"><font size="2"><i>Figure 25: Inserting a new copy of the My 
+Block will show the renamed parameter.<br>
+&nbsp;</i></font><h3><font size="3"><a name="MultiParam"></a>Creating a My Block with Multiple Input 
+Parameters</font></h3>
+<p align="left"><font size="2">The <b>ForwardDeg</b> and <b>Forward cm</b> 
+blocks that we created earlier each had only one input parameter, but as you 
+have probably guessed, it is possible to create a My Block that has more than 
+one input parameter, and this is often useful. There are a few issues to be 
+aware of, so this section will show another example of an extended variation of 
+the <b>Forward cm</b> My Block that adds an input parameter to control the power 
+level.</font><p align="left"><font size="2">First, it is important to point out 
+that you cannot add a parameter to an existing My Block, you must start over and 
+create it over again. You can recycle some of your previous work by copying and 
+pasting blocks from the old My Block if necessary, but you must go through the 
+process of creating the My Block over again.<br>
+&nbsp;</font><div align="center">
+	<table border="1" width="560" cellpadding="3">
+		<tr>
+			<td>
+			<p align="left"><font size="2"><b>Note:&nbsp; </b>Once a My Block is 
+			created, you can rename an input parameter, but you cannot add or 
+			delete an input parameter, nor can you change the type (Number, 
+			Logic, or Text) of a parameter. Therefore, it is a good idea to put 
+			some thought into what parameters you want before you create a 
+			complex My Block. You should also save a copy of the source program 
+			before creating the My Block, so that you can go back to this copy 
+			and make the changes to prepare for parameter changes in a revised 
+			block if necessary. </font></td>
+		</tr>
+	</table>
+</div>
+<p align="left"><font size="2">To create a My Block with multiple parameters, 
+you can start by creating a program that performs the desired action, using a 
+separate <b>Constant</b> block wired to each data port that you wish to make a 
+parameter out of. Figure 26 shows a first attempt at doing this. This program is 
+similar to the program used to create the <b>Forward cm</b> block (<a href="#fig21">Figure 21a</a>), 
+with the addition of another <b>Constant</b> block named <i>Power</i> that is 
+wired to the <i>Power</i> data port of the <b>Move</b> block. However, this 
+program cannot be used to create our desired My Block, because the blocks that 
+need to make up the My Block (just the <b>Math</b> block and the <b>Move</b> 
+block) are not contiguous (all next to each other on the sequence beam). Figure 
+27 shows a corrected program with the <i>Power</i> <b>Constant</b> block moved 
+to the front of the program, so that the blocks to include in the My Block can 
+be selected contiguously. </font>
+<p align="center"><img border="0" src="3-8.png" width="480" height="312"><p align="center">
+<font size="2"><i>Figure 26: In incorrect attempt to prepare a My Block with two 
+parameters.<br>
+&nbsp;</i></font><p align="center">
+<img border="0" src="3-9.png" width="572" height="425"><p align="center">
+<font size="2"><i>Figure 27: Two Constant blocks positioned at the beginning of 
+the sequence allows <br>
+the other blocks to be selected together for the My Block creation.<br>
+&nbsp;</i></font><p align="left"><font size="2">After creating a My Block from 
+the program shown in Figure 27, and naming this version of the block <b>Forward</b>, 
+the source program is modified to that shown in Figure 28. You can see that the
+<b>Forward</b> block has two input parameters, and both are still wired to the
+<b>Constant</b> blocks that we used to build it. </font>
+<p align="center"><img border="0" src="3-10.png" width="360" height="168"><p align="center">
+<font size="2"><i>Figure 28: The two-parameter My Block <b>Forward</b> has a 
+data hub with two ports.<br>
+&nbsp;</i></font><p align="left"><font size="2">As before, double-clicking the
+<b>Forward</b> block will open its contents, and here you can rename the 
+parameters. Figure 29 shows the contents of the <b>Forward</b> block with the 
+parameters renamed and the wiring rearranged somewhat.</font><p align="center">
+<img border="0" src="3-11.png" width="387" height="409"><p align="center">
+<font size="2"><i>Figure 29: The contents of the <b>Forward</b> My Block with 
+parameters renamed <br>
+and a block header comment added.<br>
+&nbsp;</i></font><p align="left"><font size="2">As in the previous examples, you 
+will need to insert a new copy of the <b>Forward</b> My Block to see the renamed 
+parameters. Figure 30 shows a new copy of the <b>Forward</b> block with its two 
+input parameters.<br>
+&nbsp;</font><div align="center">
+	<table border="0">
+		<tr>
+			<td><img border="0" src="3-12.png" width="192" height="168">&nbsp;
+			<img border="0" src="3-13.png" width="362" height="125"></td>
+		</tr>
+	</table>
+</div>
+<p align="center"><font size="2"><i>Figure 30: The <b>Forward</b> My Block with 
+two input parameters.<br>
+&nbsp;</i></font><h3><font size="3"><a name="Header"></a>Making a Block Header Comment</font></h3>
+<p align="left"><font size="2">Also shown in Figure 29 above is a suggested 
+format for a <i>block header comment</i>, which is a good way to explain what a 
+My Block does. Especially for a more complex My Block, it is a good idea to 
+include a comment inside the block (using the <i>Comment</i> Tool in the NXT-G 
+editor) that explains what the block does, and also includes a line for each 
+parameter that explains what that parameter is used for. </font>
+<p align="left"><font size="2">For the built-in NXT-G blocks, if you have a 
+question about what the block or its parameters do, you can consult the help 
+page for that block, but My Blocks that you create will of course not have a 
+help page, and later you may forget exactly how to use a block that you created 
+in the past. If you include a block header comment like this at the top of each 
+My Block, then you can simply double-click on a My Block to open the contents 
+and read the explanation. </font>
+<p align="left"><font size="2">If you add a block header comment, then you can 
+also omit the <i>Block Description</i> in the first step of the <i>My Block 
+Builder</i> (<a href="#fig4">Figure 4</a>), because a block header comment inside the My Block will 
+appear both on-screen and when printed.&nbsp; Also unlike the Block Description, 
+the block header comment can be edited later, which is important.<br>
+&nbsp;</font><hr>
+<h2><font size="4"><a name="VarWireEdit"></a>Variables, Wiring, and Editing within a My Block</font></h2>
+<p><font size="2">Using input parameters is one way that an NXT-G program can 
+send data to a My Block. Another way is by using <i>variables</i>.&nbsp; In this 
+section, we will use the <b>Variable</b> block to send an additional piece of 
+data to the <b>Forward</b> move block that we developed in the previous section, 
+in order to make the <b>Forward</b> block even more capable and flexible. Along 
+the way, we will learn a couple of other techniques that come in handy when 
+editing or working with more complex My Blocks. </font></p>
+<h3><font size="3"><a name="UsingVar"></a>Using Variables to Send Data to a My Block</font></h3>
+<p align="left"><font size="2">As developed in the previous section, the <b>
+Forward</b> My Block assumes that the robot is using the standard NXT 2.0 tires 
+on its drive wheels, in order to be able to convert centimeters of desired 
+travel distance to degrees of motor rotation. But if a robot used treads instead 
+of tires (or different tires), the conversion would not be correct. Especially 
+for a robot such as <a href="../../NXT2/multi-bot/index.html">Multi-Bot</a> that 
+can either treads or tires, it would nice if we could make a My Block that 
+worked for either treads or tires. We could change the <b>Forward</b> My Block 
+to add a third parameter for this (which would require starting over, since you 
+cannot add a parameter to an existing My Block), but here we will do this with a
+<i>variable</i> instead.</font><p align="left"><font size="2">Just as a variable 
+in NXT-G can be set written at one point in a program and then read in another 
+point in a program to pass information from one point to the other, a variable 
+can also be used to pass information between a program and a My Block. To extend 
+our <b>Forward</b> block to be able to do the correct calculations whether robot 
+is using treads or the standard NXT 2.0 tires, we will define a variable of type
+<i>Logic</i> (value is True or False) named <i>Treads</i>. This variable will 
+have the value True if the robot is using treads, or False if using tires. 
+Specifically, the main program will write the value of the variable at the 
+beginning of the program, and the contents of the <b>Forward</b> My Block will 
+read the variable to decide what to do. If <i>Treads</i> is False (the robot is 
+using tires as before), then each centimeter of travel requires 27 degrees of 
+motor rotation as before. However, if <i>Treads</i> is True, then each 
+centimeter will require 36 degrees of motor rotation (determined by experiment 
+with a treaded robot).<br>
+&nbsp;</font><h3><font size="3"><a name="DefiningVar"></a>Defining Variables in a My Block</font></h3>
+<p align="left"><font size="2">Unlike adding a parameter to a My Block, adding a 
+variable does not require starting over with the My Block creation, so we can 
+open the contents of the <b>Forward</b> My Block and make our changes there. The 
+first step is to define the variable in the My Block. Figure 31 shows the <i>
+Treads</i> variable being defined using the <i>Edit</i> - <i>Define Variables</i> 
+menu command in the contents of the <b>Forward</b> My Block.</font><p align="center">
+<img border="0" src="3-14.png" width="628" height="459"><p align="center">
+<font size="2"><i>Figure 31: Variables defined in the contents of a My Block can 
+be used to send data to the block.<br>
+&nbsp;</i></font><h3><font size="3"><a name="Rewriting"></a>Rewriting the Contents of a My Block</font></h3>
+<p align="left"><font size="2">After defining the <i>Treads</i> variable in the
+<b>Forward</b> My Block, we are ready to modify the contents of the <b>Forward</b> 
+My Block to use it. Using the variable in the desired way will actually result 
+in a substantial change from the way the <b>Forward</b> block was previously 
+written, so at this point it is helpful to know that once a My Block has been 
+created, you can make major changes to it, to the point of essentially rewriting 
+it if you want. In fact, the only things that you can’t change about a My Block 
+are the number of parameters and the types of the parameters. Everything else 
+can be deleted and re-created if necessary.</font><p align="left">
+<font size="2">Figure 32 shows the contents of <b>Forward</b> My Block after 
+deleting the previous cm to degrees calculation and starting the process of 
+using the <i>Treads</i> variable to do this in a different way. The block header 
+comment has also been revised to add a mention of the use of the <i>Treads</i> 
+variable. Note that the two parameter connection blocks cannot be deleted, but 
+you can delete the wires leading from them and then reconnect them to new or 
+rewritten blocks in your revised block contents, which we will do below.</font><p align="center">
+<img border="0" src="3-15.png" width="483" height="445"><p align="center">
+<font size="2"><i>Figure 32: Starting to rewrite the <b>Forward</b> My Block to 
+use the Treads variable.<br>
+&nbsp;</i></font><h3><font size="3"><a name="SharingWires"></a>Sharing Wires in a Tabbed Switch</font></h3>
+<p align="left"><font size="2">In order to get the behavior that we want from 
+the <i>Treads</i> variable in the <b>Forward</b> block, we will use the 
+technique of <i>Wiring into a Switch block</i>.&nbsp; Although not specific to 
+My Blocks, this technique is especially useful when working with My Blocks due 
+to the need to share uses of a parameter, so we will step through an example of 
+using it here. </font>
+<p align="left"><font size="2">A <b>Logic Switch</b> will be used to test the <i>
+Treads</i> variable and decide whether to multiply the <i>Distance cm</i> 
+parameter by 27 for tires (when <i>Treads</i> is False) or by 36 for treads 
+(when <i>Treads</i> is True).&nbsp; Figure 33 shows the first part of the Switch 
+(<i>Treads</i> is True) completed and wired up to a <b>Math</b> block that 
+multiplies by 36. Note that the Switch must have the <i>Flat view</i> option 
+unchecked to show the tabbed view, which allows routing data wires into the 
+switch from outside. <br>
+&nbsp;</font><div align="center">
+	<table border="0">
+		<tr>
+			<td><img border="0" src="3-16.png" width="392" height="290">&nbsp;
+			<img border="0" src="3-17.png" width="309" height="113"></td>
+		</tr>
+	</table>
+</div>
+<p align="center"><font size="2"><i>Figure 33: The True tab of the Switch uses a
+<b>Math</b> block to multiply Distance cm by 36.<br>
+&nbsp;</i></font><p align="left"><font size="2">Figure 34 shows the <b>Switch</b> 
+block after selecting the <i>False</i> tab and adding another <b>Math</b> block 
+inside that multiplies by 27 instead of 36. <br>
+&nbsp;</font><div align="center">
+	<table border="0">
+		<tr>
+			<td><img border="0" src="3-18.png" width="390" height="295">&nbsp;
+			<img border="0" src="3-19.png" width="312" height="112"></td>
+		</tr>
+	</table>
+</div>
+<p align="center"><font size="2"><i>Figure 34: The False tab of the Switch uses 
+a <b>Math</b> block to multiply Distance cm by 27.<br>
+&nbsp;</i></font><p align="left"><font size="2">We can now wire this second <b>
+Math</b> block to the two hidden connection points that were created at the 
+boundary of the <b>Switch</b> block when the <i>True</i> part was wired. To do 
+this, draw wires starting from the <b>Math</b> block and ending at the two 
+connection points on the switch boundary, as shown in Figure 35a/b. <br>
+&nbsp;</font><div align="center">
+	<table border="0">
+		<tr>
+			<td><img border="0" src="3-20.png" width="357" height="267">&nbsp;
+			<img border="0" src="3-21.png" width="354" height="267"></td>
+		</tr>
+	</table>
+</div>
+<p align="center"><font size="2"><i>Figure 35a/b: The ports on the <b>Math</b> 
+block in the False tab of the Switch are wired to the points<br>
+where the wires entered and exited the Switch in the True tab.<br>
+&nbsp;</i></font><p align="left"><font size="2">The final result is that the two
+<b>Math</b> blocks (one in each tab of the <b>Switch</b>) both use the same <i>
+Distance cm</i> input parameter (although only one of them will execute, 
+depending on the value of the <i>Treads</i> variable), and the result value of 
+the <b>Math</b> block that was chosen to execute will have its data sent to the
+<i>Duration</i> port of the <b>Move</b> block.<br>
+&nbsp;</font><h3><font size="3"><a name="UsingVarMain"></a>Using My Block Variables from the Main Program</font></h3>
+<p align="left"><font size="2">Once we have modified the contents of the <b>
+Forward</b> My Block to read the <i>Treads</i> variable and modify its 
+calculations accordingly, we can now change the main program to use it. The main 
+program will need to write the value of the <i>Treads</i> variable to the 
+correct value for the robot being used before the <i>Treads</i> variable is read 
+by the <b>Forward</b> block. However, before we can write the <i>Treads</i> 
+variable in the main program we must first define it. Although we already 
+defined the <i>Treads</i> variable in the contents of the <b>Forward</b> block, 
+we need to define it again in the main program, as shown in Figure 36. It is 
+important to spell the variable name exactly the same as the one defined in the 
+My Block, including capitalization.</font></p>
+<div align="center">
+	<table border="1" width="560" cellpadding="3">
+		<tr>
+			<td>
+			<p align="left"><font size="2"><b>Note:&nbsp; </b>Each program and 
+			My Block has its own list of variables that have been defined and 
+			can be used inside it. However, if a variable in a program has the 
+			same name as a variable in a My Block used by that program, the two 
+			variables will refer to the same storage location, and therefore can 
+			be used to pass data between the program and the My Block. This is 
+			sometimes referred to as a “global” variable in other programming 
+			languages, and in fact all variables in NXT-G are global in this 
+			sense.</font></td>
+		</tr>
+	</table>
+</div>
+<p align="center"><img border="0" src="3-22.png" width="619" height="488"></p>
+<p align="center"><font size="2"><i>Figure 36: A variable defined in the main 
+program with the same name as<br>
+a variable in a My Block will access the same storage location.<br>
+&nbsp;</i></font><p align="left"><font size="2">Figure 37 shows a completed 
+example test program that uses the <b>Forward</b> My Block with the <i>Treads</i> 
+variable. At the beginning of the program, the <i>Treads</i> variable is written 
+with the value <i>True</i> to indicate that the robot being used has treads and 
+not tires. Then the <b>Forward</b> block is used twice along with the <b>
+BeepBeep</b> block that we created earlier. Although the <b>Forward</b> block is 
+used twice, we only need to write the value of the <i>Treads</i> variable once 
+at the beginning of the program, and all instances of the <b>Forward</b> block 
+will use this value.<br>
+&nbsp;</font><div align="center">
+	<table border="1" width="570" cellpadding="3">
+		<tr>
+			<td>
+			<p align="left"><font size="2"><b>Note:&nbsp; </b>If you don’t write 
+			a value into a variable before it is read, then a variable of type
+			<i>Logic</i> will have the value <i>False</i>, a variable of type <i>
+			Number</i> will have the value 0 (zero), and a variable of type <i>
+			String</i> will be empty. However, even if this is the desired value 
+			for a variable, it is a good idea to always explicitly write the 
+			desired value of the variable before reading it, to reduce confusion 
+			and to help remind you (and anybody else reading your program) that 
+			the variable is used later.</font></td>
+		</tr>
+	</table>
+</div>
+<p align="center"><img border="0" src="3-23.png" width="483" height="219"><p align="center">
+<font size="2"><i>Figure 37: A variable written in the main program can be read 
+by the My Blocks.<br>
+&nbsp;</i></font><p align="left"><font size="2">Now if we later decided to 
+modify our robot to use tires instead of treads, we could simply change the <i>
+Treads</i>&nbsp; <b>Variable</b> block at the beginning of the program to set <i>
+Treads</i> to <i>False</i> instead of <i>True</i>, and all of the uses of the <b>
+Forward</b> block will automatically adapt correctly. Note that if we had 
+decided to use a third input parameter for the <b>Forward</b> block to send the
+<i>Treads</i> data instead of using a variable, each use of the <b>Forward</b> 
+block in the program would need to be changed to specify the new <i>Treads</i> 
+parameter value, so in this case using a variable instead of parameter seems 
+better. In general, if the value of a data item needed by a My Block will not 
+change while a program is running, you could consider using a variable instead 
+of an input parameter.<br>
+&nbsp;</font><div align="center">
+	<table border="1" width="580" cellpadding="3">
+		<tr>
+			<td>
+			<p align="left"><font size="2"><b>Note:&nbsp; </b>Variables can also 
+			be used to send data from a My Block back to the program using the 
+			block. A result calculated by a My Block that was written to a 
+			variable could be later read by the main program or by other My 
+			Blocks in the program.</font></td>
+		</tr>
+	</table>
+</div>
+<p align="left">&nbsp;</p>
+<hr>
+<h2><font size="4"><a name="ModifiedCopy"></a>Making a Modified Copy of a My Block</font></h2>
+<p><font size="2">The <b>Forward</b> block developed in the previous sections 
+provides a reasonably flexible way to make a robot go forward, but what about 
+going backward? The standard <b>Move</b> block has a <i>Direction</i> parameter 
+that can be used to specify whether to go forward to backward, but our <b>
+Forward</b> block does not. We could make another version of a movement My Block 
+block that included another input parameter to specify the direction, but 
+another option is to create a different My Block named <b>Backward</b> that goes 
+backward instead of forward. This option will tend to make the program using it 
+easier to read, since you will see the block names clearly indicating “Forward” 
+and “Backward” in the program. This section will show how to make a modified 
+copy of an existing My Block with a different name, which is useful in 
+situations like this as well as many other situations (you might want to try out 
+a few different variations on a block, for example).</font></p>
+<h3><font size="3"><a name="Copying"></a>Copying a My Block</font></h3>
+<p align="left"><font size="2">To create a <b>Backward</b> My Block, you can 
+notice that it will be exactly like the <b>Forward</b> My Block except for the 
+direction of movement, so we can make a copy of the <b>Forward</b> My Block, 
+make the direction change, and then name it <b>Backward</b>. To make a new copy 
+of a My Block, start by using the <i>Edit -</i> <i>Manage Custom Palette</i> 
+command (Figure 38).&nbsp; </font></p><div align="center">
+	<table border="1" width="580" cellpadding="3">
+		<tr>
+			<td>
+			<p align="left"><font size="2"><b>Note:&nbsp; </b>You can also use 
+			the <i>File - Save As</i> command to create a new copy of a My Block 
+			with a different name, but <i>Save As</i> will also replace any uses 
+			of the My Block in open programs with the new name, which is 
+			probably not what you want or are expecting, so you will usually 
+			want to use <i>Manage Custom Palette</i> instead.</font></td>
+		</tr>
+	</table>
+</div>
+<p align="left"><font size="2">The <i>Edit -</i> <i>Manage Custom Palette</i> 
+command will open the folder on your computer where the blocks on the custom 
+palette are stored, which is a folder named <i>Blocks</i> in the location where 
+the NXT-G programs for your user profile are stored.</font></p>
+<p align="center"><a name="fig38"></a><img border="0" src="4-1.png" width="331" height="361"><p align="center">
+<font size="2"><i>Figure 38: The Manage Custom Palette menu command <br>
+opens the file location where My Blocks are stored.<br>
+&nbsp;</i></font><p align="left"><font size="2">In the <i>Blocks</i> folder, 
+open the subfolder named <i>My Blocks</i>, which is the folder where My Blocks 
+that you have created are stored. In the <i>My Blocks</i> folder, you can select 
+the My Block you want to copy, use <i>Edit - Copy</i> and then <i>Edit - Paste</i> 
+to create a copy (Figure 39), then select and rename the file (Figure 40). </font>
+<p align="center"><img border="0" src="4-6.png" width="659" height="365"><p align="center">
+<font size="2"><i>Figure 39: Making a copy of a My Block (.rbt) file will create 
+another copy of the My Block.<br>
+&nbsp;</i></font><p align="center">
+<img border="0" src="4-7.png" width="659" height="365"><p align="center">
+<font size="2"><i>Figure 40: Renaming a My Block file will change the name of 
+the My Block.<br>
+&nbsp;</i></font><p align="left"><font size="2">Once you have created and 
+renamed the copy, you can double-click it to open it, and then make the 
+necessary changes to the contents. Figure 41 shows the contents of the completed
+<b>Backward</b> My Block.</font><p align="center">
+<img border="0" src="4-8.png" width="480" height="432"><p align="center">
+<font size="2"><i>Figure 41: The <b>Backward</b> My Block is just like the <b>
+Forward</b> My Block with the <br>
+motor direction reversed and the header comment modified.<br>
+&nbsp;</i></font><h3><font size="3"><a name="ChangingIcon"></a>Changing the Icon for a My Block</font></h3>
+<p align="left"><font size="2">In the case of the <b>Forward</b> and <b>Backward</b> 
+My Blocks, it is OK for the two blocks to show the same icon on the face of the 
+block, but in some cases when you create a modified copy of a My Block, you will 
+want to the change the icon of the new block. Figure 42a shows a situation where 
+a My Block named <b>LeftPivotAngle</b> was copied and modified to create a 
+similar block named <b>RightPivotAngle</b>. In this case we will want to change 
+the icon for the new <b>RightPivotAngle</b> block. </font></p>
+<p align="left"><font size="2">To change the icon for a My Block, you need to 
+select a use of the block (you cannot change the icon inside the contents of the 
+My Block), then use the <i>Edit - Edit My Block Icon</i> command. This command 
+will bring up the second step of the <i>My Block Builder</i> (<a href="#fig5">Figure 5</a>) which 
+will allow you to modify or replace the icon to something else (Figure 42b).&nbsp; 
+Once you have changed the icon, it will be changed for all new uses of the My 
+Block.</font></p>
+<div align="center">
+	<table border="0">
+		<tr>
+			<td><img border="0" src="6-2.png" width="434" height="365">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img border="0" src="6-3.png" width="241" height="121"></td>
+		</tr>
+	</table>
+</div>
+<p align="center"><font size="2"><i>Figure 42a/b: Changing the Icon of a My 
+Block (before and after).<br>
+&nbsp;</i></font><p align="center">&nbsp;<hr>
+<h2><font size="4"><a name="Advanced"></a>Creating More Advanced My Blocks</font></h2>
+<p><font size="2">In the following sections, we will show two more My Block 
+examples that demonstrate some techniques that can be used to make more complex 
+My Blocks. First we will create a My Block named <b>OutAndBack</b> that builds 
+on the blocks we have created so far to make a robot go forward a specified 
+distance, then back up by the same distance to return to the starting point, 
+sounding tones before each movement. Next, we will step through the creation of 
+a more complex My Block named <b>LimitNumber</b> that can be used to test and 
+modify a <i>Number</i> value to make sure it is a specified range. The <b>
+LimitNumber</b> block is complex enough that it will require some careful 
+planning and testing, so we will conclude by showing a step-by-step process that 
+can be used to guide you through the process of creating a more complex My 
+Block.</font></p>
+<h3><font size="3"><a name="Nested"></a>Using My Blocks Inside Other My Blocks</font></h3>
+<p align="left"><font size="2">To build an <b>OutAndBack</b> My Block, we can 
+notice that the three things we want the block to do have already been developed 
+in the My Blocks <b>Forward</b>, <b>Backward</b>, and <b>BeepBeep</b>. 
+Fortunately, a My Block can contain uses of other My Blocks, so the <b>
+OutAndBack</b> block will be easy to create using these other three blocks. 
+Figure 43 shows the program used to create the <b>OutAndBack</b> block. The main 
+functionality is achieved by simply inserting the My Blocks that we previously 
+created from the Custom Palette. Since the <b>OutAndBack</b> block will have two 
+input parameters (<i>Distance cm</i> and <i>Power</i>), two <b>Constant</b> 
+blocks are used as the data sources for these values before creating the My 
+Block. </font></p><p align="center">
+<img border="0" src="5-2.png" width="720" height="289"><p align="center"><font size="2"><i>Figure 
+43: A My Block can be created containing other My Blocks.<br>
+&nbsp;</i></font><h3><font size="3"><a name="ShareParams"></a>Using Input Parameters More than Once Inside 
+a My Block</font></h3>
+<p align="left"><font size="2">As shown in Figure 43 above, the input parameters
+<i>Power</i> and <i>Distance cm</i> are used inside the My Block by both the <b>
+Forward</b> and <b>Backward</b> blocks. When an input parameter is used more 
+than once in the contents of a My Block, it is important that all uses of the 
+parameter are wired back to the same <b>Constant</b> block (or other data 
+source) in the program that is used to create the My Block. This ensures that 
+the different uses all receive the same value and that a single parameter will 
+become the source of all of the uses. Remember that when selecting the blocks to 
+make up the My Block, the selected blocks must all be contiguous, so the <b>
+Constant</b> blocks in Figure 43 must be placed at the beginning of the 
+sequence.</font></p>
+<p align="left"><font size="2">Looking at the selection of blocks in Figure 43 
+that will be cut out to form the My Block, you will notice that four wires cross 
+the boundary of the selection. However, these four wires only represent two 
+different data paths, because some of the wires join up to the same data source 
+outside the selection. A separate parameter is only created for each different 
+data source that is outside the selection, so two input parameters are created 
+in this case as desired. Figure 44 shows the contents of the resulting <b>
+OutAndBack</b> My Block. There are two parameter connection blocks, each of 
+which is used twice inside the My Block.</font></p>
+<p align="center"><img border="0" src="5-3.png" width="483" height="267"></p>
+<p align="center"><font size="2"><i>Figure 44: The <b>OutAndBack</b> My Block 
+uses other My Blocks inside it <br>
+and uses each input parameter twice.<br>
+&nbsp;</i></font><h3><font size="3"><a name="Output"></a>Creating a My Block with an Output Data Port</font></h3>
+<p align="left"><font size="2">In the following sections, we will now build a 
+more complex My Block named <b>LimitNumber</b>, which will include an <i>output</i> 
+data port on its data hub. This will allow the My Block to pass a result value 
+back to the program that uses the block. This My Block will be harder to test 
+than the other My Blocks we have created so far, so a method of testing it 
+before and after creating the My Block will be shown. </font></p>
+<p align="left"><font size="2">The <b>LimitNumber</b> My Block will accept a <i>
+Number</i> input parameter along with two other input parameters named <i>Min</i> 
+and <i>Max</i>. It will test to see if <i>Number</i> is in the numeric range of
+<i>Min</i> to <i>Max</i> and produce an output value that is within that range. 
+Specifically, the result of <b>LimitNumber</b> can be specified as follows:</font></p>
+<ul>
+	<li>
+	<p align="left"><font size="2">If <i>Number</i> is greater than <i>Max</i>, 
+	the result is <i>Max</i>.</font></p></li>
+	<li>
+	<p align="left"><font size="2">If <i>Number</i> is less than <i>Min</i>, the 
+	result is <i>Min</i>.</font></p></li>
+	<li>
+	<p align="left"><font size="2">If <i>Number</i> is in the range of <i>Min</i> 
+	to <i>Max</i>, the result is <i>Number</i>.</font></p></li>
+</ul>
+<p align="left"><font size="2">Since <b>LimitNumber</b> will have three input 
+parameters, we will start with three <b>Constant</b> blocks that can hold the 
+data sources for these parameters. These constants are named <i>Min</i>, <i>Max</i>, 
+and <i>Number</i> in Figure 45. </font></p>
+<p align="left"><font size="2">For the output result, we also need a place to 
+connect a data wire that contains the result data to a location outside of the 
+block that will make up the My Block. Similar but reverse to the way input 
+parameters are created when a selection of blocks is turned into a My Block, an 
+output data port will be created for each data path that originates <i>inside</i> 
+the selected blocks and is wired to a location <i>outside</i> of the selected 
+blocks. </font></p><div align="center">
+	<table border="1" width="580" cellpadding="3">
+		<tr>
+			<td>
+			<p align="left"><font size="2"><b>Rule:&nbsp; </b>A My Block output 
+			data port will be created for each data path that originates <i>inside</i> 
+the selected blocks used to create the My Block and that is wired to a location <i>outside</i> 
+			of (after) the selected blocks.</font></td>
+		</tr>
+	</table>
+</div>
+<p align="left"><font size="2">An easy way to create this connection is to use a <b>Variable Write</b> 
+block to receive the output result. For clarity, you can use <i>Edit - Define 
+Variables</i> to define a variable of the appropriate type with a descriptive 
+name. For an output port, the variable write block must be placed at the end of 
+the sequence used to create the My Block as shown in Figure 45 below.</font></p>
+<p align="center"><a name="fig45"></a><img border="0" src="7-1.png" width="480" height="145"></p>
+<p align="center"><font size="2"><i>Figure 45: Preparing to make a My Block with 
+three input parameters and one output data port.<br>
+&nbsp;</i></font></p><h3><font size="3"><a name="LocalVar"></a>Using a Local Variable in a My Block</font></h3>
+<p align="left"><font size="2">For a complex formula such as the specification 
+of the <b>LimitNumber</b> result based on <i>Number</i>, <i>Min</i>, and <i>Max</i> 
+shown above, it is often helpful to use one or more temporary variables to store 
+and modify intermediate results before producing the final result. If we had a 
+temporary variable named <i>TempResult</i> defined, then we could implement the 
+formula for <b>LimitNumber</b> using the following ordered sequence of actions:</font></p>
+<ol>
+	<li>
+	<p align="left" style="margin-bottom: 6px"><font size="2">Write the <i>
+	TempResult</i> variable to have the value of <i>Number.</i></font></p></li>
+	<li>
+	<p align="left" style="margin-bottom: 6px"><font size="2">Compare <i>Number</i> 
+	to <i>Max</i>, and if <i>Number</i> is greater than <i>Max</i> then 
+	overwrite the <i>TempResult</i> variable with the value <i>Max</i>.</font></p>
+	</li>
+	<li>
+	<p align="left" style="margin-bottom: 6px"><font size="2">Compare <i>Number</i> 
+	to <i>Min</i>, and if <i>Number</i> is less than <i>Min</i> then overwrite 
+	the <i>TempResult</i> variable with the value <i>Min</i>.</font></p></li>
+	<li>
+	<p align="left"><font size="2">Wire the <i>TempResult</i> variable to the 
+	output data path.</font></p></li>
+</ol>
+<p align="left"><font size="2">The temporary variable <i>TempResult</i> in this 
+sequence is used only inside the contents of the My Block and is not needed 
+before or after the My Block does its work. However, a possible problem with 
+using a temporary variable inside a My Block is that if the variable has a name 
+that matches another variable used by a program using the block, them the 
+temporary variable will overwrite this variable in the program and likely create 
+a bug. Some programming languages provide a way to create something called a <i>
+local variable</i> , which will not affect the outside program, but NXT-G does 
+not, so instead we will use a <i>variable naming convention</i> to prevent this 
+problem.</font></p>
+<div align="center">
+	<table border="1" width="580" cellpadding="3">
+		<tr>
+			<td>
+			<p align="left"><font size="2"><b>Note:&nbsp; </b>All variables in 
+			NXT-G are &quot;global&quot;, which means that any two variables with the same 
+			name will refer to the same storage location. You cannot define a 
+			&quot;local&quot; variable that is guaranteed to affect the contents of only 
+			one My Block.</font></td>
+		</tr>
+	</table>
+</div>
+<p align="left"><font size="2">Using a naming convention for variables means 
+coming up with conventions about how you spell variables that are used in 
+different places, in order to prevent name conflicts. A temporary variable with 
+a name like <i>TempResult</i> is unfortunately quite likely to conflict with 
+another variable used in the program (even if you know you don’t have a variable 
+named that now, you may add one later). </font>
+<p align="left"><font size="2">The naming convention for variables that I 
+suggest is:</font><ul>
+	<li>
+	<p align="left" style="margin-bottom: 6px"><font size="2">Temporary 
+	variables in a My Block start with a lower-case letter and have the name of 
+	the My Block appended to the end after an underscore (“_”) character.</font></li>
+	<li>
+	<p align="left"><font size="2">Normal variables start with a capital letter.</font></li>
+</ul>
+<p align="left"><font size="2">This convention will ensure that your temporary 
+variables don’t interfere with normal variables in a program or any temporary 
+variables in other My Blocks. It also makes it easy to identify your temporary 
+variables at a glance because they start with a lower-case letter. Figure 46 
+shows a temporary variable named <i>number_LimitNumber</i> for use in the <b>
+LimitNumber</b> My Block. </font></p>
+<p align="center"><a name="fig46"></a><img border="0" src="7-2.png" width="289" height="314"><p align="center">
+<font size="2"><i>Figure 46: A naming convention for “local” variables used only 
+inside of a My Block.<br>
+&nbsp;</i></font></p>
+<p align="left"><font size="2">Figure 47 shows a program that can be used to 
+create the <b>LimitNumber</b> My Block using the temporary variable <i>
+number_LimitNumber</i> and the sequence of actions planned above. Note that the 
+only part of the name of the temporary variable displays on the face of the 
+variable blocks, but you can still see the important part of the name at the 
+beginning.</font><p align="center"><a href="7-3.png" name="fig47">
+<img border="0" src="7-3-small.png" width="720" height="180"></a><p align="center">
+<font size="2"><i>Figure 47: A program to create the <b>LimitNumber</b> My Block 
+(<a href="7-3.png">click to enlarge</a>).<br>
+&nbsp;</i></font></p>
+<p align="left"><font size="2">As mentioned in the <b>OutAndBack</b> example 
+earlier, note that all uses of an input parameter need to be wired to the same 
+data path leading back to the <b>Constant</b> block for that parameter. For 
+longer My Blocks, it can get difficult to do this. For example, note that the 
+data path for the <i>Min</i> parameter in Figure 47 is quite long. If it gets 
+too difficult to wire access to an input parameter in all the locations needed, 
+you can introduce another temporary variable to hold a copy of the input 
+parameter. In this case you would use a <b>Variable Write</b> block to copy the 
+value from the input parameter to the temporary variable at the beginning of the 
+block contents, then you can use multiple <b>Variable Read</b> blocks to access 
+the temporary variable throughout the program.<br>
+&nbsp;</font><div align="center">
+	<table border="1" width="580" cellpadding="3">
+		<tr>
+			<td>
+			<p align="left"><font size="2"><b>Note:&nbsp; </b>The program in 
+			Figure 47 includes a few comments for clarity here, but typically 
+			you will want to wait until after creating the My Block before 
+			adding a lot of comments, because they may need to be repositioned 
+			after the My Block is created.</font></td>
+		</tr>
+	</table>
+</div>
+<h3><font size="3"><br>
+<a name="Testing"></a>Testing a My Block Before and After Creating It</font></h3>
+<p align="left"><font size="2">The <b>LimitNumber</b> program shown in Figure 47 
+is more complex than the other My Blocks programs we have created so far, and it 
+is also harder to test, because it doesn’t result in any movement, sounds, or 
+display visible on the robot. To test the program, we need to be able to see the 
+value of the <i>Result</i> variable at the end. Figure 48 shows some additional 
+blocks that can be used for this testing. The <i>Result</i> variable is 
+converted to text and displayed on the NXT screen, and then an empty <i>Forever</i>
+<i>Loop</i> makes the program wait until you abort it (so that the result won’t 
+be erased from the screen when the program ends). </font></p>
+<p align="center"><a name="fig48"></a><img border="0" src="7-4.png" width="432" height="241"></p>
+<p align="center"><font size="2"><i>Figure 48: Additional blocks used for 
+testing before creating the <b>LimitNumber</b> My Block.<br>
+&nbsp;</i></font></p>
+<p align="left"><font size="2">The testing blocks in Figure 48 should be added 
+to the end of the program in Figure 47 before creating the My Block, and then 
+the program can be tested (again, before the My Block is created) by running it 
+several times, modifying the program slightly each time to use different values 
+for the constants <i>Number</i>, <i>Min</i>, and <i>Max</i> at the beginning of 
+the program and observing the displayed <i>Result</i> value to make sure it 
+behaves as expected. It is best to do the testing before creating the My Block, 
+because some things are not changeable (or easily changeable) after creating the 
+My Block.&nbsp; Figure 49 shows the complete program used to test and create the
+<b>LimitNumber</b> My Block with the testing blocks added. </font></p>
+<p align="center"><a href="7-5.png" name="fig49">
+<img border="0" src="7-5-small.png" width="720" height="160"></a><p align="center">
+<font size="2"><i>Figure 49: Selecting the blocks that will go inside the <b>
+LimitNumber</b> My Block (<a href="7-5.png">click to enlarge</a>).<br>
+&nbsp;</i></font></p>
+<div align="center">
+	<table border="1" width="580" cellpadding="3">
+		<tr>
+			<td>
+			<p align="left"><font size="2"><b>Note:&nbsp; </b>Just before 
+			creating a My Block, it is important to save a copy of the program 
+			(separate from the one you are working on, which you should also 
+			save) in case the My Block does turn out the way you expect and you 
+			need to go back to the source program to make changes. You can save 
+			a copy using the <i>File - Save As</i> command.</font><p align="left">
+			<font size="2">For example, you might use <i>Save As</i> to save a 
+			copy of the program shown in Figure 49 named <i>LimitNumberProg1</i> 
+			and then <i>Save As</i> again to save another copy named <i>
+			LimitNumberProg2</i>, then go on to create the My Block in <i>
+			LimitNumberProg2</i>.</font></td>
+		</tr>
+	</table>
+</div>
+<p align="left"><font size="2"><br>
+To create the <b>LimitNumber</b> My Block from the completed program, select the 
+blocks after the parameter <b>Constant</b> blocks at the beginning and <i>before</i> 
+the block that writes the output result into the <b>Result</b> variable (Figure 
+49). This selection will result in three input data sources outside the 
+selection at the beginning, which will become the three input parameters, and 
+one data path crossing outside of the selection at the end, which will result in 
+the output data port.&nbsp; The resulting program with the selection replaced by 
+the My Block is shown in Figure 50. Note that the testing blocks are still there 
+after the <b>LimitNumber</b> block. You can test the program again at this point 
+if you want, but it should behave the same as the program before the My Block 
+was created.</font><p align="center">
+<a name="fig50"></a>
+<img border="0" src="7-6.png" width="720" height="181"><p align="center">
+<font size="2"><i>Figure 50: The test program after creating the <b>LimitNumber</b> 
+My Block.<br>
+&nbsp;</i></font><p><font size="2">The contents of the <b>LimitNumber</b> My 
+Block are shown in Figure 51. Here the parameters have been renamed, a block 
+header comment was added, and the wires and comments were rearranged and cleaned 
+up a bit. Note that the output data port results in a connection block similar 
+to the input parameters and can also be renamed.</font></p>
+<p align="center"><a href="7-7.png" name="fig51">
+<img border="0" src="7-7-small.png" width="720" height="284"></a></p>
+<p align="center"><font size="2"><i>Figure 51: The finished contents of the <b>
+LimitNumber</b> My Block (<a href="7-7.png">click to enlarge</a>).<br>
+&nbsp;</i></font><p><font size="2">As a final test of the <b>LimitNumber</b> 
+block, you can create a new program that has a new copy of the <b>LimitNumber</b> 
+block wired directly to the testing blocks (Figure 52), and test the different 
+combinations of input parameters by entering them directly in the configuration 
+panel of the <b>LimitNumber</b> block.</font></p>
+<p align="center"><a name="fig52"></a><img border="0" src="7-8.png" width="481" height="193"><p align="center">
+<font size="2"><i>Figure 52: Final Testing using a new copy of the <b>
+LimitNumber</b> My Block.<br>
+&nbsp;</i></font><h3><font size="3"><a name="Process"></a>A Step-by-Step Process for Creating and 
+Testing a Complex My Block</font></h3>
+<p align="left"><font size="2">As we saw with the <b>LimitNumber</b> My Block in 
+the previous section, there are several steps involved in creating a more 
+complex My Block, and strategic times during the process where you should save 
+and test your work. This section summarizes a step-by-step process that you can 
+use to guide you in the process of creating and testing a complex My Block.</font></p>
+<div align="center">
+	<table border="1" width="650" cellpadding="4">
+		<tr>
+			<td><b><font size="2">A Step-by-Step Process for Creating and 
+			Testing a Complex My Block:</font></b><ol>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Decide what input 
+				parameters, output data ports, and variables that your My Block 
+				will use to communicate with programs that use the My Block. You 
+				cannot change the number or type of parameters or ports after 
+				creating a My Block, so it is a good idea to try to think this 
+				through ahead of time.</font></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Create a new 
+				program that will be used to test and create the My Block. Let’s 
+				call this the <i>test program</i>.</font></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">In the test 
+				program, insert one <b>Custom</b> <b>Constant</b> block for each 
+				input parameter at the beginning of the program, and one <b>
+				Variable Write</b> block for each output data port at the end of 
+				the program (<a href="#fig45">Figure 45</a>). </font></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Define any 
+				temporary variables for use in the My Block using a naming 
+				convention that avoids name conflicts with other variables. It 
+				is suggested that temporary variables start with a lower-case 
+				letter and append the My Block name at the end after an 
+				underscore (“_”) character, and normal variables start with a 
+				capital letter (<a href="#fig46">Figure 46</a>). </font></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Create the contents 
+				of the My Block in the test program as a contiguous sequence of 
+				blocks between the input parameter <b>Constant</b> block(s) and 
+				the output port <b>Variable</b> blocks(s) (<a href="#fig47">Figure 47</a>).</font></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Make sure that if 
+				an input parameter is used multiple times that all uses are all 
+				wired back to the same data path leading to the original <b>
+				Constant</b> block for that input parameter. If a data path gets 
+				too long or complex to manage, you can introduce a temporary 
+				variable to store the value of an input parameter and access it 
+				from the temporary variable instead.</font></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Add test blocks to 
+				the beginning and/or end of the test program to help you verify 
+				that it works as you expect (<a href="#fig48">Figure 48</a>).</font></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Run several test 
+				cases, modifying the values of input parameters in the <b>
+				Constant</b> blocks between runs to test all the relevant cases. 
+				Make any necessary changes to the test program.</font></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Save two copies of 
+				the test program using <i>Save As</i>, so that you always have a 
+				backup copy before the My Block was created.</font></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Select the sequence 
+				of blocks that will make up the contents of the My Block. This 
+				should include all blocks after any input parameter <b>Constant</b> 
+				blocks and before any output port <b>Variable Write</b> blocks, 
+				and should not include any blocks added for testing (<a href="#fig49">Figure 49</a>).
+				</font></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Click the <i>Create 
+				My Block</i> button on the toolbar and use the <i>My Block 
+				Builder</i> to specify the name and icon for the My Block 
+				(<a href="#fig3">Figures 3 to 5</a>). </font></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Verify that the 
+				modified test program still looks correct after the My Block has 
+				been substituted, especially the data paths for any input 
+				parameters and output ports. You can do more test runs at this 
+				point if you want (<a href="#fig50">Figure 50</a>).</font></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Double click on the 
+				My Block in the test program to open its contents. Rename the 
+				input parameters and output ports to the desired names, add a 
+				block header comment and any other comments to the contents, and 
+				reposition any wire paths as desired. Any wire paths that get 
+				too hard to work with can be deleted and re-created as necessary 
+				(<a href="#fig51">Figure 51</a>).</font></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Save the My Block 
+				contents with <i>File - Save</i>.</font></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Create a new 
+				program to test the final My Block. Insert a new copy of the My 
+				Block from the Custom Palette, and add any test code needed to 
+				test it, and then perform a full set of test runs again (<a href="#fig52">Figure 
+				52</a>).</font></li>
+			</ol>
+			</td>
+		</tr>
+	</table>
+</div>
+<p align="center">&nbsp;<hr>
+<h2><font size="4"><a name="Organizing"></a>Organizing and Sharing My Blocks</font></h2>
+<p><font size="2">In this final section, we will look at some ways to manage and 
+share your collection of My Blocks.</font></p>
+<h3><font size="3"><a name="CopyNameDel"></a>Copying, Renaming, and Deleting My Blocks</font></h3>
+<p><font size="2">As shown in the <a href="#Copying">Copying a My Block</a> 
+section earlier, the
+<i>Edit - Manage Custom Palette</i> command can be used to open the folder on 
+your computer where your My Blocks are stored (<a href="#fig38">Figures 38 to 40</a>). With this 
+folder open, you can copy, rename, or delete My Blocks that you have created by 
+copying, renaming, or deleting the corresponding program (.rbt) files for the My 
+Blocks. In this way, you can manage your set of My Blocks to make alternate 
+versions, get rid ones you don’t need any more, etc.</font></p>
+<h3><font size="3"><a name="Broken"></a>Broken Blocks</font></h3>
+<p><font size="2">An NXT-G program that contains a use of a My Block (an 
+instance of a My Block inserted from the Custom Palette) does not actually store 
+the contents My Block inside the main program file. Instead, the program 
+contains only a <i>reference</i> to the My Block, which is essentially the name 
+of the My Block along with some information about where the block came from. 
+When you open the program, the software attempts to locate the My Block file 
+(the My Block’s .rbt file) using this information. If the software fails to find 
+the My Block (because its .rbt file was deleted or renamed, for example), then 
+NXT-G will display a <i>broken block</i> instead of the correct My Block, and 
+you will not be able to download the program to the NXT. </font></p>
+<p><font size="2">Figure 53 shows an example of a broken block. This example was 
+created by creating a program that used the My Block named <b>Forward500</b>, 
+closing the program, deleting the <b>Forward500</b> block (from <i>Edit - Manage 
+Custom Palette</i>), and then opening the program again. The NXT-G software 
+knows that the block was named <b>Forward500</b>, but it was unable to find it, 
+so a broken block with the name <b>Forward500</b> is displayed. Any broken 
+blocks in a program will need to be deleted and the proper blocks inserted, or 
+the missing My Block files need to be located and installed before the program 
+can be used.</font></p>
+<p align="center"><img border="0" src="8-4.png" width="217" height="121"></p>
+<p align="center"><font size="2"><i>Figure 53: A Broken My Block<br>
+&nbsp;</i></font><p align="left"><font size="2">A common cause of broken blocks 
+is when one user attempts to share an NXT-G program written on one computer with 
+a user on a different computer (by transferring or emailing the program file or 
+posting the program file on the web, for example). If that program contains a 
+reference to a My Block and the My Block is not also transferred, the program 
+will show a broken My Block. It is possible to transfer My Blocks and install 
+them on the destination computer as well, but an easier and better way to share 
+programs is using the <i>Pack and Go</i> feature, as described in the next 
+section.</font><h3><font size="3"><a name="PackAndGo"></a>Sharing Programs with Pack and Go</font></h3>
+<p><font size="2">In the <i>Tools</i> menu of the NXT 2.0 software is a command 
+called <i>Create Pack and Go</i>. This command is another way to save an NXT-G 
+program that will save it along with a copy of all the My Blocks, sounds, and 
+graphics files that are used by the program. Normally, saving an NXT-G program 
+with <i>File - Save</i> or <i>File - Save As</i> will save only the main program 
+file along with <i>references</i> to any My Blocks, sound files, and image files 
+used by the program, and the program will only work on the destination computer 
+if the additional files are already on that computer or are also transferred and 
+properly installed. Saving a program with <i>Tools - Create Pack and Go</i> is a 
+much easier and more reliable way to share programs with other users on other 
+computers.</font></p>
+<div align="center">
+	<table border="1" width="580" cellpadding="3">
+		<tr>
+			<td>
+			<p align="left"><font size="2"><b>Note:&nbsp; </b>The <i>Create Pack 
+			and Go</i> feature is not available on versions of the NXT software 
+			prior to NXT 2.0, and the <i>Pack and Go</i> file storage format (.rbtx) 
+			is not readable by earlier versions either.&nbsp; If you save a 
+			program in this format, it will not be directly readable by users 
+			with the NXT 1.X software or the “NXT-G 2.0” software from LEGO 
+			Education.</font></td>
+		</tr>
+	</table>
+</div>
+<p><font size="2">Figure 54 shows a program that uses two My Blocks, one graphic 
+file, and one sound file, and the <i>Create Pack and Go</i> command is being 
+used to save the program. The <i>Create Pack and Go</i> dialog allows you to 
+enter a name for the saved program and browse for a folder location to specify 
+where the file should be saved. When you use <i>Create Pack and Go</i> to save a 
+program, the program is saved in a different format than a normal (.rbt) NXT-G 
+program file, as indicated by the file extension .rbtx. The NXT-G software calls 
+this format a <i>Distribution</i>, because it is designed to distribute a 
+program to other computers.</font></p>
+<p align="center"><img border="0" src="8-5.png" width="483" height="579"></p>
+<p align="center"><font size="2"><i>Figure 54: The Pack and Go feature saves a 
+program along with its required <br>
+My Blocks, sounds, and graphics into a single file.<br>
+&nbsp;</i></font><p align="left"><font size="2">The lower portion of the <i>
+Create Pack and Go</i> dialog shows which files will be included in the saved 
+Distribution (.rbtx) file. In this example, the main program <b>PackTest</b> is 
+being saved, along with the <i>Smile 01</i> graphic used by the <b>Display</b> 
+block, the <i>Good Job</i> sound used by the <b>Sound</b> block, and a copy of 
+the <b>LeftPivotAngle</b> and <b>OutAndBack</b> My Blocks. In addition, the <b>
+Backward</b>, <b>BeepBeep</b>, and <b>Forward</b> My Blocks are also included 
+because they are used by the <b>OutAndBack</b> block. This allows the resulting 
+distribution file to work on any computer with the NXT 2.0 software regardless 
+of which supporting files already exist on that computer.<br>
+&nbsp;</font><div align="center">
+	<table border="1" width="580" cellpadding="3">
+		<tr>
+			<td>
+			<p align="left"><font size="2"><b>Note:&nbsp; </b>The Pack and Go (.rbtx) 
+			format is also compressed, which results in significantly smaller 
+			files, even for a single program file with no other supporting 
+			files.&nbsp; </font>
+			<p align="left"><font size="2">Furthermore, the compression used is 
+			the standard &quot;zip&quot; format, so if you rename a Pack and Go (.rbtx) 
+			file to have the &quot;.zip&quot; extension, then you can open it with any zip 
+			extractor (built in to many computer operating systems) and access 
+			the individual files inside (even if you don't have the NXT 2.0 
+			software).</font></td>
+		</tr>
+	</table>
+</div>
+<h3><font size="3"><a name="SubMenu"></a>Making a Sub-Menu on the Custom Palette</font></h3>
+<p><font size="2">If you get to the point of creating a lot of My Blocks, it can 
+be helpful to organize them into groups, so that they don’t all appear in one 
+long list on the Custom Palette (<a href="#fig10">Figure 10</a>). It can also be useful to group all 
+of the My Blocks that are designed for a particular project together. 
+Fortunately, NXT-G makes it possible to create additional menus on the Custom 
+Palette where you can organize your my Blocks into groups. </font></p>
+<p><font size="2">To create an additional menu on the Custom Palette, use the <i>
+Edit - Manage Custom Palette</i> command to open the storage folder for the 
+custom palette (Figure 55). In this folder, the two subfolders <i>My Blocks</i> 
+and <i>Web Blocks</i> correspond to the two standard menus on the custom 
+palette. To create your own menu, simply create another subfolder at the same 
+level as the <i>My Blocks</i> subfolder. You can then move any My Block (.rbt) 
+files from the <i>My Blocks</i> folder into your new folder. </font></p>
+<p align="center"><img border="0" src="8-1.png" width="626" height="317"><p align="center">
+<font size="2"><i>Figure 55: Creating a new folder next to the My Blocks folder
+<br>
+will create a new menu in the Custom Palette.<br>
+&nbsp;</i></font><p align="left"><font size="2">In Figure 55, I have created a 
+subfolder named <i>Pinball</i> to hold seven My Blocks that were designed 
+specifically for a pinball machine project that I designed. Figure 56 shows the 
+seven My Block (.rbt) files that I moved to the <i>Pinball</i> folder, and 
+Figure 57 shows the resulting menu on the Custom Palette with the seven My 
+Blocks for the pinball machine project on it.</font><p align="center">
+<img border="1" src="8-2.png" width="401" height="205"><p align="center">
+<font size="2"><i>Figure 56: The Pinball folder contains all the My Blocks 
+specific to the Pinball project.</i></font><p align="center"><font size="2"><i>
+<br>
+</i></font><img border="0" src="8-3.png" width="533" height="345"><p align="center">
+<font size="2"><i>Figure 57: The Pinball My Block menu containing seven My 
+Blocks and showing its custom menu icon.</i></font><p align="left">
+<font size="2"><i><br>
+</i>The <i>Pinball</i> menu in Figure 57 displays as a black circle because I 
+have customized the icon for it. NXT-G makes it easy to customize your own menu 
+icons if you want. Figure 56 shows two additional files named <i>PaletteIcon.txt</i> 
+and <i>PaletteIcon.png</i> that have been placed in the <i>Pinball</i> folder. 
+The <i>PaletteIcon.png</i> file is a graphic file that specifies the icon to use 
+on the menu, and the <i>PaletteIcon.txt</i> file is a text file that specifies 
+the tooltip text that is displayed when you position your cursor over the menu 
+icon. If these files (named exactly this) are present in a My Blocks folder, the 
+menu icon will be customized, otherwise it will display the standard icon and 
+tooltip. </font>
+<p align="left"><font size="2">The <i>PaletteIcon.png</i> file must be a graphic 
+file in the PNG format that is 45 x 45 pixels in size. On a computer running 
+Windows, you can create this file using the <i>Paint</i> accessory program. In 
+the <i>Paint</i> program, use <i>Image - Attributes</i> to set the image size to 
+45 by 45, draw and/or paste whatever image you want, and then save the file in 
+PNG format (.png). The <i>PaletteIcon.txt</i> file can be created on a Windows 
+computer using the <i>Notepad</i> accessory program to create a simple text 
+file.<br>
+&nbsp;</font><div align="center">
+	<table border="1" width="580" cellpadding="3">
+		<tr>
+			<td>
+			<p align="left"><font size="2"><b>Note:&nbsp; </b>The <i>
+			PaletteIcon.txt</i> file in a My Block folder is ignored unless the
+			<i>PaletteIcon.png</i> file is also present, so if you want a custom 
+			tooltip for a My Block menu, you must also make a custom icon for 
+			it.</font></td>
+		</tr>
+	</table>
+	<p align="left">&nbsp;</div>
+<hr><p align="left">&nbsp;</td>
+	</tr>
+</table>
+
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center"><font face="Verdana" size="1"><br>
+Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2010 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; 
+Please see the <a href="../../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>NXT Sensor Meter</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../index.html">
+<img border="0" src="../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">Sensor Meter</font></td>
+		<td width="150" align="right">
+		<table border="0">
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html">Building</a>:</font></td>
+				<td height="23" align="right">
+				<img border="0" src="../images/BuildEasy.gif" width="53" height="16" alt="Easy"></td>
+			</tr>
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="#Program">Program</a>: </font>
+				</td>
+				<td height="23" align="right">
+				<img border="0" src="../images/ProgramAdvanced.gif" width="53" height="16" alt="Advanced"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p><a href="../index.html">
+<img border="0" src="../images/ForNXT1X.png" width="737" height="21"></a></p>
+<h3><span style="font-weight: 400">Building Instructions</span></h3>
+<hr>
+<p><b><font face="Arial" size="7">1</font></b></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">To make a simple way to test all of the sensors, 
+		attach all of the motors and sensors to the NXT brick as follows:<br>
+&nbsp;</font><div align="center">
+			<table border="1" style="border-collapse: collapse" bordercolor="#000000" cellpadding="2">
+				<tr>
+					<td><font size="2">Touch Sensor</font></td>
+					<td><font size="2">Port <b>1</b></font></td>
+				</tr>
+				<tr>
+					<td><font size="2">Sound Sensor</font></td>
+					<td><font size="2">Port <b>2</b></font></td>
+				</tr>
+				<tr>
+					<td><font size="2">Light Sensor</font></td>
+					<td><font size="2">Port <b>3</b></font></td>
+				</tr>
+				<tr>
+					<td><font size="2">Ultrasonic Sensor</font></td>
+					<td><font size="2">Port <b>4</b></font></td>
+				</tr>
+				<tr>
+					<td><font size="2">3 Motors</font></td>
+					<td><font size="2">Ports <b>A</b>, <b>B</b>, <b>C</b></font></td>
+				</tr>
+			</table>
+			<p align="left"><font size="2">You can also use the program for this 
+			project with any other robot if as the sensors are connected like 
+			this. </font></div>
+		</td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_5108.JPG" width="736" height="481"></p>
+<hr>
+<p><a name="Program"></a></p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td bgcolor="#C0C0C0"><font face="Arial Rounded MT Bold" size="5">Sensor 
+		Meter Programming</font><p><font size="2">Use the 
+		<a href="../programs/Sensor_Meter.rbt">Sensor_Meter</a> program to 
+		display the values for all of the sensors, as shown below.</font></p>
+		</td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+<p><font face="Arial Rounded MT Bold" size="5">Using the Sensor Meter</font></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">The <a href="../programs/Sensor_Meter.rbt">
+		Sensor_Meter</a> program displays the following information:<br>
+&nbsp;</font><table border="0" width="740">
+	<tr>
+		<td align="left" valign="top">
+		<ol>
+			<li>
+			<p style="margin-bottom: 4px"><font size="2">Touch sensor &quot;Pressed&quot; 
+			or &quot;Released&quot;.&nbsp; Note that the &quot;bumped&quot; state depends on when 
+			you last asked the sensor, so that is not displayed.</font></li>
+			<li>
+			<p style="margin-bottom: 4px"><font size="2">Current sound level 
+			heard by the sound sensor (this number changes very quickly), 
+			followed by the loudest sound level heard during the last second</font></li>
+			<li>
+			<p style="margin-bottom: 4px"><font size="2">Current (reflected) 
+			light level from the light sensor</font></li>
+			<li>
+			<p style="margin-bottom: 4px"><font size="2">Current distance seen 
+			by the ultrasonic sensor in cm</font></li>
+			<li>
+			<p style="margin-bottom: 4px"><font size="2">(</font>A, B, C<font size="2">) 
+			Degrees and direction recorded by the rotation sensors from the 
+			motors, as reported by the Rotation Sensor programming block.&nbsp; 
+			The degrees is always a positive number, and the direction will be 
+			reported as &quot;False&quot; if the degrees is negative.</font></li>
+			<li>
+			<p style="margin-bottom: 4px"><font size="2">If the left arrow, 
+			enter button, or right arrow button on the NXT brick are currently 
+			pressed, then &quot;Left&quot;, &quot;Enter&quot;, or &quot;Right&quot; will be displayed on the 
+			last line of the display.</font></li>
+		</ol>
+		</td>
+		<td valign="top">
+		<img border="1" src="DCP_5124-1.JPG" width="305" height="211"></td>
+	</tr>
+</table>
+		<p><font size="2">To reset the rotation sensors back to zero, you can 
+		abort the program with the dark gray button on the NXT brick, then 
+		restart the program.</font></td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="5">Challenges</font><p style="margin-bottom: 6px">
+		<font size="2">Try experimenting with different combinations of sensors, 
+		and even plugging some sensors into the wrong port to see what happens 
+		(I trust that LEGO has designed the parts so that you cannot damage a 
+		part by plugging it into the wrong port).&nbsp; For example, some things 
+		that I found out were:</font><ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">The NXT will not report 
+			two of the NXT buttons being pressed at the same time.&nbsp; One 
+			button will always take precedence.&nbsp; Can you determine the 
+			order of precedence of all three buttons?</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">The light and sound 
+			sensors, and their sensor programming blocks, appear to give the 
+			same signals and work the same way.&nbsp; If you switch their ports 
+			(or use the wrong programming block), they still work fine.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">If you plug a motor 
+			into a sensor port (1-4), you get some results, depending on what 
+			type of sensor you say is connected, but it's not obvious how to use 
+			the numbers in a useful way.&nbsp; The numbers only appear to be 
+			useful in one direction of rotation, for example.&nbsp; It would 
+			sometimes be nice to be able to use an extra motor as a rotation 
+			sensor (if all 3 motor ports are taken), if you could get useful 
+			enough results.</font></li>
+		</ul>
+		</td>
+	</tr>
+</table>
+<p align="center">&nbsp;</p>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana" size="1">Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2009 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

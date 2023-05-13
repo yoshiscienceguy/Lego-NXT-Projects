@@ -1,0 +1,415 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>NXT Claw Car with Game Controller</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt" onload="FP_preloadImgs(/*url*/'../images/buttons/instructions/buttonC.jpg', /*url*/'../images/buttons/instructions/buttonB.jpg')">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../index.html">
+<img border="0" src="../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">Claw Car with Game Controller</font></td>
+		<td width="150" align="right">
+		<table border="0">
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html">Building</a>:</font></td>
+				<td height="23" align="right">
+				<img border="0" src="../images/BuildExpert.gif" width="53" height="16" alt="Expert"></td>
+			</tr>
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="#Program">Program</a>: </font>
+				</td>
+				<td height="23" align="right">
+				<img border="0" src="../images/ProgramExpert.gif" width="53" height="16" alt="Expert"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p><a href="../index.html">
+<img border="0" src="../images/ForNXT1X.png" width="737" height="21"></a></p>
+<h3><span style="font-weight: 400">Building Instructions</span></h3>
+<hr>
+<p><b><font face="Arial" size="7">1-23</font></b></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<p align="left"><font size="2">Start by building the 
+		<a href="../game_control_car/steps.html">Car with Game Controller</a> 
+		project (using the <a href="../castor_bot/steps.html">Castor Bot</a>).&nbsp; 
+Click the picture for building instructions.</font></p>
+		</td>
+	</tr>
+</table>
+<p><a href="../game_control_car/steps.html">
+<img border="1" src="../game_control_car/DCP_3645.JPG" width="736" height="364"></a></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<p align="center"><a href="../game_control_car/steps.html">
+		<img border="0" id="img1" src="../images/buttons/instructions/buttonA.jpg" height="36" width="180" alt="Building Instructions" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonB.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonA.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonC.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'../images/buttons/instructions/buttonB.jpg')" fp-style="fp-btn: Glow Capsule 3; fp-font: Arial; fp-orig: 0" fp-title="Building Instructions"></a><font size="2"><br>
+&nbsp;</font></td>
+	</tr>
+</table>
+<hr>
+<p><b><font face="Arial" size="7">24</font></b></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">This project needs the NXT brick pointing the 
+		opposite way from the Castor Bot project, so in this step you need to 
+		remove the NXT brick, turn it around, then re-attach it.&nbsp; To do 
+		this:</font><ol>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Remove the two motor 
+			wires, and detach the two sensor wires from the NXT brick.</font></li>
+		</ol>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 6px">
+<img border="1" src="DCP_3754.JPG" width="736" height="342"></p>
+<table border="0" width="740">
+	<tr>
+		<td>&nbsp;<ol start="2">
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Carefully remove the 
+			NXT brick from the chassis of the Castor Bot.&nbsp; It is attached 
+			by two straight white beams and two angled gray beams on the sides, 
+			and four pegs on the bottom.&nbsp; You can either remove the side 
+			beams, or carefully pop them out of the NXT brick and bend them 
+			slightly outwards to get the NXT out.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Make sure that the all 
+			the black pegs end up on the beams of the chassis and none on the 
+			NXT brick.&nbsp; If they stick to the NXT, take them out and put 
+			them back on the chassis beams.</font></li>
+		</ol>
+		</td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_3752.JPG" width="736" height="457"></p>
+<table border="0" width="740">
+	<tr>
+		<td>&nbsp;<ol start="3">
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Re-attach the NXT brick 
+			in the opposite direction.&nbsp; Get the four bottom pegs plugged in 
+			first, then attach the four side beams.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Leave the wires 
+			unattached for now.</font></li>
+		</ol>
+		</td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_3751.JPG" width="736" height="554"></p>
+<hr>
+<p><b><font face="Arial" size="7">25</font></b></p>
+<p><img border="1" src="DCP_3750.JPG" width="736" height="315"></p>
+<p><img border="1" src="DCP_3749.JPG" width="736" height="535"></p>
+<p><img border="1" src="DCP_3748.JPG" width="736" height="497"></p>
+<p><img border="1" src="DCP_3747.JPG" width="736" height="515"></p>
+<hr>
+<p><b><font face="Arial" size="7">26</font></b></p>
+<p><img border="1" src="DCP_3746.JPG" width="736" height="455"></p>
+<p><img border="1" src="DCP_3745.JPG" width="736" height="535"></p>
+<p><img border="1" src="DCP_3744.JPG" width="736" height="520"></p>
+<hr>
+<p><b><font face="Arial" size="7">27</font></b></p>
+<p><img border="1" src="DCP_3743.JPG" width="736" height="295"></p>
+<p><img border="1" src="DCP_3742.JPG" width="736" height="457"></p>
+<p><img border="1" src="DCP_3740.JPG" width="736" height="473"></p>
+<p><img border="1" src="DCP_3739.JPG" width="736" height="495"></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<p align="left"><font size="2"><b>Note:</b> When attaching the second 
+		claw to the motor, you will need to rotate the small gray axle slightly 
+		until it lines up with the cross hole on the other claw.</font></p></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_3738.JPG" width="736" height="436"></p>
+<hr>
+<p><b><font face="Arial" size="7">28</font></b></p>
+<p><img border="1" src="DCP_3737.JPG" width="736" height="362"></p>
+<p><img border="1" src="DCP_3736.JPG" width="736" height="345"></p>
+<p><img border="1" src="DCP_3735.JPG" width="736" height="494"></p>
+<p><img border="1" src="DCP_3734.JPG" width="736" height="516"></p>
+<hr>
+<p><b><font face="Arial" size="7">29</font></b></p>
+<p><img border="1" src="DCP_3733.JPG" width="736" height="390"></p>
+<p><img border="1" src="DCP_3732.JPG" width="736" height="323"></p>
+<p><img border="1" src="DCP_3731.JPG" width="736" height="544"></p>
+<p><img border="1" src="DCP_3730.JPG" width="736" height="503"></p>
+<p><img border="1" src="DCP_3729.JPG" width="736" height="502"></p>
+<hr>
+<p><b><font face="Arial" size="7">30</font></b></p>
+<p><img border="1" src="DCP_3728.JPG" width="736" height="280"></p>
+<p><img border="1" src="DCP_3726.JPG" width="736" height="490"></p>
+<hr>
+<p><b><font face="Arial" size="7">31</font></b></p>
+<p><img border="1" src="DCP_3727.JPG" width="736" height="324"></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<p align="left"><font size="2"><b>Important:</b> Make sure both sides of 
+		the claw are open all the way before putting the gears on.&nbsp; This 
+		will ensure that the claw will open and close symmetrically.</font></p></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_3725.JPG" width="736" height="509"></p>
+<hr>
+<p><b><font face="Arial" size="7">32</font></b></p>
+<p><img border="1" src="DCP_3724.JPG" width="736" height="332"></p>
+<p><img border="1" src="DCP_3755.JPG" width="736" height="543"></p>
+<p><img border="1" src="DCP_3721.JPG" width="736" height="504"></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<p align="left"><font size="2"><b>Important:</b> Make sure both sides of 
+		the claw are still open all the way before putting on the L-shaped beam.</font></p></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_3720.JPG" width="736" height="489"></p>
+<hr>
+<p><b><font face="Arial" size="7">33</font></b></p>
+<p><img border="1" src="DCP_3719.JPG" width="736" height="356"></p>
+<p><img border="1" src="DCP_3759.JPG" width="736" height="479"></p>
+<p><img border="1" src="DCP_3758.JPG" width="736" height="256"></p>
+<p><img border="1" src="DCP_3757.JPG" width="736" height="459"></p>
+<p><img border="1" src="DCP_3756.JPG" width="736" height="465"></p>
+<hr>
+<p><b><font face="Arial" size="7">34</font></b></p>
+<p><img border="1" src="DCP_3715.JPG" width="736" height="418"></p>
+<p><img border="1" src="DCP_3714.JPG" width="736" height="491"></p>
+<p><img border="1" src="DCP_3713.JPG" width="736" height="283"></p>
+<p><img border="1" src="DCP_3712.JPG" width="736" height="510"></p>
+<p><img border="1" src="DCP_3711.JPG" width="736" height="534"></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<p align="left"><font size="2">Attach the claw to the bottom of the 
+		robot as shown below.&nbsp; There are five black pegs that need to go 
+		in.</font></p></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_3709.JPG" width="736" height="396"></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<p align="left"><font size="2">This is what it should look like from the 
+		top when the claw is properly attached.</font></p></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_3710.JPG" width="736" height="528"></p>
+<hr>
+<p><b><font face="Arial" size="7">35</font></b></p>
+<p><img border="1" src="DCP_3708.JPG" width="736" height="311"></p>
+<p><img border="1" src="DCP_3707.JPG" width="736" height="321"></p>
+<p><img border="1" src="DCP_3706.JPG" width="736" height="512"></p>
+<p><img border="1" src="DCP_3705.JPG" width="736" height="535"></p>
+<hr>
+<p><b><font face="Arial" size="7">36</font></b></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<p align="left"><font size="2">Re-attach the two motor wires.&nbsp; 
+		Looking at the NXT brick right-side-up, the left motor should attach to 
+		port <b>B</b> on the NXT, and the right wire should attach to port <b>C</b> 
+		on the NXT.&nbsp; You can route the wires under the chassis side beam to 
+		keep them out of the way, as shown below.</font></p></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_3760.JPG" width="736" height="372"></p>
+<hr>
+<p><b><font face="Arial" size="7">37</font></b></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<p align="left"><font size="2">Use the shortest wire to attach the claw 
+		motor to port <b>A</b> on the NXT brick.&nbsp; You can route the wire 
+		under the round chassis cross support to keep it off the ground, as 
+		shown below.</font></p></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_3698.JPG" width="736" height="483"></p>
+<p><img border="1" src="DCP_3703.JPG" width="736" height="534"></p>
+<hr>
+<p><b><font face="Arial" size="7">38</font></b></p>
+<table border="0" width="740">
+	<tr>
+		<td>
+		<p align="left"><font size="2">Reattach the two controller wires to the 
+		NXT brick, making sure that the light sensor wire goes to port <b>3</b> 
+		on the NXT and the the touch sensor wire goes to port <b>4</b> on the 
+		NXT.</font></p></td>
+	</tr>
+</table>
+<p><img border="1" src="DCP_3697.JPG" width="736" height="351"></p>
+<hr>
+<p><a name="Program"></a></p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td bgcolor="#C0C0C0"><font face="Arial Rounded MT Bold" size="5">Claw Car 
+		with Game Controller Programming</font><p style="margin-bottom: 6px">
+		<font size="2">Use the program <a href="../programs/Claw_Control.rbt">
+		Claw Control</a> for the Claw Car with Game Controller.&nbsp; This program 
+		is based on the <a href="../programs/Game_Control.rbt">Game_Control</a> 
+		program&nbsp;that is used for the
+		<a href="../game_control_car/index.html">Car with Game Controller</a> 
+		project and then adds a way to open and close the claw using the touch 
+		sensor.&nbsp; The controller must be calibrated before it can be used, 
+		so the program starts with a calibration sequence.&nbsp; See the 
+		instructions below for details.</font></p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 6px">&nbsp;</p>
+<p style="margin-bottom: 6px"><font face="Arial Rounded MT Bold" size="5">Using 
+the Controller for the Claw Car</font></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">The remote control for this project is based on the 
+		controller used for the <a href="../game_control_car/index.html">Car 
+		with Game Controller</a> project.&nbsp; The control must be calibrated 
+		before you can drive with it.&nbsp; See the instructions for
+		<a href="../game_control_car/steps.html#Using">Using the Game Controller</a> 
+		to learn how to calibrate the control and drive the robot using it.</font><p><font size="2">
+		The <a href="../programs/Claw_Control.rbt">Claw Control</a> program for 
+		this project adds a way to open and close the claw using the touch 
+		sensor on the control.&nbsp; But the touch sensor is also used to tell 
+		the robot to drive forward, so a little trick is needed to tell the 
+		difference between the two:</font></p>
+		<ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">When the touch sensor 
+			button is pressed and held down, the robot will drive forward (and 
+			the left thumb plate will steer the robot left and right while it is 
+			driving). </font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">When the touch sensor 
+			is pressed briefly and then quickly released (&quot;Clicked&quot;), the claw 
+			will open if it is closed or close if it is open.</font></li>
+		</ul>
+		<p style="margin-bottom: 6px"><font size="2">Because of this trick, 
+		there is a slight delay before the robot will drive forward when you 
+		press the touch sensor, while the program is waiting to see if you 
+		release the button soon enough or not.&nbsp; This same trick is often 
+		used in the graphical user interface of desktop computer programs to 
+		tell the difference between a &quot;click&quot; and a &quot;drag&quot; of the mouse.</font></td>
+	</tr>
+</table>
+<p style="margin-bottom: 6px">&nbsp;</p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="5">Challenges</font><ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Practice driving and 
+			using the claw with the remote control, then see if you can drive up 
+			to a plastic NXT ball, grab it, take it somewhere else, and then let 
+			it go.&nbsp; There is no way to back up with the
+			<a href="../programs/Claw_Control.rbt">Claw Control</a> program, so 
+			you can just pull back on the controller wires when you need to back 
+			up.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">The claw will grab and 
+			hold lots of other things besides balls.&nbsp; See what other kinds 
+			of things you can grab, hold, and drive with.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">For an advanced 
+			programming challenge, see if you can understand enough of the
+			<a href="../programs/Claw_Control.rbt">Claw Control</a> program to 
+			modify it to control something else that you build.&nbsp; See the 
+			Challenges section at the end of the
+			<a href="../game_control_car/steps.html">Car with Game Controller</a> 
+			Project for hints on how to get started, because the
+			<a href="../programs/Claw_Control.rbt">Claw Control</a> program is 
+			based on the <a href="../programs/Game_Control.rbt">Game_Control</a> 
+			program.&nbsp; In addition to the six &quot;BC&quot; Move blocks for the 
+			driving, the <a href="../programs/Claw_Control.rbt">Claw Control</a> 
+			program adds three &quot;A&quot; Move blocks to open and close the claw (one 
+			is just to force it open at the beginning of the program).&nbsp;
+			</font></li>
+		</ul>
+		</td>
+	</tr>
+</table>
+<p align="center">&nbsp;</p>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana" size="1">Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2009 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

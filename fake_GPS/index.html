@@ -1,0 +1,159 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>NXT Fake GPS Receiver</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt" onload="FP_preloadImgs(/*url*/'../images/buttons/instructions/buttonC.jpg', /*url*/'../images/buttons/instructions/buttonB.jpg')">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../index.html">
+<img border="0" src="../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">Fake GPS Receiver</font></td>
+		<td width="150" align="right">
+		<table border="0">
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html">Building</a>:</font></td>
+				<td height="23" align="left">
+				<font size="2">(none)</font><font face="Verdana" size="2"> </font></td>
+			</tr>
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html#Program">Program</a>: </font>
+				</td>
+				<td height="23" align="left">
+				<img border="0" src="../images/ProgramExpert.gif" width="53" height="16" alt="Expert"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p><a href="../index.html">
+<img border="0" src="../images/ForNXT1X.png" width="737" height="21"></a></p>
+<p><a href="steps.html">
+<img border="1" src="DCP_5753-1.JPG" width="736" height="463" longdesc="LEGO Mindstorms NXT Fake GPS Receiver: Free building instructions and downloadable program at www.nxtprograms.com" alt="LEGO Mindstorms NXT Fake GPS Receiver"></a></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">This project was designed as an
+		<a href="http://en.wikipedia.org/wiki/April_Fools'_Day">April Fool's</a> 
+		Joke.&nbsp; It is just a program for your NXT (no building) that 
+		pretends to be a GPS (Global Positioning System) receiver that uses the 
+		NXT to calculate your position (latitude and longitude) by receiving 
+		signals from GPS satellites via the NXT's Bluetooth radio receiver.&nbsp; 
+		But the whole thing is fake.&nbsp; And furthermore, the NXT-G program 
+		(block organization) is designed to look convincing and make it 
+		difficult to determine how the fake part works.&nbsp; </font>
+		<p><font size="2">So this project might give you two programming 
+		challenges.&nbsp; First, for you NXT-G programming whizzes out there, 
+		can you figure out how the fake program works?&nbsp; Can you explain 
+		everything that you see on the screen given the contents of the program?&nbsp; 
+		See the </font><font face="Verdana" size="2">
+				<a href="steps.html#Program">Program</a> </font>
+				<font size="2">section for some hints.&nbsp; &nbsp; </font></p>
+		<p><font size="2">Second, perhaps this idea will give you some ideas for 
+		other interesting fake programs you could think up yourself that might 
+		be fun to trick your friends with, such as a fake Lie Detector.&nbsp; 
+		See the Challenges section at the end of the building instructions for 
+		some ideas.</font></td>
+	</tr>
+</table>
+<p><a href="steps.html">
+<img border="1" src="DCP_5754-1.JPG" width="736" height="465"></a></p>
+<table border="0" width="740">
+	<tr>
+		<td><font size="2">To make things even more confusing, and to help trick 
+		people that have experience with computers, the program pretends to 
+		&quot;reboot&quot; the NXT under a different operating system, which then runs the 
+		GPS application.&nbsp; This is fake too, and is just a diversion to make 
+		the trick more complicated...</font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td width="100" valign="bottom">
+		&nbsp;</td>
+		<td>
+		<p align="center"><font face="Verdana" size="2"><br>
+		</font><a href="steps.html">
+		<img border="0" id="img2" src="../images/buttons/instructions/buttonA.jpg" height="36" width="180" alt="Building Instructions" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'../images/buttons/instructions/buttonB.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'../images/buttons/instructions/buttonA.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'../images/buttons/instructions/buttonC.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'../images/buttons/instructions/buttonB.jpg')" fp-style="fp-btn: Glow Capsule 3; fp-font: Arial; fp-orig: 0" fp-title="Building Instructions"></a></td>
+		<td width="100">
+		&nbsp;</td>
+	</tr>
+</table>
+<p style="margin-bottom: 6px">&nbsp;</p>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana" size="1">Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2009 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,732 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>NXT Guitar Challenge Game</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body style="font-family: Verdana; font-size: 10pt">
+
+<table border="0" width="740">
+	<tr>
+		<td><a href="../index.html">
+<img border="0" src="../images/nxtprograms.png" width="296" height="36" alt="nxtprograms.com"></a></td>
+		<td>
+		<p align="right"><font size="2" face="Verdana">Fun 
+		Projects for 
+				your </font><font size="2"><font face="Arial Rounded MT Bold">LEGO</font><sup><font face="Arial Rounded MT Bold">®</font></sup><font face="Arial Rounded MT Bold"> 
+				MINDSTORMS</font><sup><font face="Arial Rounded MT Bold">®</font></sup></font><font size="2" face="Arial Rounded MT Bold"> 
+				NXT!</font></td>
+	</tr>
+</table>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="742" cellpadding="6">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="6">Guitar Challenge Game</font></td>
+		<td width="150" align="right">
+		<table border="0">
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="steps.html">Building</a>:</font></td>
+				<td height="23" align="right">
+				<img border="0" src="../images/BuildExpert.gif" width="53" height="16" alt="Expert"></td>
+			</tr>
+			<tr>
+				<td align="right" width="70"><font face="Verdana" size="2">
+				<a href="#Program">Program</a>: </font>
+				</td>
+				<td height="23" align="right">
+				<img border="0" src="../images/ProgramExpert.gif" width="53" height="16" alt="Expert"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<p><a href="../index.html">
+<img border="0" src="../images/ForNXT1X.png" width="737" height="21"></a></p>
+<h2><font face="Arial">Using the Guitar Challenge Game Project</font></h2>
+<table border="0" width="760" cellpadding="4">
+	<tr>
+		<td><font size="2">There are several programs for the Guitar Challenge 
+		Game project, and using them is more complex than a normal NXT program, 
+		so there are some instructions to read here. </font>
+		<p><b><font size="2">Index to Instructions:</font></b></p>
+		<p><font size="2"><a href="#Intro">Introduction</a><br>
+		<a href="#GameMode">Game Mode</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#SongFiles">Song Data Files</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Downloading">Downloading the Game Mode 
+		Programs and Sample Songs</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Record_NXT">Recording your own Songs on the 
+		NXT</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Playing">Playing Songs on the NXT</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Record_PC">Recording Songs on the PC</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Edit_PC">Editing Songs on the PC</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Upgrade">Program Upgrades and Accessing 
+		Additional Song Files</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Source">Program Source Code</a><br>
+		<a href="#FreePlay">Free Play Mode</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#ChordSounds">Copying the Guitar Chord Sounds 
+		to the NXT</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="#FreePlay_Hints">Hints for using the Guitar in 
+		Free Play mode</a></font></p><hr>
+		<h2><font face="Arial"><a name="Intro"></a>Introduction</font></h2>
+		<p><font size="2">Overall there are two modes that you can use the 
+		guitar in: <a href="#GameMode">Game Mode</a> and <a href="#FreePlay">
+		Free Play</a> mode.&nbsp; In both modes, you choose a note to play by 
+		sliding the flat plate along the neck of the guitar with your left hand 
+		to select the note to play, then press the strum lever with your right 
+		thumb or fingers to play the note.&nbsp; </font></p>
+		<p><font size="2">If the guitar was made with two touch sensors, the 
+		strum lever will trigger on both up and down strokes, otherwise only on 
+		down strokes.</font></p>
+		<p><font size="2"><b>Important: </b>For best results, be sure to keep your left hand 
+		completely behind the sliding plate, so that the ultrasonic sensor sees 
+		only the plate and not your hand, as shown below:</font></p>
+		<table border="0" width="100%" cellpadding="6">
+			<tr>
+				<td><img border="1" src="DSC_3011.JPG" width="364" height="230"></td>
+				<td><img border="1" src="DSC_3012.JPG" width="360" height="230"></td>
+			</tr>
+			<tr>
+				<td><font size="2"><b>Correct:</b> Keep all fingers behind the 
+				sensor plate.</font></td>
+				<td><font size="2"><b>Wrong:</b> Fingers interfering with the 
+				ultrasonic sensor</font></td>
+			</tr>
+		</table>
+		<hr>
+		<h2><font face="Arial"><a name="GameMode"></a>Game Mode</font></h2>
+		<p><font size="2">In Game Mode, you are challenged to play along with 
+		notes that are scrolling downward on the NXT screen, optionally 
+		listening to the song from an external source such as a stereo or iPod.&nbsp; 
+		For the Game Mode programs you will want the NXT brick separated from 
+		the body of the guitar as shown in the main <a href="steps.html">
+		building instructions</a>, so that you can see the screen while playing.</font></p>
+		<table border="0" width="100%">
+			<tr>
+				<td width="435">
+				<img border="1" src="DSC_2913.JPG" width="439" height="301"></td>
+				<td align="right" valign="top">&nbsp;</td>
+				<td align="right" valign="top" width="286">
+				<img border="1" src="DCP_2854.JPG" width="281" height="202"></td>
+			</tr>
+		</table>
+		<p><font size="2">In Game Mode, the NXT doesn't play the notes of the 
+		music.&nbsp; The game is designed to allow you to listen to the &quot;real&quot; 
+		music on your stereo or iPod and play along with it.&nbsp; The only 
+		sound coming from the NXT will be short beeps when you miss notes.</font></p>
+		<h4><font face="Arial"><b><a name="SongFiles"></a>Song Data Files</b></font></h4>
+		<p><font size="2">The songs that you play are stored in data files on 
+		the NXT, with a separate data file for each song.&nbsp; You can get song 
+		data files onto your NXT in four ways:</font></p>
+		<ol>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">You can download the 
+			data files for the sample songs provided below to the NXT.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">You can record your own 
+			songs by &quot;playing along&quot; with your own favorite music using the <b>
+			GuitarRecord</b> NXT song recording program.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Owners of the CD can use the PC (Windows) song recording program 
+			to record and edit their own songs on a PC using the keyboard and 
+			mouse.&nbsp; This provides a much easier and more accurate way to 
+			record your own songs than using the NXT to record.&nbsp; This also 
+			allows you to label your songs with artist, song, and album titles, 
+			reset high scores, and edit/change the recorded notes.</font></li>
+			<li><font size="2">Owners of the CD also have access to additional 
+			song files submitted by other owners of the game.&nbsp; For more 
+			information, see <a href="#Upgrade">Program Upgrades and Accessing 
+			Additional Song Files</a>. </font></li>
+		</ol>
+		<h4><b><font face="Arial"><a name="Downloading"></a>Downloading the Game 
+		Mode Programs and Sample Songs</font></b></h4>
+		<p><font size="2">The NXT programs for Game Mode were written in NXC, 
+		which is a programming language that provides lower-level access to the 
+		NXT's capabilities and more speed than the standard NXT-G programming 
+		system.&nbsp;&nbsp; So the programs needed will not load and download in 
+		the same way as other NXT programs on this CD.&nbsp; To load the 
+		programs and sample songs, do the following:</font></p>
+		<ol>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Make a folder on your 
+			computer where you will keep the programs and song data files.&nbsp; 
+			For example, on Windows, you might make a folder under &quot;My 
+			Documents&quot; named &quot;NXT Guitar Game&quot;.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Download the programs 
+			and song files that you want from the table below, and save the 
+			downloaded files in the folder you created in step 1.<br>
+&nbsp;</font></p>
+			<table border="1" width="650" bordercolorlight="#C0C0C0" bordercolordark="#C0C0C0" style="border-collapse: collapse">
+				<tr>
+					<td colspan="2">
+					<p align="center"><b><font size="2">Downloads (Pick Save to 
+					save to the folder you created above)</font></b></td>
+				</tr>
+				<tr>
+					<td><b><font size="2">Programs:</font></b></td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td><font size="2"><a href="GuitarGame.rxe">GuitarGame.rxe</a></font></td>
+					<td><font size="2">For playing the guitar game on the NXT 
+					(compiled NXT program file)</font></td>
+				</tr>
+				<tr>
+					<td><font size="2"><a href="GuitarRecord.rxe">GuitarRecord.rxe</a></font></td>
+					<td><font size="2">For recording your own songs on the NXT 
+					(compiled NXT program file)</font></td>
+				</tr>
+				<tr>
+					<td><font size="2"><a href="GuitarRecorder.exe">GuitarRecorder.exe</a></font></td>
+					<td><font size="2">For recording, labeling, and editing 
+					songs on a Windows PC</font></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td><b><font size="2">Sample Songs:</font></b></td>
+					<td><font size="2">(<a href="songs/SampleSongs.zip">All 
+					Sample Songs</a> in a zip file)</font></td>
+				</tr>
+				<tr>
+					<td><font size="2"><a href="songs/Song%201.gcs">Song 1.gcs</a></font></td>
+					<td><font size="2">&quot;Happy Birthday&quot; practice song (no music 
+					accompaniment)</font></td>
+				</tr>
+				<tr>
+					<td><font size="2"><a href="songs/Song%202.gcs">Song 2.gcs</a></font></td>
+					<td><font size="2">&quot;Smoke on the Water&quot; by Deep Purple 
+					(first 1 min)</font></td>
+				</tr>
+				<tr>
+					<td><font size="2"><a href="songs/Song%203.gcs">Song 3.gcs</a></font></td>
+					<td><font size="2">&quot;Hit Me with Your Best Shot&quot; by Pat 
+					Benatar (full song)</font></td>
+				</tr>
+				<tr>
+					<td><font size="2"><a href="songs/Song%204.gcs">Song 4.gcs</a></font></td>
+					<td><font size="2">&quot;It's Not My Time&quot; by 3 Doors Down (full 
+					song)</font></td>
+				</tr>
+				<tr>
+					<td><font size="2"><a href="songs/Song%205.gcs">Song 5.gcs</a></font></td>
+					<td><font size="2">&quot;Back in Black&quot; by AC/DC (full song)</font></td>
+				</tr>
+				<tr>
+					<td><font size="2"><a href="songs/Song%206.gcs">Song 6.gcs</a></font></td>
+					<td><font size="2">&quot;Carry on Wayward Son&quot; by Kansas (first 1 
+					min)</font></td>
+				</tr>
+				<tr>
+					<td><font size="2"><a href="songs/Song%207.gcs">Song 7.gcs</a></font></td>
+					<td><font size="2">&quot;Through the Fire and Flames&quot; by 
+					Dragonforce (first 1 min)</font></td>
+				</tr>
+			</table>
+			</li>
+			<li>
+			<p style="margin-top: 20px"><font size="2">Start the NXT programming 
+			software on your computer, connect your NXT, start a new blank 
+			program, then open the &quot;NXT Window&quot; from the controller in the lower 
+			right, and select the Memory tab as shown below.</font></p>
+			<table border="0" cellpadding="4">
+				<tr>
+					<td>
+					<img border="1" src="sshot-1.png" width="145" height="127"></td>
+					<td>
+					<img border="1" src="sshot-2.png" width="549" height="272"></td>
+				</tr>
+			</table>
+			</li>
+			<li>
+			<p style="margin-top: 20px; margin-bottom: 6px"><font size="2">
+			Delete any unneeded programs and sounds from your NXT to free up as 
+			much memory as possible by selecting the &quot;Program&quot; and &quot;Sound&quot; 
+			categories, selecting items from the list, and pressing the Delete 
+			button, or just press the &quot;Delete All&quot; button to remove all programs 
+			and sounds from the NXT.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Press the Download 
+			button on the Memory tab shown above, then locate the <b>
+			GuitarGame.rxe</b> file that you saved on your computer in step 2 
+			and download it to the NXT.&nbsp; Repeat for <b>GuitarRecord.rxe</b>.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">To download sample 
+			songs (the files named &quot;<b><i>Song xx.gcs</i></b>&quot;), press the Download 
+			button, then in the dialog that locates the file, specify that you 
+			want to look for &quot;Files of type&quot; <b>All Files</b>.&nbsp; Locate the 
+			sample song you want (that you saved in step 2) and download it.&nbsp;&nbsp; 
+			The file will appear in the &quot;Other&quot; category on the Memory tab.&nbsp; 
+			Repeat for each sample song that you want.</font></li>
+		</ol>
+		<p style="margin-bottom: 6px"><b><font face="Arial">
+		<a name="Record_NXT"></a>Recording your own Songs on the NXT</font></b></p>
+		<p style="margin-bottom: 6px"><font size="2">To record your own songs on 
+		the NXT, run the <b>GuitarRecord</b> program on the NXT.&nbsp; The song 
+		will start recording as soon as you strum the first note, and stop 
+		recording when you press the orange Enter button on the NXT.&nbsp;
+		</font></p>
+		<p style="margin-bottom: 6px"><font size="2">In Game Mode there are five 
+		note positions corresponding to the five &quot;strings&quot; shown on the screen.&nbsp; 
+		You can &quot;play&quot; whatever notes (positions) you want, and your note 
+		selection and timing will be recorded.&nbsp; No sound will be played by 
+		the NXT.&nbsp; Recording is designed to synchronize along with external 
+		music that you are listening to on your stereo or iPod (or you can just 
+		play to an imaginary song from memory if you want).</font></p>
+		<p style="margin-bottom: 6px"><font size="2">&nbsp;When listening to 
+		music that you want to synchronize the song with, a good strategy is:</font></p>
+		<ol>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Start the <b>
+			GuitarRecord</b> program and get ready to play.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Start the song on your 
+			stereo or iPod.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Wait for a logical 
+			place near the beginning of the song to start your first note.&nbsp; 
+			It shouldn't be right at the beginning, because this will be too 
+			hard to anticipate when playing back.&nbsp; Give yourself the 
+			opportunity to hear the tempo and start the first note in a logical 
+			place that will be easy to anticipate when playing back.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Play your first note at 
+			the right time, then choose and play more notes in sync with the 
+			music.&nbsp; Hold the strum button down to make long notes.&nbsp; 
+			The whammy bar doesn't do anything in Game Mode.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Press the Enter button 
+			on the NXT when done recording.&nbsp; The song will be given a data 
+			file name something like &quot;Song xx&quot;.&nbsp; The Artist and Song title 
+			information will be filled in to indicate the NXT recorder. </font>
+			</li>
+		</ol>
+		<p style="margin-bottom: 6px"><b><font face="Arial"><a name="Playing">
+		</a>Playing Songs on the NXT</font></b></p>
+		<p style="margin-bottom: 6px"><font size="2">To play the guitar game on 
+		the NXT, run the <b>GuitarGame</b> program on the NXT and choose the 
+		song to play using the NXT buttons.&nbsp; When you get to the game 
+		display with the &quot;fret strings&quot;, the song will start playing as soon as 
+		you strum the first note.&nbsp; So, if you are playing along with 
+		external music:</font></p>
+		<ol>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Get the song ready to 
+			play in the <b>GuitarGame</b> program</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Start the song on your 
+			stereo or iPod.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Play the start of the 
+			first note at the correct time.&nbsp; You will need to know when the 
+			first recorded note of the song is in order to anticipate it and 
+			play it at the right time.&nbsp; If you play the first note at the 
+			wrong time, all of the notes in the song will be displayed out of 
+			synch with the music.&nbsp; For songs you recorded, you will need to 
+			remember where the first note is.&nbsp; For the sample songs and 
+			songs you record on the PC, the song will specify the approximate 
+			starting time of the first note in seconds from the beginning of the 
+			song.&nbsp; For example, if the song says to start 0:08, then the 
+			first game note will be approximately 8 seconds from the very 
+			beginning of the song.&nbsp; Note that this time is approximate, the 
+			exact time will be in sync with a logical/clear guitar note in the 
+			song. </font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">At the end of the 
+			recorded notes, your number of missed notes and score (percent 
+			correct) will be displayed.&nbsp; If you beat the best high score 
+			for that song so far, the new high score will be saved.<br>
+&nbsp;</font></p>
+			</li>
+		</ol>
+		<p style="margin-bottom: 6px"><b><font face="Arial"><a name="Record_PC">
+		</a>Recording Songs on the PC</font></b></p>
+		<p style="margin-bottom: 6px"><font size="2">Owners of the CD can also 
+		record songs on the PC using the keyboard, which is easier and more 
+		accurate than recording on the NXT, and you can also edit the result 
+		with the keyboard and mouse, and record the song in several stages if 
+		you want to.&nbsp; To record a new song on the 
+		PC:</font></p>
+		<ol>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Run the <b>
+			GuitarRecorder</b> program on the PC (requires a PC that can run 
+			Windows).</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Start the song on your 
+			stereo or iPod, and at the same time (the very beginning of the 
+			song, not the first game note), press the Space bar on the PC to 
+			start the song timer.&nbsp; Starting the timer at the beginning of 
+			the song will allow GuitarRecorder to calculate the estimated time 
+			of the first game note.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Record notes using the 
+			keys 1-5 on the PC keyboard, starting the first note at a logical 
+			time.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">(Optional) Edit the 
+			song to fix recording mistakes (see below).</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Enter artist, song 
+			title, and album info using the menu choice <font face="Arial"><b>File 
+			=&gt; Edit Song Info</b></font>.&nbsp; Here you can also specify the 
+			approximate time in seconds for the first game note if it was not 
+			automatically calculated.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Save the song.&nbsp; In 
+			order for the NXT game program to find them, all song files must be named 
+			<br>
+			&quot;<b><i>Song xx.gcs</i></b>&quot;, where <i>xx</i> 
+			is a number from 1 to 99.&nbsp; To keep your files organized and ensure that you 
+			don't overwrite another file, save all of your song files in the 
+			same folder (the same folder as the programs and sample songs), and 
+			make sure you choose a unique number 1-99 when saving it.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">To play the song you 
+			recorded, you will need to download it to the NXT, similar to the 
+			way you downloaded the sample songs.</font></li>
+		</ol>
+		<p style="margin-bottom: 6px"><b><font face="Arial"><a name="Edit_PC">
+		</a>Editing Songs on the PC</font></b></p>
+		<p style="margin-bottom: 20px"><font size="2">Owners of the <b>
+		GuitarRecorder</b> PC program on the CD can also edit songs, assign 
+		the artist, song title, and album name information, and reset high scores.&nbsp; 
+		Note that you can also edit songs that were recorded on the NXT if you 
+		upload them from the NXT to the PC from the Memory Tab in the NXT 
+		Window.&nbsp; </font></p>
+		<table border="0" width="100%">
+			<tr>
+				<td align="left" valign="top" width="464">
+		<p style="margin-bottom: 6px"><font size="2">To edit a song using the <b>
+		GuitarRecorder</b> program, open it from the File menu, make your 
+		changes, then save it from the File menu.&nbsp; You can edit 
+		artist/song/album/score info with <font face="Arial"><b>File =&gt; Edit 
+		Song Info</b></font>.&nbsp; See the Help menu 
+		for editing operations you can do to edit the notes of the song.&nbsp; 
+		Remember to re-download your edited song to the NXT.</font></p>
+				<p style="margin-bottom: 6px"><font size="2">Here are some hints 
+				for editing songs on the PC using the <b>GuitarRecorder</b> 
+				program:</font></p>
+				<ul>
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">You have five 
+					note positions to work with.&nbsp; Come up with a basic plan 
+					for how you will use the five notes for a section in the 
+					song and practice it a bit on the keys before recording it.
+					</font></p></li>
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">You can record 
+					a song in sections if you use reference points in the song 
+					for where to restart the recording timer.&nbsp; This allows 
+					you to plan and re-try certain portions until you get them 
+					close enough to fine tune edit by hand.&nbsp; Here is how:</font></p>
+					<ol>
+						<li>
+						<p style="margin-bottom: 6px"><font size="2">After 
+						recording one section, stop the timer with the Space 
+						bar.</font></p></li>
+						<li>
+						<p style="margin-bottom: 6px"><font size="2">Scroll back 
+						to a reference point in the music graph that you know, 
+						using the scroll bar and arrow keys.&nbsp; For example, 
+						in the picture to the right, the song has been stopped 
+						and scrolled back to the beginning of a recognizable 
+						note at the beginning of a beat, which is at about 2:08 
+						in the song.</font></p></li>
+						<li>
+						<p style="margin-bottom: 6px"><font size="2">Rewind your 
+						music player to before the reference point (e.g. a few 
+						second before 2:08 in this example).</font></p></li>
+						<li>
+						<p style="margin-bottom: 6px"><font size="2">Listen for 
+						the reference point in the music (near 2:08), then press 
+						the Space bar exactly at the reference point to restart 
+						the timer and start recording again. </font></p></li>
+					</ol>
+					</li>
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">To erase 
+					portions of a song before re-recording them, start the 
+					timer, then press and hold the 0 (zero) key to erase notes 
+					at the recording point.</font></p></li>
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">You can fine 
+					tune and fix minor errors in the recording using the mouse 
+					when the timer is stopped&nbsp; Click and drag with the left 
+					button to &quot;draw&quot; a note on a string, and click and drag with 
+					the right button to erase notes.</font></p></li>
+					<li>
+					<p style="margin-bottom: 6px"><font size="2">Remember to 
+					save a song after editing it.</font></p></li>
+				</ul>
+				</td>
+				<td align="left" valign="top">
+				<img border="0" src="GuitarRecorder.png" align="right"></td>
+			</tr>
+		</table>
+		<hr>
+		<p><b><font face="Arial"><a name="Upgrade"></a>Program Upgrades and 
+		Access to Additional Song Files </font></b></p>
+		<p><font size="2">Owners of the CD have access to free program upgrades 
+		and additional song files contributed by other owners of the game, at 
+		the following web site:</font></p>
+		<blockquote>
+			<p><font size="2">Web site:&nbsp;
+			<a href="http://www.nxtprograms.com/guitar_game/upgrade">
+			http://www.nxtprograms.com/guitar_game/upgrade</a><br>
+			User Name: guitargame<br>
+			Password: 15131197<br>
+&nbsp;</font></p>
+		</blockquote>
+		<p><b><font face="Arial"><a name="Source"></a>Program Source Code</font></b></p>
+		<p><font size="2">Owners of the CD also have access to a copy of the 
+		source code for the <b>GuitarGame</b> and <b>
+		GuitarRecord</b> NXT programs, as well as the <b>
+		GuitarRecorder</b> program for Windows, so that they can learn how they 
+		are implemented or make modifications for their own use.&nbsp; See the 
+		&quot;Source Code&quot; folder on the CD.</font></p>
+		<p><font size="2"><i><b><u>Note</u>: </b></i>The source code for the 
+		programs is copyrighted and cannot be published in any form without 
+		written permission from nxtprograms.com.&nbsp; This includes modified 
+		versions.&nbsp; If you use the source code to build a modified version 
+		of the game or recording programs, you may only use them for your own 
+		use.&nbsp; You may not publish the modified source code, nor can you 
+		publish the modified version of the executable programs.</font></p>
+		<hr>
+		<h2><font face="Arial"><a name="FreePlay"></a>Free Play Mode</font></h2>
+		<p><font size="2">In Free Play mode, the NXT’s built-in speaker will 
+		make its own musical notes, and you can play the guitar like an 
+		instrument by itself.&nbsp; There are 8 different notes from the &quot;<a href="#Notes">Blues 
+		Scale</a>&quot; that correspond to 8 different positions of the fret slider.&nbsp; 
+		The Free Play programs will draw a graph of the tones being playing on 
+		the screen that you can watch if you want.&nbsp; </font></p>
+		<table border="0" width="100%">
+			<tr>
+				<td width="415" valign="top">
+				<h3><img border="1" src="DSC_2917.JPG" width="438" height="234"></h3>
+				</td>
+				<td>&nbsp;</td>
+				<td width="289" align="right" valign="top">
+				<img border="1" src="DCP_2903.JPG" width="281" height="196"></td>
+			</tr>
+		</table>
+		<p><font size="2">In Free Play mode, you can install the NXT brick into 
+		the body of the guitar as shown above to make it more portable (see the 
+		Free Play <a href="steps.html#FreePlay">conversion instructions</a>), or 
+		you can leave the NXT outside as in Game Mode so that you can see the 
+		tone graph drawn by the Free Play mode programs.</font></p>
+		<p style="margin-bottom: 6px"><font size="2">There are two Free Play 
+		programs that give you two different variations:</font></p>
+		<ol>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">The 
+			<a href="../programs/GuitarFreeTones.rbt">GuitarFreeTones</a> 
+			program plays tones for the notes using the NXT's tone generator.&nbsp; 
+			When playing tones, you can hold the strum lever down to hold a long 
+			note.&nbsp; You can also use the &quot;whammy bar&quot; to add whammy effects 
+			to a long tone.&nbsp; To use the whammy bar, position the whammy bar 
+			angled against its rubber support, strum and hold a note with your 
+			thumb, then push the whammy bar down and up with your fingers or 
+			palm (towards the light sensor) <i>after</i> strumming the note.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">The 
+			<a href="../programs/GuitarFreeChord.rbt">GuitarFreeChord</a> program will play some 
+			cool recorded guitar “power chord” sounds to make your electric 
+			guitar sound more realistic. However, to use this program, you will 
+			<b>first</b> need to copy some recorded guitar chord sound files to the NXT 
+			Sounds folder on your computer as described in the next section 
+			below.<br>
+			<br>
+			In addition to needing the guitar sound files, the
+			<a href="../programs/GuitarFreeChord.rbt">GuitarFreeChord</a> 
+			program has a few other restrictions that 
+			you should know about:</font><ul>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">The recorded guitar 
+				chord sounds take a lot of memory on the NXT, so you may need to 
+				delete other programs that you have downloaded to your NXT to 
+				make room. And when you are done using the guitar and need more 
+				memory for other programs, you should delete the sound files 
+				from the NXT.</font></li>
+				<li>
+				<p style="margin-bottom: 6px"><font size="2">Due to memory constraints, the guitar chords 
+				will only play for about ½ second for each press, so you can‘t 
+				hold long notes. Use it like a “rhythm guitar” and keep 
+				strumming!</font></li>
+				<li><font size="2">The whammy bar doesn't do anything when 
+				playing chords.</font></li>
+			</ul></li>
+		</ol>
+		<h4><font face="Arial"><a name="ChordSounds"></a>Copying the Guitar 
+		Chord Sounds to the NXT</font></h4>
+		<p><font size="2">Before you can download and use the
+		<a href="../programs/GuitarFreeChord.rbt">GuitarFreeChord</a> program, 
+		you need to copy the special guitar chord sounds to a location on your 
+		computer where the NXT software can find them.&nbsp; To do this:</font></p>
+		<ol>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Locate and open the 
+				NXT Sounds folder on your computer. On most computers, this is:<br>
+			<b>&nbsp;&nbsp; Windows:</b> <i>C:\Program Files\LEGO Software\LEGO MINDSTORMS 
+				NXT\engine\Sounds</i><b><br>&nbsp;&nbsp; Mac: </b><i>Applications &gt; LEGO MINDSTORMS NX &gt; engine &gt; Sounds</i></font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Open the package of
+				<a href="../sounds/Guitar_Chord_Sounds.zip">Guitar Chord 
+				Sounds</a> (a .zip file) and open it to locate 
+				the eight guitar sound (.rso) files.&nbsp; If your computer 
+				cannot open .zip files, you can download the eight sound files 
+				individually from <a href="../sounds/guitar/">here</a>.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Copy (select and drag) all eight of the 
+				guitar chord sound files (.rso) to the NXT Sounds folder on your 
+				computer.</font></li>
+			<li><font size="2">Download the
+			<a href="../programs/GuitarFreeChord.rbt">GuitarFreeChord</a> 
+			program to the NXT <i>after</i> installing the sounds.</font></li>
+		</ol>
+		<h4><font face="Arial"><a name="FreePlay_Hints"></a>Hints for using the 
+		Guitar in Free Play mode</font></h4>
+		<p><font size="2">Playing music in Free Play mode is tricky and takes 
+		some practice.&nbsp; The ultrasonic sensor is very sensitive to the 
+		exact position of the fret slider.&nbsp; Here are a few tips:</font></p>
+		<ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Make sure your left 
+			hand is positioned behind the slider, so that the ultrasonic sensor 
+			sees only the sliding flat plate, not your hand.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Slight changes in the 
+			angle of the sliding flat plate can cause the note to change.&nbsp; 
+			It helps to apply a slight twisting pressure to the plate in one 
+			direction so that its angle does not &quot;chatter&quot; around from side to 
+			side.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Experiment to find the 
+			positions of the 8 notes.&nbsp; Adjust the slider stopper pegs if 
+			necessary.&nbsp; Then watch the fret board to hit the positions you 
+			remember.&nbsp; Better yet, insert pegs into the neck of the guitar 
+			at the right locations to mark the center of each note position.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">When playing a note, 
+			stop the previous note, then quickly move the slider into position 
+			for the next note slightly before the note and get it to stop as 
+			fast as possible, then strum the note at the right time.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">You will not be able to 
+			play all notes, only the 8 notes from the <a href="#Notes">Blues 
+			Scale</a> as shown below.&nbsp; You will have to experiment to see 
+			which tunes this will allow you to play.</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Practice very easy 
+			tunes first and slowly work your way up to harder tunes.</font></li>
+		</ul>
+		<hr>
+		</td>
+	</tr>
+</table>
+<p><a name="Notes"></a></p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="5">The Free Play 
+		Notes</font><p style="margin-bottom: 6px"><font size="2">The programs 
+		for Free Play mode play a series of notes or chords known as the 
+		“blues scale”. <br>
+		These notes are often used in blues and heavy metal rock music. The 
+		notes in this scale are:</font></p>
+		<blockquote>
+			<p style="margin-bottom: 6px"><b>A, C, D, D#, E, G, G#, A</b><font size="2">&nbsp;&nbsp;&nbsp;&nbsp; 
+			(The </font><b>#</b><font size="2"> means “sharp”, so </font><b>D#</b><font size="2"> 
+			is “D sharp”)</font></p>
+		</blockquote>
+		<p style="margin-bottom: 6px"><font size="2">On a piano keyboard, these 
+		notes are:</font></p>
+		<blockquote>
+			<p style="margin-bottom: 6px">
+			<img border="0" src="../guitar/PianoBluesScale.gif" width="296" height="109"></p>
+		</blockquote>
+		<p style="margin-bottom: 6px"><font size="2">Using these notes, it is 
+		easy to improvise or &quot;play around&quot; even if you don't know anything about 
+		music.</font></td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+<table border="1" width="740" cellpadding="4">
+	<tr>
+		<td><font face="Arial Rounded MT Bold" size="5">Challenges</font><ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Can you arrange the 
+			pegs in the neck of the guitar to visually mark the different note 
+			locations?&nbsp; The locations are different for Game Mode (5 
+			positions) vs. Free Play mode (8 positions).</font></li>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">Can you figure out the 
+			notes to some tunes you know in Free Play mode? For example, the main riff of <br>
+			the rock song
+			“Smoke on the Water” by the band Deep Purple would be:</font></li>
+		</ul>
+		<blockquote>
+			<table border="1" width="500" style="border-collapse: collapse" bordercolorlight="#000000" bordercolordark="#000000">
+				<tr>
+					<td width="58" bordercolorlight="#000000" bordercolordark="#000000"><b>A</b></td>
+					<td width="70" bordercolorlight="#000000" bordercolordark="#000000"><b>C</b></td>
+					<td width="140" bordercolorlight="#000000" bordercolordark="#000000"><b>D</b></td>
+					<td bordercolorlight="#000000" bordercolordark="#000000"><b>A</b></td>
+					<td bordercolorlight="#000000" bordercolordark="#000000"><b>C</b></td>
+					<td width="39" bordercolorlight="#000000" bordercolordark="#000000"><b>D#</b></td>
+					<td width="35" bordercolorlight="#000000" bordercolordark="#000000"><b>D</b></td>
+				</tr>
+			</table>
+		</blockquote>
+		<ul>
+			<li>
+			<p style="margin-bottom: 6px"><font size="2">In Free Play mode, 
+			where the NXT is playing the tones or chords, the NXT is not very 
+			loud. Can you figure out a way to use the microphone and 
+			sound system on your computer as an amplifier for your guitar?</font></li>
+		</ul>
+		</td>
+	</tr>
+</table>
+<p align="center">&nbsp;</p>
+<table border="0" width="742" height="26" cellpadding="4">
+	<tr>
+		<td bgcolor="#FF9900">
+		<p align="left" style="margin-bottom: 0"><font size="2">
+		<a href="../index.html"><font color="#000000">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../projects.html"><font color="#000000">Projects</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../help.html"><font color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="../contact.html"><font color="#000000">Contacts</font></a></font></td>
+	</tr>
+</table>
+<table border="0" width="740">
+	<tr>
+		<td>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana" size="1">Copyright </font>
+<font size="1" face="Times New Roman">© </font><font face="Verdana" size="1">
+2007-2009 by Dave Parker.&nbsp; All rights reserved.&nbsp; <br>
+All project designs, images, and programs are protected by copyright.&nbsp; Please see 
+the <a href="../copyright.html">usage policy</a>. </font></p>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>
